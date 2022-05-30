@@ -1,4 +1,4 @@
-a = 1
-b = 2
-print(a + b)
+num_a = 1
+num_b = 2
+print(num_a + num_b)
 print()
