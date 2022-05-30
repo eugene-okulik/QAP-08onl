@@ -1,8 +1,8 @@
 from math import sqrt
 
 
-num1 = 10
-num2 = 15
+NUM1 = 10
+NUM2 = 15
 
 
 def get_triangle(side1, side2):
@@ -11,4 +11,4 @@ def get_triangle(side1, side2):
     return f"Гипотенуза = {hypo} \nПлощадь = {area}"
 
 
-print(get_triangle(num1, num2))
+print(get_triangle(NUM1, NUM2))
