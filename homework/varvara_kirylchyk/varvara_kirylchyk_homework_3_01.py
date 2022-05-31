@@ -1,9 +1,10 @@
 #Даны 2 действительных числа a и b.
 # Получить их сумму, разность и произведение
 
-a=1
-b=2
+NUM1 = 1
+NUM2 = 2
 
-print(a+b)
-print(a-b)
-print(a*b)
+print(NUM1 + NUM2)
+print(NUM1 - NUM2)
+print(NUM1 * NUM2)
+

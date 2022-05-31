@@ -2,10 +2,10 @@
 # Найти среднее арифметическое и среднее геометрическое этих чисел
 
 import math
-a=1
-b=2
-print((a+b)/2)
+NUM1 = 1
+NUM2 = 2
+print( (NUM1+NUM2) / 2)
 
-num=a*b
-geometrical=math.sqrt(num)
-print(geometrical)
+NUM3 = NUM1*NUM2
+GEO = math.sqrt(NUM3)
+print(GEO)

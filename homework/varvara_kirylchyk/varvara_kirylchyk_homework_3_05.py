@@ -1,9 +1,9 @@
 #Программа запрашивает у пользователя длину ребра куба.
 # И находит объем куба и площадь его боковой поверхности
 
-a=input("Length: ")
-cube=int(a)**3
-print(cube)
+NUM = input("Length: ")
+CUBE = int(NUM)**3
+print(CUBE)
 
-ploshad=4*int(a)**2
-print(ploshad)
+SQUARE = 4 * int(NUM) **2
+print(SQUARE)
