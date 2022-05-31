@@ -7,4 +7,3 @@ NUM2 = 2
 print(NUM1 + NUM2)
 print(NUM1 - NUM2)
 print(NUM1 * NUM2)
-
