@@ -1,3 +1,4 @@
+"""Добавлены 2 формулы для решения задания"""
 from statistics import mean
 
 from math import sqrt
