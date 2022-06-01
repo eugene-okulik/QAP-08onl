@@ -1,1 +1,2 @@
 print("I'm learning Python")
+print("I don't undestand a lot about Python")
