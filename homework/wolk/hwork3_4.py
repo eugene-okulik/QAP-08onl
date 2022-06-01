@@ -1,9 +1,9 @@
 
-per1 = float (input ("Введите катет 1: "))
-per2 = float (input ("Введите катет 2: "))
+A = float(input("Введите катет 1: "))
+B = float(input("Введите катет 2: "))
 
-gipo = per1**2 + per2**2
-plo = (per1 * per2) / 2
+Q = A**2 + B**2
+S = (A * B) / 2
 
-print("Гипотенуза = ", gipo ** .5)
-print("Площадь треугольника: %.2f" % plo)
+print("Гипотенуза = ", Q ** .5)
+print("Площадь треугольника: %.2f" % S)

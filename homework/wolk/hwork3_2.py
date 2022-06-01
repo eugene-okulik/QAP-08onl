@@ -1,3 +1,3 @@
-per = 9
-per2 = 6
-print(per - per2 / 1 + (per * per2))
+A = 9
+B = 6
+print(A - B / 1 + (A * B))
