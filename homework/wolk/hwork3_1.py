@@ -1,3 +1,3 @@
-a = 6
-b = 3
-print(a + b, a - b, a * b, a / b)
+per = 6
+per2 = 3
+print(per + per2, per - per2, per * per2, per / per2)
