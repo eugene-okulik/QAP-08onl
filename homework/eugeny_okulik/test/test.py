@@ -20,6 +20,7 @@ def draw_tile(coords, file_name, cairo):
             draw_polygon(coord, context)
 
 
+
 def draw_polygon(coords, context):
     context.move_to(coords[0][0]/10000, coords[0][1]/10000)
     final_coord = None
