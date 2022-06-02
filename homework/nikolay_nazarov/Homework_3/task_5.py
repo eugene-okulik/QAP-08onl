@@ -2,9 +2,7 @@
 # И находит объем куба и площадь его боковой поверхности
 
 CUBE_EDGE = int(input("Введите длину ребра куба:\n"))
-CUBE_VOLUME = CUBE_EDGE**3
 print("Объем куба равен:")
-print(CUBE_VOLUME)
-SQUARE = (CUBE_EDGE**2)*4
+print(CUBE_EDGE**3)
 print("Площадь боковой поверхности куба равен:")
-print(SQUARE)
+print((CUBE_EDGE**2)*4)

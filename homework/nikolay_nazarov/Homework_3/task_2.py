@@ -2,6 +2,5 @@
 
 X = 10
 Y = 20
-RESULT = X - Y / 1 + X * Y
 print("Результат выражения x − y / 1 + xy равно:")
-print(RESULT)
+print(X - Y / 1 + X * Y)
