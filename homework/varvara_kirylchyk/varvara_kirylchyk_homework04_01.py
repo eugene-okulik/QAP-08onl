@@ -18,8 +18,3 @@ for word in MY_LIST:
 
 MY_NEW_SRTING = ' '.join(MY_NEW_LIST)
 print(MY_NEW_SRTING)
-
-
-
-
-

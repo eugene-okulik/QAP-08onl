@@ -17,4 +17,5 @@ while USER_NUMBER != LUCKY_NUMBER:
     if USER_NUMBER == LUCKY_NUMBER:
         print("Поздравляю! Вы угадали!")
         break
+    else:
         print("Попробуйте снова!")
