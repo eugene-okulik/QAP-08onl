@@ -1,0 +1,3 @@
+NUM = 6
+NUM1 = 7
+print(NUM-NUM1/1+(NUM*NUM1))
