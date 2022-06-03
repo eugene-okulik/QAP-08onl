@@ -5,11 +5,10 @@ TEXT = ('Etiam tincidunt neque erat, quis molestie enim'
 
 def add_ing(text):
     text = text.replace(',', "").replace(".", "").split(" ")
-    lst = list()
+    lst = []
     for i in text:
         lst.append(i+"ing")
     return print(lst)
 
 
 add_ing(TEXT)
-
