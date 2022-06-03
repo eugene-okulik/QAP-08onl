@@ -4,9 +4,9 @@
 # Проверить начинается ли строка с подстроки: “Hello”
 # Проверить заканчивается ли строка подстрокой: “qwe”
 
-test_string = "Hello world!"
+TEST_STRING = "Hello world!"
 
-print(test_string.index('w'))
-print(test_string.count('l'))
-print(test_string.startswith('Hello'))
-print(test_string.endswith('qwe'))
+print(TEST_STRING.index('w'))
+print(TEST_STRING.count('l'))
+print(TEST_STRING.startswith('Hello'))
+print(TEST_STRING.endswith('qwe'))
