@@ -13,3 +13,4 @@ def symbols(text):
 
 
 symbols(TEXT)
+
