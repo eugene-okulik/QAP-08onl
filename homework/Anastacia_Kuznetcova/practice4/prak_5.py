@@ -18,5 +18,5 @@ colors = {
 }
 TO_PRINT = 'green'
 for key, value in colors.items():
-    if value in TO_PRINT:
+    if value == TO_PRINT:
         print(key)
