@@ -6,8 +6,6 @@ colors = {
     'water': 'blue',
     'clouds': 'white'
 }
-for x in colors.items():
-    if 'green' in x:
-        for res in x:
-            if res not in "green":
-                print(res)
+for x, y in colors.items():
+    if 'green' in y:
+        print(x)
