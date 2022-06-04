@@ -12,5 +12,5 @@ print(FOUR)
 FIVE = ONE[-3]
 print(FIVE)
 SIX = len(ONE)
-print(f"Длина строки = {ONE}")
+print(f"Длина строки = {SIX}")
 
