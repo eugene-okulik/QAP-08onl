@@ -2,8 +2,14 @@
 # символ, затем последний, третий с начала и третий с конца. Измерьте длину вашей
 # строки.
 ONE = "fermentum"
-TWO = (ONE[1:])
-THREE = TWO[0:7]
-FOUR = THREE.replace('m', '')
-FIVE = len(FOUR)
-print(f"Длина строки = {FIVE}")
+TWO = ONE[0]
+print(TWO)
+THREE = TWO[-1]
+print(THREE)
+FOUR = THREE[2]
+print(FOUR)
+FIVE = THREE[-3]
+print(FIVE)
+SIX = len(FIVE)
+print(f"Длина строки = {SIX}")
+
