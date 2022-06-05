@@ -5,14 +5,12 @@
 # Проверить начинается ли строка с подстроки: “Hello”
 # Проверить заканчивается ли строка подстрокой: “qwe”
 
-
-test_string = "Hello world!"
-print(test_string.find("w"))
-print(test_string.count("l"))
-if test_string.startswith('Hello'):
+TEST_STRING = "Hello world!"
+print(TEST_STRING.find("w"))
+print(TEST_STRING.count("l"))
+if TEST_STRING.startswith('Hello'):
     print('Yes, this string contains this word!')
-
-if test_string.endswith('qwe'):
+if TEST_STRING.endswith('qwe'):
     print('Yes,this string end with qwe')
 else:
     print('No, there are no such letters.')

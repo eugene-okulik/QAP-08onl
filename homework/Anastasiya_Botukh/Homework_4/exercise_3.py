@@ -6,13 +6,13 @@
 # четыре символа из центра строки
 # символы с индексами кратными трем
 
-text = 'Mauris fringilla odio sit amet pretium ' \
+TEXT = 'Mauris fringilla odio sit amet pretium ' \
        'ultricies.Pellentesque habitant morbi tristique'
 
-my_list = text[:8]
-print(my_list)
+MY_LIST = TEXT[:8]
+print(MY_LIST)
 
-my_list_2 = text[40:44]
-print(my_list_2)
+MY_LIST_2 = TEXT[40:44]
+print(MY_LIST_2)
 
-print(text[3::3])
+print(TEXT[3::3])
