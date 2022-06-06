@@ -7,15 +7,15 @@
 # Если пользователь угадывает цифру, программа пишет “Поздравляю! Вы угадали!” и завершается.
 # Т.е. программа не завершается пока пользователь не угадает цифру.
 
-LUCKY_NUMBER = 9
-USER_NUMBER = None
+NUM = 7
+ANSWER = 0
+print("Число:")
 
-while USER_NUMBER != LUCKY_NUMBER:
-    USER_NUMBER = input('Число:')
-    USER_NUMBER = int(USER_NUMBER)
-
-    if USER_NUMBER == LUCKY_NUMBER:
-        print("Поздравляю! Вы угадали!")
-        break
+while True:
+    ANSWER = int(input())
+    if ANSWER != NUM:
+        print("попробуйте снова!")
     else:
-        print("Попробуйте снова!")
+        break
+
+print("Поздравляю! Вы угадали!")
