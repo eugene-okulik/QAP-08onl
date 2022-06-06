@@ -1,7 +1,7 @@
-text = 'Etiam tincidunt neque erat, quis molestie enim imperdiet vel. ' \
+TEXT = 'Etiam tincidunt neque erat, quis molestie enim imperdiet vel. ' \
        'Integer urna nisl, facilisis vitae semper at, dignissim vitae libero'
 
-TEXT = text.split()
+TEXT = TEXT.split()
 LIST1 = TEXT.append(' ')
 
 LIST1 = 'ing '.join(TEXT)
