@@ -5,5 +5,4 @@ while True:
     if NUM_B == NUM_A:
         print('Congratulations! You guessed it!')
         break
-    else:
-        print('Try again')
+    print('Try again')
