@@ -13,5 +13,4 @@ while SECRET_NUMBER != PLAYER:
     if SECRET_NUMBER == PLAYER:
         print("Congratulations! It's right number.")
         break
-    else:
-        print("Sorry, no. Try again")
+    print("Sorry, no. Try again")
