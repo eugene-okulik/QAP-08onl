@@ -2,10 +2,10 @@
 # Salary - integer, bonus - boolean.
 # Если bonus - true, salary должна быть умножена на 10. Если false - нет
 
-salary = 168998
-bonus = False
+SALARY = 168998
+BONUS = False
 
-if bonus:
-    print(salary * 10)
+if BONUS:
+    print(SALARY * 10)
 else:
-    print(salary)
+    print(SALARY)

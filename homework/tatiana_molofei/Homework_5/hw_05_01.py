@@ -6,7 +6,7 @@
 b = range(1, 100)
 
 i = 0
-for i in a:
+for i in b:
     if i % 3 == 0 and i % 5 == 0:
         print('FuzzBuzz')
     elif i % 5 == 0:

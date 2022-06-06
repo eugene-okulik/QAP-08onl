@@ -1,7 +1,7 @@
 # Подсчет букв. Дано две переменные: строка и буква => "fizbbbuz","b",
 # нужно подсчитать сколько раз буква b встречается в заданной строке
 
-new_string = 'fizbbbuz'
-letter = 'b'
+NEW_STRING = 'fizbbbuz'
+LETTER = 'b'
 
-print(new_string.count(letter))
+print(NEW_STRING.count(LETTER))
