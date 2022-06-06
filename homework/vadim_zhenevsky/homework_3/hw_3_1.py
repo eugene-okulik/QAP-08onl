@@ -1,5 +1,5 @@
-a = 5
-b = 15
-print(a + b)
-print(a - b)
-print(a * b)
+A = 5
+B = 15
+print(A + B)
+print(A - B)
+print(A * B)

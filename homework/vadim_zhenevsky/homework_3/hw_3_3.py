@@ -1,6 +1,6 @@
-z = 4
-x = 8
-q = (z + x) / 2
-print(q)
-p = (z * x) / 2
-print(p)
+Z = 4
+X = 8
+Q = (Z + X) / 2
+print(Q)
+P = (Z * X) / 2
+print(P)

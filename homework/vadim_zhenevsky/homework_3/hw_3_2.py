@@ -1,3 +1,3 @@
-x = 14
-y = 8
-print(x - y / 1 + x * y)
+X = 14
+Y = 8
+print(X - Y / 1 + X * Y)
