@@ -1,5 +1,5 @@
 TEXT = 'Etiam tincidunt neque erat, quis molestie enim imperdiet vel. ' \
-       'Innteger urna nisl, facilisis vitae semper at, dignissim vitae libero'
+       'Innteger utrna nisl, facilisis vitae semper at, dignissim vitae libero'
 
 TEXT = TEXT.split()
 
