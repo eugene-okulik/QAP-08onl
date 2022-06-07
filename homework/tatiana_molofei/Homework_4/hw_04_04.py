@@ -10,8 +10,8 @@ MY_NUM = 16
 
 user_num = int(input('Попробуйте угадать загаданную цифру. Введите любую цифру '))
 
-while user_num < MY_NUM or user_num > MY_NUM:
+while user_num != MY_NUM:
     print("Попробуйте снова")
     user_num = int(input('Попробуйте угадать загаданную цифру. Введите любую цифру '))
-    break
+
 print("Поздравляю! Вы угадали!")
