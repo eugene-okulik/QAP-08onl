@@ -11,4 +11,4 @@ CHECK = 'green'
 
 for key, value in colors.items():
     if value in CHECK:
-        print (key)
+    print(key)
