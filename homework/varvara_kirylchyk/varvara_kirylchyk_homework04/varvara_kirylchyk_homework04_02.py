@@ -7,14 +7,14 @@
 
 
 TEST_STRING = "Hello world!"
-print (TEST_STRING.find("w"))
+print(TEST_STRING.find("w"))
 
 COUNT = TEST_STRING.count('l')
 print("The count of 'l' is ", COUNT)
 
 if TEST_STRING.startswith ('Hello'):
-    print ('Yes, it starts with "Hello"')
-elif TEST_STRING.startswith ('qwe'):
-    print ('Yes, it starts with "qwe"')
+    print('Yes, it starts with "Hello"')
+if TEST_STRING.startswith ('qwe'):
+    print('Yes, it starts with "qwe"')
 else:
     print("No")
