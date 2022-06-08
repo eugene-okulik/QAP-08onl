@@ -6,9 +6,9 @@
 # Если пользователь угадывает цифру, программа пишет “Поздравляю! Вы угадали!” и завершается.
 # Т.е. программа не завершается пока пользователь не угадает цифру.
 
-NUMBER = 7
-TEXT = int(input('Угадайте число. Введите цифру'))
-while TEXT != NUMBER:
-    TEXT = int(input('попробуйте снова'))
-if TEXT == NUMBER:
+SECRET_NUMBER = 7
+NUMBER = int(input('Угадайте число. Введите цифру'))
+while NUMBER != SECRET_NUMBER:
+    NUMBER = int(input('попробуйте снова'))
+if NUMBER == SECRET_NUMBER:
     print('Поздравляю! Вы угадали!')
