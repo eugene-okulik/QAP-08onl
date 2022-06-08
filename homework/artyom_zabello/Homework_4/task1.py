@@ -8,7 +8,8 @@ def add_ing(text):
     lst = []
     for i in text:
         lst.append(i+"ing")
-    return print(str(lst).replace("[", "").replace("]", "").replace("'", "").replace(",", ""))
+    return print(str(lst).replace("[", "").replace("]", "").
+                 replace("'", "").replace(",", ""))
 
 
 add_ing(TEXT)
