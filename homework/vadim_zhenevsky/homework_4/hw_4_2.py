@@ -1,5 +1,5 @@
-string = "Hello world!"
-print(string.index('w'))
-print(string.count('l'))
-print(string.startswith('Hello'))
-print(string.endswith('qwe'))
+STRING = "Hello world!"
+print(STRING.index('w'))
+print(STRING.count('l'))
+print(STRING.startswith('Hello'))
+print(STRING.endswith('qwe'))
