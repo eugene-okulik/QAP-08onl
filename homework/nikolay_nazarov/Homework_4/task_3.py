@@ -8,4 +8,4 @@ SOME_TEXT = "Mauris fringilla odio sit amet pretium ultricies. " \
             "Pellentesque habitant morbi tristique"
 print(SOME_TEXT[:8])
 print(SOME_TEXT[int((len(SOME_TEXT)-1)/2-2):int((len(SOME_TEXT)-1)/2+2)])
-print(SOME_TEXT[4::4])
+print(SOME_TEXT[3::3])
