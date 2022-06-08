@@ -5,7 +5,7 @@ TEXT = ('Mauris fringilla odio sit amet pretium ultricies. '
 def symbols(text):
     lst = []
     print(text[0:8])
-    print(text[42:46])
+    print(text[round((len(text)/2)-2):round((len(text)/2)+2)])
     for i in text:
         if text.index(i) % 3 == 0:
             lst.append(i)

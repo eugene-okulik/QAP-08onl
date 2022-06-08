@@ -1,12 +1,12 @@
 NUM = 9
 
 
-def guessing(number):
+def guessing():
     res = int(input("Угадайте цифру: "))
-    while res != number:
+    while res != NUM:
         res = int(input("Попробуйте снова: "))
-    if res == number:
+    if res == NUM:
         print("Поздравляю! Вы угадали!")
 
 
-guessing(NUM)
+guessing()
