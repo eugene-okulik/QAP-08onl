@@ -10,6 +10,8 @@ print(TEST_STRING.find("w"))
 print(TEST_STRING.count("l"))
 if TEST_STRING.startswith('Hello'):
     print('Yes, this string contains this word!')
+else:
+    print('Sorry, no this word')
 if TEST_STRING.endswith('qwe'):
     print('Yes,this string end with qwe')
 else:

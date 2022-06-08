@@ -12,4 +12,5 @@ while SECRET_NUMBER != PLAYER:
     PLAYER = int(input('Please, try to guess the secret number:'))
     if SECRET_NUMBER == PLAYER:
         print("Congratulations! It's right number.")
+        break
     print("Sorry, no. Try again")
