@@ -6,14 +6,11 @@
 # Если пользователь угадывает цифру, программа пишет “Поздравляю! Вы угадали!” и завершается.
 # Т.е. программа не завершается пока пользователь не угадает цифру.
 
-SOME_NUM = 5
-print("Угадай какую цифру я загадал, кожаный мешок")
-
-while True:
-    ANSWER = int(input())
-    if ANSWER != SOME_NUM:
-        print("попробуйте снова")
-    else:
+SECRET_NUMBER = 12
+PLAYER = 0
+while SECRET_NUMBER != PLAYER:
+    PLAYER = int(input('Please, try to guess the secret number:'))
+    if SECRET_NUMBER == PLAYER:
+        print("Congratulations! It's right number.")
         break
-
-print("Поздравляю! Вы угадали!")
+    print("Sorry, no. Try again")
