@@ -8,11 +8,11 @@
 # "abcde" == "abcde"
 # "aaabbdefffff" == "a3b2def5"
 
-string = "ccbbbbcbbaaacccbabab"
+STRING = "ccbbbbcbbaaacccbabab"
 
 
 def user_string():
-    print(f'"{string}" == "c{string.count("c")}b{string.count("b")}a{string.count("a")}"')
+    print(f'"{STRING}" == "c{STRING.count("c")}b{STRING.count("b")}a{STRING.count("a")}"')
 
 
 user_string()
