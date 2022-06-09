@@ -1,0 +1,3 @@
+NUM = 4
+NUM1 = 5
+print(NUM+NUM1, NUM-NUM1, NUM*NUM1)
