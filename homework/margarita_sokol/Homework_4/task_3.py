@@ -17,4 +17,3 @@ print(TEXT[EX2 + A - 2:EX2 + A + 2])
 
 EX3 = TEXT[3::3]
 print(EX3)
-

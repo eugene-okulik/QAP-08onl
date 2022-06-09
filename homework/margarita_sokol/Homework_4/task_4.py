@@ -12,7 +12,5 @@ while USER_NUM:
     if USER_NUM == SECRET_NUM:
         print('Поздравляю! Вы угадали!')
         break
-    else:
-        print('попробуйте снова')
-        USER_NUM = input('Угадай цифру?! ')
-        continue
+    print('попробуйте снова')
+    USER_NUM = input('Угадай цифру?! ')
