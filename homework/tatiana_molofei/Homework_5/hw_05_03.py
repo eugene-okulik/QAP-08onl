@@ -4,4 +4,4 @@
 NEW_STRING = 'fizbbbuz'
 LETTER = 'b'
 
-print(NEW_STRING.count(LETTER))
+print(f'"{NEW_STRING}", "b" == {NEW_STRING.count(LETTER)}')
