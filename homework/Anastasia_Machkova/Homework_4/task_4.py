@@ -11,4 +11,4 @@ PLAYER = int(input('Guess the number '))
 while A != PLAYER:
     PLAYER = int(input('Try again'))
 if A == PLAYER:
-    PLAYER = int(input('Congratulations! You have guessed'))
+    print('Congratulations! You have guessed')
