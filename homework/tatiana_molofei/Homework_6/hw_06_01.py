@@ -8,11 +8,17 @@
 # "abcde" == "abcde"
 # "aaabbdefffff" == "a3b2def5"
 
-STRING = "ccbbbbcbbaaacccbabab"
+STRING = input()
+NEW_DICT = {}
 
+for i in STRING:
+    if i not in NEW_DICT:
+        NEW_DICT[i] = 1
+    else:
+        NEW_DICT[i] += 1
 
-def user_string():
-    print(f'"{STRING}" == "c{STRING.count("c")}b{STRING.count("b")}a{STRING.count("a")}"')
-
-
-user_string()
+NEW_STRING = []
+for key, item in NEW_DICT.items():
+    NEW_STRING.append("{}{}".format(key.capitalize(), item))
+RESULT = "".join(NEW_STRING)
+print(RESULT)
