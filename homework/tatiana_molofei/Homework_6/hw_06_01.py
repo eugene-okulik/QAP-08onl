@@ -19,6 +19,6 @@ for i in STRING:
 
 NEW_STRING = []
 for key, item in NEW_DICT.items():
-    NEW_STRING.append("{}{}".format(key.capitalize(), item))
+    NEW_STRING.append(f'{key}{item}')  # NEW_STRING.append("{}{}".format(key.capitalize(), item))
 RESULT = "".join(NEW_STRING)
 print(RESULT)
