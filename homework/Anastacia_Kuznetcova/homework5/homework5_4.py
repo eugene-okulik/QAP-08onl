@@ -26,8 +26,8 @@ DEPARTMENTS = {
     }
 }
 
-for key, value in DEPARTMENTS.items():
-    for key2, value2 in value.items():
-        if value2['title'] == 'head':
-            value2['salary'] += 500
+for departament, people in DEPARTMENTS.items():
+    for person, date in people.items():
+        if date['title'] == 'head':
+            date['salary'] += 500
 print(DEPARTMENTS)

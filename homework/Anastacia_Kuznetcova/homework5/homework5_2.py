@@ -2,8 +2,8 @@
 # Если bonus - true, salary должна быть умножена на 10. Если false - нет
 """Внизу решение задачи"""
 SALARY = 50
-BONUS = False
-if SALARY:
+BONUS = True
+if BONUS:
     print((SALARY * 10))
 else:
-    print(BONUS)
+    print(SALARY)
