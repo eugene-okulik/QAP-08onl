@@ -20,8 +20,8 @@ departments = {
         }
     }
 }
-for a, b in departments.items():
-    for c, d in b.items():
-        if d['title'] == 'head':
-            d['salary'] += 500
+for department, staff in departments.items():
+    for worker, data in staff.items():
+        if data['title'] == 'head':
+            data['salary'] += 500
 print(departments)
