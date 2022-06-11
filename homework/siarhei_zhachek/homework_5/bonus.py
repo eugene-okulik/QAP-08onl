@@ -6,6 +6,6 @@ while True:
     bonus = random.choice([True, False])
     if bonus is True:
         a = salary * 10
-        print(f'You win ', a)
+        print('You win ', a)
     else:
-        print(f'You win ', salary)
+        print('You win ', salary)
