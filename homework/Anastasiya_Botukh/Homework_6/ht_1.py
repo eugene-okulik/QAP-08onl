@@ -4,7 +4,7 @@ STRING = input('enter different letters:')
 def letter_count(user_str):
     count_let = 1
     result = ''
-    for key, value in enumerate(user_str):
+    for key, _ in enumerate(user_str):
         if key == len(user_str) - 1:
             if count_let == 1:
                 result += user_str[key]
