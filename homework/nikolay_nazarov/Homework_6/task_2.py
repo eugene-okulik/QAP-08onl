@@ -6,16 +6,22 @@
 def calculator(num_1, num_2, oper):
     """Возвращает результат действия над двумя числами"""
     if oper == 1:
-        return f"Сумма: {num_1 + num_2}"
+        result = f"Сумма: {num_1 + num_2}"
     if oper == 2:
-        return f"Разность: {num_1 - num_2}"
+        result = f"Разность: {num_1 - num_2}"
     if oper == 3:
-        return f"Произведение: {num_1 * num_2}"
+        result = f"Произведение: {num_1 * num_2}"
     if oper == 4:
-        if num_1 % num_2 == 0:
-            return f"Частное: {num_1 / num_2}"
-        return f"Частное: {num_1 // num_2}, Остаток: {num_1 % num_2}"
-    return "Ошибка программы"
+        if num_2 != 0:
+            if num_1 % num_2 == 0:
+                result = f"Частное: {num_1 / num_2}"
+            if num_1 % num_2 != 0:
+                result = f"Частное: {num_1 // num_2}, Остаток: {num_1 % num_2}"
+        if num_2 == 0:
+            result = "На ноль делить нельзя"
+    else:
+        result = "Ошибка ввода"
+    return result
 
 
 operation = int(input("Выберите операцию:\n" +
