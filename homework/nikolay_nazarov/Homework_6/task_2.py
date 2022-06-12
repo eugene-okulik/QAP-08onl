@@ -3,15 +3,16 @@
 # а затем запрашивает два числа и выводит результат
 # Не забудьте о проверке деления на 0.
 
-def calculator(num_1, num_2, oper):
+def calculator(num_1, num_2, action):
     """Возвращает результат действия над двумя числами"""
-    if oper == 1:
+    result = None
+    if action == 1:
         result = f"Сумма: {num_1 + num_2}"
-    if oper == 2:
+    if action == 2:
         result = f"Разность: {num_1 - num_2}"
-    if oper == 3:
+    if action == 3:
         result = f"Произведение: {num_1 * num_2}"
-    if oper == 4:
+    if action == 4:
         if num_2 != 0:
             if num_1 % num_2 == 0:
                 result = f"Частное: {num_1 / num_2}"
