@@ -15,7 +15,7 @@ def user_actions(action, num_1, num_2):
     if action == 4:
         if NUM_2 == 0:
             return 'not allowed'
-        return num_1 // num_2, num_1 % num_2
+    return num_1 // num_2, num_1 % num_2
 
 
 print(user_actions(ACTIONS, NUM_1, NUM_2))
