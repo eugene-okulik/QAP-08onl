@@ -5,7 +5,7 @@ str1 = input("Input: ")
 
 def count_letters(line):
 
-    line += 'n'
+    line += '\n'
     list01 = []
     str_length = len(line)
     res_string = ""
@@ -28,4 +28,6 @@ def count_letters(line):
 
     return res_string
 
-print(count_letters(str1))
+result = count_letters(str1)
+
+print(f"Our result: {result}")

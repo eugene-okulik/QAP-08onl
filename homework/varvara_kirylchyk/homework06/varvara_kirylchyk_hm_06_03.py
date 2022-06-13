@@ -22,53 +22,64 @@ PRICE_LIST = '''тетрадь 50р
 пенал 300р
 рюкзак 500р'''
 
-x = PRICE_LIST.split()
-# print(x)
-# print(type(x))
+x = PRICE_LIST.split("\n")
 
-def every_second_element(values):
-    second_values = []
+output = {}
 
-    for index in range(1, len(values), 2):
-        second_values.append(values[index])
+for line in x:
+    item = line.split()
+    output.update({item[0]: int(item[1][:-1])})
 
-    return second_values
+print(output)
 
-# print(every_second_element(x))
+# def every_second_element(values):
+#     second_values = []
+#
+#     for index in range(1, len(values), 2):
+#         second_values.append(values[index])
+#
+#     return second_values
+#
+# # print(every_second_element(x))
+#
+# y = every_second_element(x)
+# # print(y)
+#
+# # new_y=[s.replace("p", "") for s in y]
+# new_y=[s.replace("р", "") for s in y]
+#
+# new_numbers = []
+# for n in new_y:
+#     new_numbers.append(int(n))
+# new_y = new_numbers
+#
+# # print(new_y)
+#
+# def every_second_element2(values):
+#     second_values = []
+#
+#     for index in range(0, len(values), 2):
+#         second_values.append(values[index])
+#
+#     return second_values
+#
+# # print(every_second_element2(x))
+# w = every_second_element2(x)
+# # print(w)
+#
+# # w = key
+# # new_y = value
+#
+# res = {}
+# for key in w:
+#     for value in new_y:
+#         res[key] = value
+#         z = new_y.remove(value)
+#         break
+#
+# print(res)
 
-y = every_second_element(x)
-# print(y)
-
-# new_y=[s.replace("p", "") for s in y]
-new_y=[s.replace("р", "") for s in y]
-
-new_numbers = []
-for n in new_y:
-    new_numbers.append(int(n))
-new_y = new_numbers
-
-# print(new_y)
-
-def every_second_element2(values):
-    second_values = []
-
-    for index in range(0, len(values), 2):
-        second_values.append(values[index])
-
-    return second_values
-
-# print(every_second_element2(x))
-w = every_second_element2(x)
-# print(w)
-
-# w = key
-# new_y = value
-
-res = {}
-for key in w:
-    for value in new_y:
-        res[key] = value
-        z = new_y.remove(value)
-        break
-
-print(res)
+# def is_palindrom(line):
+#     if line == line[::-1]:
+#         return True
+#     return False
