@@ -12,15 +12,15 @@ LST = []
 
 def dict_gen():
     """This function converts from string(PRICE_LIST) to dictionary"""
-    for i in RES:
-        if not i.isalpha():
-            for x_1 in i:
-                if x_1 == "р":
-                    LST.append(i.replace(x_1, ""))
-        elif i.isalpha():
-            LST.append(i)
-    res_dic = {LST[i]: LST[i + 1] for i in range(0, len(LST), 2)}
-    return res_dic
+    for word in RES:
+        if not word.isalpha():
+            for char in word:
+                if char == "р":
+                    LST.append(word.replace("р", ""))
+        elif word.isalpha():
+            LST.append(word)
+    res_dict = {LST[i]: int(LST[i + 1]) for i in range(0, len(LST), 2)}
+    return res_dict
 
 
 print(dict_gen())
