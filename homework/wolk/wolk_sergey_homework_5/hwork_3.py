@@ -1,4 +1,3 @@
-
 A = "fizbbbbbuz"
 B = "b"
 C = "f"
