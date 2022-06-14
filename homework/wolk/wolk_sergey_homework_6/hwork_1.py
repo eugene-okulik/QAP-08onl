@@ -1,7 +1,7 @@
 str1 = input("Input: ")
 
 
-def COUNT(line):
+def count_log(line):
     line += 'n'
     list1 = []
     str_l = len(line)
@@ -25,4 +25,4 @@ def COUNT(line):
     return res_str
 
 
-print(COUNT(str1))
+print(count_log(str1))
