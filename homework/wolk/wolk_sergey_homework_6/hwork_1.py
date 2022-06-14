@@ -1,28 +1,28 @@
-STR1 = input("Input: ")
+str1 = input("Input: ")
 
 
 def COUNT(line):
     line += 'n'
-    LIST1 = []
-    STR_L = len(line)
-    RES_STR = ""
+    list1 = []
+    str_l = len(line)
+    res_str = ""
 
     counter = 1
 
-    for i in range(0, STR_L - 1):
+    for i in range(0, str_l - 1):
         if line[i] == line[i + 1]:
             counter += 1
         else:
-            LIST1.append({line[i]: counter})
+            list1.append({line[i]: counter})
             counter = 1
 
-    for element in LIST1:
+    for element in list1:
         for key, value in element.items():
-            RES_STR += key
+            res_str += key
             if value > 1:
-                RES_STR += str(value)
+                res_str += str(value)
 
-    return RES_STR
+    return res_str
 
 
-print(COUNT(STR1))
+print(COUNT(str1))
