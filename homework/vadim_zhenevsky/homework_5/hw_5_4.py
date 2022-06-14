@@ -25,3 +25,4 @@ for department, employee in departments.items():
         if value['title'] == 'head':
             value['salary'] += 500
     print(departments)
+
