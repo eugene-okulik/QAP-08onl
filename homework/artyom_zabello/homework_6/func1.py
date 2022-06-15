@@ -4,17 +4,18 @@ def word_counter(word: str) -> str:
     lst = []
     for index, _ in enumerate(word):
         if word[index] in lst:
-            if word[index] != word[index-1] and word[index] != word[index+1]:
+            if word[index] != word[index-1]:
                 lst.append(word[index])
             else:
                 continue
         else:
             lst.append(word[index])
-            if word.count(word[index]) > 1:
-                if word[index] not in word[index+5:len(word)]:
-                    lst.append(word.count(word[index]))
-                else:
-                    lst.append(word.count(word[index])-1)
+        if word.count(word[index]) > 1:
+            if word[index] == word[index+1]:
+                counter = word[index:index+7].count(word[index])
+                lst.append(counter)
+            else:
+                continue
 
     return "".join(map(str, lst))
 
