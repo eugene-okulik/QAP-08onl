@@ -1,29 +1,30 @@
-alfabet1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't'
-            , 'u', 'v', 'w', 'x', 'y', 'z']
+"""Программа проверяет что введен правильный купон"""
+import datetime
 
-a = "hello world!"
-offset = 3
-i = 0
-a = 0
-decoded_alfabet = []
-while a < len(alfabet1):
-    try:
-        decoded_alfabet.append(alfabet1[i+3])
-        i += 1
-        a += 1
-    except IndexError:
-        i = 0
-        while a < len(alfabet1):
-            decoded_alfabet.append(alfabet1[i])
-            i += 1
-            a += 1
-dictionary = {i: k for i, k in alfabet1, decoded_alfabet}
+CORRECT_CODE = '123'
 
 
-print(alfabet1)
-print(decoded_alfabet)
-print(dictionary)
-# decoded_alfabet = [alfabet[alfabet.index(i)+3] for i in alfabet]
+def date_encoder(some_date):
+    """
+    Преобразует строку с датой в правильный формат даты
+    :param some_date: str
+    :return: datetime.datetime
+    """
+    encoded_date = datetime.datetime.strptime(some_date, '%B %d, %Y')
+    return encoded_date
 
-#print(decoded_alfabet)
 
+def check_coupon(entered_code, expiration_date):
+    """
+    Функция проверяет что введен правильный купон и он действителен
+    :param entered_code: str
+    :param expiration_date: str
+    :return: bool
+    """
+    if date_encoder(expiration_date) > datetime.datetime.now() and entered_code == "123":
+        return True
+    return False
+
+
+print(check_coupon("123", "July 9, 2022"))
+print(check_coupon("123", "June 2, 2022"))
