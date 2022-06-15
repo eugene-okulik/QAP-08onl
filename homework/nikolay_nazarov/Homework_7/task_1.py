@@ -55,10 +55,10 @@ def decoder(some_text_to_decode, decoder_dictionary):
 
 e = decode_and_encode_dictionaries_generator(alfabet_eng)[0]
 d = decode_and_encode_dictionaries_generator(alfabet_eng)[1]
-# Для того чтобы закодировать текст необходимо
+# Для того, чтобы декодировать текст необходимо
 # в качестве первого аргумента ввести строку для кодирования (INPUT_STRING_FOR_ENCODING),
 # а в качестве второго переменную "e" """
-# Для того чтобы декодировать текст необходимо
+# Для того, чтобы декодировать текст необходимо
 # в качестве первого аргумента ввести строку для декодирования (INPUT_STRING_FOR_DECODING),
 # а в качестве второго переменную "d" """
 print(decoder(INPUT_STRING_FOR_ENCODING, e))
