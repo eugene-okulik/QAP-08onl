@@ -10,7 +10,7 @@
 user_string = f'{input()} '
 
 
-def count_letters(user_string):
+def count_letters(user_str):
 
     count_index = 1
     new_list = []
