@@ -9,7 +9,7 @@ try:
 except ValueError:
     print("Incorrect format")
 
-code = input("Code: ")
+CODE = input("Code: ")
 CORRECT_CODE = "123"
 
 now = datetime.now()
@@ -20,4 +20,4 @@ def check_coupon(code_x, date_y):
     if code_x == CORRECT_CODE and date_y >= CORRECT_DATE:
         print("True")
 
-print(check_coupon(code, DATE))
+print(check_coupon(CODE, DATE))
