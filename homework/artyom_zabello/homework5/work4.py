@@ -21,12 +21,10 @@ departments = {
     }
 }
 
-for i, x in departments["sales"].items():
-    if x["title"] == "head":
-        x["salary"] += 500
 
-for i, x in departments["operations"].items():
-    if x["title"] == "head":
-        x["salary"] += 500
+for dep in departments.values():
+    for staff in dep.values():
+        if staff['title'] == 'head':
+            staff['salary'] += 500
 
 print(departments)
