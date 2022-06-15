@@ -7,10 +7,10 @@
 # "abcde" == "abcde"
 # "aaabbdefffff" == "a3b2def5"
 
-user_string = f'{input()} '
+user_str = f'{input()} '
 
 
-def count_letters(user_str):
+def count_letters(user_string):
 
     count_index = 1
     new_list = []
@@ -32,6 +32,6 @@ def count_letters(user_str):
     return new_string
 
 
-RESULT = count_letters(user_string)
+RESULT = count_letters(user_str)
 
 print(RESULT)
