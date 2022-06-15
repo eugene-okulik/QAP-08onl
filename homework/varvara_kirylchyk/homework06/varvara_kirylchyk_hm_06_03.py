@@ -30,7 +30,10 @@ for line in x:
     item = line.split()
     output.update({item[0]: int(item[1][:-1])})
 
-print(output)
+#print(output)
+
+for keys,values in output.items():
+    print(keys, values)
 
 # def every_second_element(values):
 #     second_values = []

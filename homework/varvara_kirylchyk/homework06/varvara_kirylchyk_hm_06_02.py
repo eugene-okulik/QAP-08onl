@@ -31,6 +31,7 @@ def validate_zero (something):
 
 if not validate_zero(C):
     raise Exception("Деление на ноль")
+#Валидация деления на ноль
 
 def my_sum (num1, num2):
     return sum (num1, num2)
