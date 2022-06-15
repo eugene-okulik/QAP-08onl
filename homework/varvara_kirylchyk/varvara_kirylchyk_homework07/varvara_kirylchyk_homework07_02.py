@@ -1,6 +1,7 @@
 #У вас интернет магазин, надо написать функцию которая проверяет
 # что введен правильный купон и он еще действителен
 
+import sys
 from datetime import datetime
 
 DATE = str(input('Date: '))
@@ -19,5 +20,8 @@ CORRECT_DATE = now.strftime("%B %d, %Y")
 def check_coupon(code_x, date_y):
     if code_x == CORRECT_CODE and date_y >= CORRECT_DATE:
         print("True")
+    else:
+        print("Error")
+        sys.exit()
 
 print(check_coupon(CODE, DATE))
