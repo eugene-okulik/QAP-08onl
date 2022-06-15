@@ -1,15 +1,15 @@
-def calculator(choice, a, b):
+def calculator(choice, A, B):
     if choice == 1:
-        result = a+b
+        result = A+B
     elif choice == 2:
-        result = a-b
+        result = A-B
     elif choice == 3:
-        result = a*b
+        result = A*B
     elif choice == 4:
-        if b == 0:
+        if B == 0:
             result = "Division by 0"
         else:
-            result = "Quotient" + str(int(a / b)) + "Remains" + str(int(a % b))
+            result = "Quotient" + str(int(A / B)) + "Remains" + str(int(A % B))
     else:
         result = "Not correct"
     return result

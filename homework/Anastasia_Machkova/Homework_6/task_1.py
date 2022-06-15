@@ -1,15 +1,15 @@
-def enum(s):
-    a = list(s)
-    c = []
-    for let in a:
-        if not let in c:
-            c.append(let)
+def enum(S):
+    A = list(S)
+    C = []
+    for let in A:
+        if not let in C:
+            C.append(let)
     result = ""
-    for let in c:
-        if s.count(let) == 1:
+    for let in C:
+        if S.count(let) == 1:
             result += let
         else:
-            result += let + str(s.count(let))
+            result += let + str(S.count(let))
     return result
 
 
