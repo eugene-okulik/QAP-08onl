@@ -24,16 +24,15 @@ PRICE_LIST = '''тетрадь 50р
 
 x = PRICE_LIST.split("\n")
 
-output = {}
 
-for line in x:
-    item = line.split()
-    output.update({item[0]: int(item[1][:-1])})
+def get_items(text_list):
+    return {line.split()[0]: int(line.split()[1][:-1]) for line in text_list}
 
-#print(output)
+print(get_items(x))
 
-for keys,values in output.items():
-    print(keys, values)
+
+# for keys,values in output.items():
+#     print(keys, values)
 
 # def every_second_element(values):
 #     second_values = []

@@ -19,22 +19,27 @@
 # Частное: 3, Остаток: 3
 # Можете сделать все в одной функции, можете разделить на разные.
 
+import sys
+
 A = int(input('Выберите операцию: 1. Сложение 2. Вычитание 3. Умножение '
               '4. Деление -> Введите номер пункта меню: '))
 B = int(input('Введите первое число: '))
 C = int(input('Введите второе число: '))
 
-def validate_zero (something):
-    if something == 0:
-        return False
-    return True
+# def validate_zero (something):
+#     if something == 0:
+#         return False
+#     return True
+#
+#if not validate_zero(C):
+#    raise Exception("Деление на ноль")
 
-if not validate_zero(C):
-    raise Exception("Деление на ноль")
-#Валидация деления на ноль
+if C == 0:
+    print("Ошибка")
+    sys.exit()
 
-def my_sum (num1, num2):
-    return sum (num1, num2)
+def my_sum(num1, num2):
+    return num1+ num2
 
 def my_diff (num1, num2):
     return num1 - num2
