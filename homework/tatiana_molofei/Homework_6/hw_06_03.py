@@ -21,6 +21,9 @@ PRICE_LIST = '''тетрадь 50р
 
 user_list = PRICE_LIST.split()
 
-dict_key = {user_list[i]: int(user_list[i + 1].replace('р', '')) for i in range(0, len(user_list), 2)}
+dict_key = {
+    user_list[i]: int(user_list[i + 1].replace('р', ''))
+    for i in range(0, len(user_list), 2)
+}
 
 print(dict_key)
