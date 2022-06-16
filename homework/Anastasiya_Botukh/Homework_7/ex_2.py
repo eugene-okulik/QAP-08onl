@@ -7,10 +7,12 @@ def check_coupon(entered_code, expiration_date):
     expiration_date = now.strptime(expiration_date, '%B %d, %Y')
     if entered_code is not CORRECT_CODE:
         return 'Your coupon is invalid.'
-    if expiration_date >= now:
+    elif expiration_date >= now:
         return 'Your coupon is valid.'
-    if expiration_date < now:
+    elif expiration_date < now:
         return 'Your coupon is invalid.'
+    else:
+        return 'Invalid information'
 
 
 print(check_coupon("123", "July 16, 2022"))
