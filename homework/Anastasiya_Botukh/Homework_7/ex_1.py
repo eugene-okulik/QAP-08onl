@@ -1,4 +1,5 @@
 STRING_ENCODE = str(input('Please, enter the words to encode:'))
+STRING_ENCODE = STRING_ENCODE.lower()
 ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
 
 
