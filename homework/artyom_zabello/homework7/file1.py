@@ -2,7 +2,7 @@ def encode(text, shift):
     """This function converts a input string to string
     at caesar 's cipher case"""
     lst = []
-    for char in text:
+    for char in text.lower():
         if char != " " and char not in "?.,!?;:_-":
             res = ord(char) + shift
             if res > 122:
@@ -18,7 +18,7 @@ def encode(text, shift):
 def decode(text, shift):
     """This function decodes a string from caesar 's cipher"""
     lst = []
-    for char in text:
+    for char in text.lower():
         if char != " " and char not in "?.,!?;:_-":
             res = ord(char) - shift
             if res < 97:
