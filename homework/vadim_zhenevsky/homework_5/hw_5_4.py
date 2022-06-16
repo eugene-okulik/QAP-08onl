@@ -24,5 +24,4 @@ for department, employee in departments.items():
     for people, value in employee.items():
         if value['title'] == 'head':
             value['salary'] += 500
-    print(departments)
-
+print(departments)

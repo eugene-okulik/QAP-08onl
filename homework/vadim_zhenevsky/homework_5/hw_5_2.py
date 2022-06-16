@@ -1,4 +1,4 @@
-SALARY = 100
+SALARY = 50
 BONUS = True
 if BONUS:
     print(SALARY * 10)
