@@ -9,10 +9,8 @@ def check_coupon(entered_code, expiration_date):
         return 'Your coupon is invalid.'
     elif expiration_date >= now:
         return 'Your coupon is valid.'
-    elif expiration_date < now:
-        return 'Your coupon is invalid.'
     else:
-        return 'Invalid information'
+        return 'Your coupon is invalid.'
 
 
 print(check_coupon("123", "July 16, 2022"))
