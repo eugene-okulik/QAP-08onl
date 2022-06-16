@@ -22,7 +22,7 @@ def decode_string(string, shift):
         if index == -1:
             decode += value
         if index < int(shift):
-            len(ALPHABET) - 1 - (shift - index)
+            _ = len(ALPHABET) - 1 - (shift - index)
         else:
             decode += ALPHABET[index - int(shift)]
     return decode
