@@ -9,10 +9,7 @@ number_names = {
 
 
 def num_list_generator(len_of_list=99):
-    numbers = []
-    for i in range(len_of_list):
-        numbers.append(randint(0, 19))
-    return numbers
+    return [randint(0, 19) for i in range(len_of_list)]
 
 
 def dict_to_json_converter(some_dict):
