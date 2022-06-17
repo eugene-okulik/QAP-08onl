@@ -2,7 +2,7 @@
 alfabet_eng = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
                'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-INPUT_STRING_FOR_ENCODING = "hello world!"
+INPUT_STRING_FOR_ENCODING = "HEllo world!"
 INPUT_STRING_FOR_DECODING = "khoor zruog!"
 
 
@@ -35,6 +35,7 @@ def decoder(some_text_to_decode, decoder_dictionary):
     текст для кодирования или декодирования, в качестве второго - словарь полученный в результате
     работы функции decode_and_encode_dictionaries_generator
      """
+    some_text_to_decode = some_text_to_decode.lower()
     some_text_decoded = ""
     decoder_counter = 0
     while decoder_counter < len(some_text_to_decode):
