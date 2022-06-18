@@ -29,4 +29,4 @@ def calc(first, second, operation):
         print(first / second)
 
 
-calc(num1, num2, "+")
+calc(num1, num2, decar)
