@@ -15,15 +15,12 @@ except ValueError:
     sys.exit(1)
 
 code = input("Enter the code: ")
-
 current_date = datetime.now()
 
-
-def check_coupon(coupon_code, correct_code, coupon_date, current_date):
-    if correct_code == coupon_code and coupon_date >= current_date:
-        return True
+def check_coupon(coup_code, corr_code, coup_date, curr_date):
+    if corr_code == coup_code and coup_date >= curr_date:
+        print("True")
     else:
-        return False
+        print("False")
 
-
-print(check_coupon(code, CORRECT_CODE, coupon_date, current_date))
+check_coupon(code, CORRECT_CODE, coupon_date, current_date)
