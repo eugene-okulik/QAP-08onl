@@ -2,19 +2,19 @@
 # "cccbba" результат работы программы - строка “c3b2a".
 
 TEXT = 'cccbba'
-def stringcount(STRING):
-    ENUMERATOR = 0
-    STRING += ' '
-    RESULT = ''
-    for a in range(len(STRING) - 1):
-        ENUMERATOR += 1
-        LETTER = STRING[a]
-        if STRING[a] != STRING[a + 1]:
-            RESULT += LETTER
-            if ENUMERATOR > 1:
-                RESULT += str(ENUMERATOR)
-            ENUMERATOR = 0
-    return RESULT
+def stringcount(string):
+    enumerator = 0
+    string += ' '
+    result = ''
+    for let in range(len(string) - 1):
+        enumerator += 1
+        letter = string[let]
+        if string[let] != string[let + 1]:
+            result += letter
+            if enumerator > 1:
+                result += str(enumerator)
+            enumerator = 0
+    return result
 
 
 print(stringcount(TEXT))

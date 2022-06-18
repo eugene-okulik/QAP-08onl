@@ -9,22 +9,22 @@ OPERATION_SELECTION = int(input('Выберите операцию:\n'
       '3. Умножение\n'
       '4. Деление\n'
       'и введите номер пункта меню: '))
-NUM1 = int(input('Введите первое число: '))
-NUM2 = int(input('Введите второе число: '))
+_first_num = int(input('Введите первое число: '))
+_second_num = int(input('Введите второе число: '))
 
-def calculator(NUM1, NUM2):
+def calculator(_first_num, _second_num):
     if OPERATION_SELECTION == 1:
-        return f'Результат суммы чисел: {(NUM1 + NUM2)}'
+        print(f'Результат суммы чисел: {(_first_num + _second_num)}')
     elif OPERATION_SELECTION == 2:
-        return f'Результат разности чисел: {(NUM1 - NUM2)}'
+        print(f'Результат разности чисел: {(_first_num - _second_num)}')
     elif OPERATION_SELECTION == 3:
-        return f'Результат произведения чисел: {NUM1 * NUM2}'
+        print(f'Результат произведения чисел: {_first_num * _second_num}')
     elif OPERATION_SELECTION == 4:
-        if NUM2 == 0:
-            return 'Деление на ноль невозможно!!!'
-        return f'Частное от деления: {int(NUM1 // NUM2)}, остаток от деления: {int(NUM1 % NUM2)}'
-    else:
-        return 'Выбрана несуществующая операция!'
+        if _second_num == 0:
+            print('Деление на ноль невозможно!!!')
+        else:
+            print(f'Частное от деления: {int(_first_num // _second_num)}, '
+                  f'остаток от деления: {int(_first_num % _second_num)}')
 
 
-print(calculator(NUM1, NUM2))
+calculator(_first_num, _second_num)
