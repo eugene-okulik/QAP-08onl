@@ -21,7 +21,7 @@ def check_coupon(entered_code, expiration_date):
     :param expiration_date: str
     :return: bool
     """
-    if date_encoder(expiration_date) > datetime.datetime.now() and entered_code == "123":
+    if date_encoder(expiration_date) > datetime.datetime.now() and entered_code == CORRECT_CODE:
         return True
     return False
 
