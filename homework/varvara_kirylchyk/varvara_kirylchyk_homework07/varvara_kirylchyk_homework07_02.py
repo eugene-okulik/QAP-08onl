@@ -4,24 +4,26 @@
 import sys
 from datetime import datetime
 
-DATE = str(input('Date: '))
-try:
-    check = datetime.strptime(DATE, "%B %d, %Y")
-except ValueError:
-    print("Incorrect format")
-
-CODE = input("Code: ")
 CORRECT_CODE = "123"
 
-now = datetime.now()
-CORRECT_DATE = now.strftime("%B %d, %Y")
-# print(CORRECT_DATE)
+date = input('Enter the date in format - Month DD, YYYY: ')
 
-def check_coupon(code_x, date_y):
-    if code_x == CORRECT_CODE and date_y >= CORRECT_DATE:
-        print("True")
+try:
+    coupon_date = datetime.strptime(date, "%B %d, %Y")
+except ValueError:
+    print("Incorrect date format")
+    sys.exit(1)
+
+code = input("Enter the code: ")
+
+current_date = datetime.now()
+
+
+def check_coupon(coupon_code, correct_code, coupon_date, current_date):
+    if correct_code == coupon_code and coupon_date >= current_date:
+        return True
     else:
-        print("Error")
-        sys.exit()
+        return False
 
-print(check_coupon(CODE, DATE))
+
+print(check_coupon(code, CORRECT_CODE, coupon_date, current_date))
