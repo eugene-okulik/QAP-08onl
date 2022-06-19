@@ -1,7 +1,7 @@
 ALPHABET = ('абвгдеёжзиклмнопрстуфхчшщъыьэюя'
             'АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ')
-def encryption_caesar(msg, offset):
-    encrypted_alphabet = ALPHABET[offset:] + ALPHABET[:offset]
+def encryption_caesar(msg, SET):
+    encrypted_alphabet = ALPHABET[SET:] + ALPHABET[:SET]
     encrypted = []
     for char in msg:
         index = get_char_index(char, ALPHABET)
