@@ -17,7 +17,7 @@ def decryption_caesar(msg, offset=None):
     decrypted = []
     if not offset:
         dictionary = ['Привет', 'пока', 'что']
-        for offset in range(len(ALPHABET)):
+        for of_et in range(len(ALPHABET)):
             encrypted_alphabet = ALPHABET[offset:] + ALPHABET[:offset]
             for char in msg:
                 index = get_char_index(char, encrypted_alphabet)
