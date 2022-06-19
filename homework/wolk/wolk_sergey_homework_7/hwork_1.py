@@ -34,11 +34,11 @@ def decryption_caesar(msg, offset=None):
                 if word in decrypted:
                     return decrypted
             decrypted = []
-    return 'Не удалось расшифровать сообщение %f' % msg
+    return f'Не удалось расшифровать сообщение {msg:f}'
 if __name__ == '__main__':
     message = 'Привет! Мир'
     shift = 5
     encrypted_message = encryption_caesar(message, shift)
     print(f'Введите Сообщение: {message:f}')
-    print('Зашифрованное сообщение: %f' % encrypted_message)
-    print('Расшифрованное сообщение: %f' % decryption_caesar(encrypted_message))
+    print(f'Зашифрованное сообщение: {encrypted_message:f}')
+    print(f'Расшифрованное сообщение: {decryption_caesar(encrypted_message):f}')
