@@ -1,7 +1,7 @@
 ALPHABET = ('абвгдеёжзиклмнопрстуфхчшщъыьэюя'
             'АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ')
-def encryption_caesar(msg, SET_S):
-    encrypted_alphabet = ALPHABET[SET_S:] + ALPHABET[:SET_S]
+def encryption_caesar(msg, SET_CAESAR):
+    encrypted_alphabet = ALPHABET[SET_CAESAR:] + ALPHABET[:SET_CAESAR]
     encrypted = []
     for char in msg:
         index = get_char_index(char, ALPHABET)
@@ -12,6 +12,7 @@ def get_char_index(char, alphabet):
     char_index = alphabet.find(char)
     return char_index
 def decryption_caesar(msg, offset=None):
+    assert isinstance(offset, str)
     encrypted_alphabet = ALPHABET[offset:] + ALPHABET[:offset]
     decrypted = []
     if not offset:
