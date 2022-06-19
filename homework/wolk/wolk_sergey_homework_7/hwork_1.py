@@ -14,14 +14,7 @@ def get_char_index(char, alphabet):
 def decryption_caesar(msg, offset=None):
     encrypted_alphabet = ALPHABET[offset:] + ALPHABET[:offset]
     decrypted = []
-    if offset:
-        for char in msg:
-            index = get_char_index(char, encrypted_alphabet)
-            encrypted_char = encrypted_alphabet[index - offset] \
-                if index >= 0 else char
-            decrypted.append(encrypted_char)
-        return ''.join(decrypted)
-    else:
+    if not offset:
         dictionary = ['Привет', 'пока', 'что']
         for offset in range(len(ALPHABET)):
             encrypted_alphabet = ALPHABET[offset:] + ALPHABET[:offset]
@@ -30,15 +23,23 @@ def decryption_caesar(msg, offset=None):
                 encrypted_char = ALPHABET[index] if index >= 0 else char
                 decrypted.append(encrypted_char)
             decrypted = ''.join(decrypted)
+            word: str
             for word in dictionary:
                 if word in decrypted:
                     return decrypted
             decrypted = []
+    else:
+        for char in msg:
+            index = get_char_index(char, encrypted_alphabet)
+            encrypted_char = encrypted_alphabet[index - offset] \
+                if index >= 0 else char
+            decrypted.append(encrypted_char)
+        return ''.join(decrypted)
     return f'Не удалось расшифровать сообщение {msg:f}'
 if __name__ == '__main__':
-    message = 'Привет! Мир'
-    shift = 5
-    encrypted_message = encryption_caesar(message, shift)
-    print(f'Введите Сообщение: {message:f}')
+    MESS = 'Привет! Мир'
+    ST = 5
+    encrypted_message = encryption_caesar(MESS, ST)
+    print(f'Введите Сообщение: {MESS:f}')
     print(f'Зашифрованное сообщение: {encrypted_message:f}')
     print(f'Расшифрованное сообщение: {decryption_caesar(encrypted_message):f}')
