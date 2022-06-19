@@ -16,8 +16,9 @@
 # если одно из чисел отрицательное - умножение
 
 def my_dec(func):
-    def wrapper(*args):
-        func(*args)
+    def wrapper(*args, **kwargs):
+        res = func(*args, **kwargs)
+        return res
     return wrapper
 
 @my_dec
@@ -42,7 +43,6 @@ def calc4(num1: int, num2: int):
     if num2 < 0:
         print(num1 * num2)
 
-
 NUM1 = int(input("NUM1: "))
 NUM2 = int(input("NUM2: "))
 
@@ -50,4 +50,3 @@ calc(NUM1, NUM2)
 calc2(NUM1,NUM2)
 calc3(NUM1,NUM2)
 calc4(NUM1,NUM2)
-
