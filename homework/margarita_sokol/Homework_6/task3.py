@@ -13,14 +13,5 @@ PRICE_LIST = '''тетрадь 50р
 # 'альбом': 120, 'пенал': 300, 'рюкзак': 500}
 
 MY_PRICE_LIST = PRICE_LIST.split()
-LENGHT = len(MY_PRICE_LIST)
-LIST = []
-for i in range(0, LENGHT):
-    if i % 2 != 0:
-        MY_PRICE_LIST[i] = int(MY_PRICE_LIST[i].rstrip('р'))
-for q in range(0, LENGHT):
-    if q % 2 == 0:
-        PAIRS = [MY_PRICE_LIST[q], MY_PRICE_LIST[q+1]]
-        LIST.append(PAIRS)
-DICTIONARY = {key: value for key, value in LIST}
-print(DICTIONARY)
+print({MY_PRICE_LIST[i]: int(MY_PRICE_LIST[i+1].rstrip('р'))
+       for i in range(0, len(MY_PRICE_LIST), 2)})
