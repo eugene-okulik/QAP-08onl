@@ -1,7 +1,7 @@
 ALPHABET = ('абвгдеёжзиклмнопрстуфхчшщъыьэюя'
             'АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ')
-def encryption_caesar(msg, SET):
-    encrypted_alphabet = ALPHABET[SET:] + ALPHABET[:SET]
+def encryption_caesar(msg, SET_S):
+    encrypted_alphabet = ALPHABET[SET_S:] + ALPHABET[:SET_S]
     encrypted = []
     for char in msg:
         index = get_char_index(char, ALPHABET)
@@ -39,7 +39,7 @@ def decryption_caesar(msg, offset=None):
 if __name__ == '__main__':
     MESS = 'Привет! Мир'
     ST = 5
-    encrypted_message = encryption_caesar(MESS, ST)
+    ENCRYPTED_MESSAGE = encryption_caesar(MESS, ST)
     print(f'Введите Сообщение: {MESS:f}')
-    print(f'Зашифрованное сообщение: {encrypted_message:f}')
-    print(f'Расшифрованное сообщение: {decryption_caesar(encrypted_message):f}')
+    print(f'Зашифрованное сообщение: {ENCRYPTED_MESSAGE:f}')
+    print(f'Расшифрованное сообщение: {decryption_caesar(ENCRYPTED_MESSAGE):f}')
