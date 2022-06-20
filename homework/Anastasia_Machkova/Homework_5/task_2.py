@@ -9,10 +9,9 @@
 # 78, False == '$78'
 # 67890, True == '$678900'
 
-A = 78
-B = True
-if B is True:
-    print(A * 10)
-B = False
-if B is False:
-    print(A)
+SALARY = 78
+BONUS = True
+if BONUS:
+    print(SALARY * 10)
+else:
+    print(SALARY)

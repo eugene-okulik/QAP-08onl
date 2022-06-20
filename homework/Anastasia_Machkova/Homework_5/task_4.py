@@ -25,8 +25,8 @@ departments = {
 #Измените словарь так, чтобы ЗП у всех, у кого нужно увеличилась на 500.
 #Выведите на экран тот словарь, который в итоге получится.
 
-for key, value in departments.items():
-    for key2, value2 in value.items():
-        if value2['title'] == 'head':
-            value2['salary'] += 500
+for department, people in departments.items():
+    for person, data in people.items():
+        if data['title'] == 'head':
+            data['salary'] += 500
 print(departments)
