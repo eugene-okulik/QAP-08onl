@@ -22,5 +22,5 @@ def check_coupon(user_code, user_date):
     return False
 
 
-print(check_coupon(int(input(f'Enter your coupon number: ')),
-                   input(f'Enter your coupon expiration date Month name dd, yyyy: ')))
+print(check_coupon(int(input('Enter your coupon number: ')),
+                   input('Enter your coupon expiration date Month name dd, yyyy: ')))
