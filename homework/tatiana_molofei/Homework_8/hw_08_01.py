@@ -12,13 +12,13 @@
 # если первое больше второго, то происходит вычитание второго из певрого
 # если второе больше первого - деление первого на второе
 # если одно из чисел отрицательное - умножение
-
-first_num = int(input('Enter first number: '))
-second_num = int(input('Enter second number: '))
+#
+# first_num = int(input('Enter first number: '))
+# second_num = int(input('Enter second number: '))
 
 
 def decorator(func):
-    def wrapper(first, second, operation):
+    def wrapper(first_num, second_num, operation):
         if first_num == second_num:
             operation = '+'
         if first_num > second_num:
@@ -33,7 +33,7 @@ def decorator(func):
 
 
 @decorator
-def calc(first, second, operation):
+def calc(first_num, second_num, operation):
     if operation == '+':
         print(first_num + second_num)
     if operation == '-':
@@ -44,4 +44,4 @@ def calc(first, second, operation):
         print(first_num * second_num)
 
 
-calc(first_num, second_num, decorator)
+calc(int(input('Enter first number: ')), int(input('Enter second number: ')), decorator)
