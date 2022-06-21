@@ -22,4 +22,3 @@ while True:
 
 
     print(calculator())
-# added function 'dif'
