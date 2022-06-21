@@ -21,16 +21,13 @@ def count(func):
 def secondary_count(first, second, operation):
     if operation == '+':
         result = first + second
-        return result
     if operation == '-':
         result = first - second
-        return result
     if operation == '/':
         result = first / second
-        return result
     if operation == '*':
         result = first * second
-        return result
+    return result
 
 
 print(secondary_count(INPUT_1, OUTPUT_1, "+"))
