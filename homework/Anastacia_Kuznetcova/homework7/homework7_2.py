@@ -1,16 +1,19 @@
 """Решение задачи внизу"""
 from datetime import datetime
 
-CORRECT_CODE = "123"
-now = datetime.now()
-CORRECT_DATE = now.strftime("%B %d, %Y")
+CORRECT_CODE = '123'
 
 
-def check_coupon(entered_code, user_input_date):
+def check_coupon(entered_code, expiration_date):
     """Функия проверяет срок годности купона"""
-    if user_input_date == CORRECT_DATE and entered_code == "123":
-        return True
-    return False
+    now = datetime.now()
+    expiration_date = now.strptime(expiration_date, "%B %d, %Y")
+    if entered_code != CORRECT_CODE:
+        return "Купон неверный"
+    if expiration_date >= now:
+        return "True"
+    return "False"
 
 
-print(check_coupon(input("Введите код купона "), input("Введите дату - Month name DD, YYYY: ")))
+print(check_coupon("123", "June 25, 2022"))
+print(check_coupon("123", "June 20, 2022"))
