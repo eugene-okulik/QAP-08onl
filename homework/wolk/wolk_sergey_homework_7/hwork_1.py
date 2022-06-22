@@ -41,6 +41,6 @@ if __name__ == '__main__':
     MESS = 'Привет! Мир'
     ST = 5
     ENCRYPTED_MESSAGE = encryption_caesar(MESS, ST)
-    print(f'Введите Сообщение: {MESS:f}')
-    print(f'Зашифрованное сообщение: {ENCRYPTED_MESSAGE:f}')
-    print(f'Расшифрованное сообщение: {decryption_caesar(ENCRYPTED_MESSAGE):f}')
+    print(f'Введите Сообщение: {MESS:}')
+    print(f'Зашифрованное сообщение: {ENCRYPTED_MESSAGE:}')
+    print(f'Расшифрованное сообщение: {decryption_caesar(ENCRYPTED_MESSAGE):}')

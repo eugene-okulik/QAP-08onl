@@ -7,7 +7,7 @@ _entered_code = (input('Введите номер купона: '))
 _expiration_date = (input('Введите дату в формате (Month name DD, YYYY): '))
 
 def check_coupon(_entered_code, _expiration_date):
-    if _entered_code == CODE and _expiration_date == K_DATE:
+    if _entered_code == CODE and _expiration_date >= K_DATE:
         return True
     return False
 
