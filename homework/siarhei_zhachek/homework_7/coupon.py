@@ -8,11 +8,12 @@ def check_coupon(entered_code, expiration_date):
     if entered_code == CORRECT_CODE:
         if now > date:
             print('Your coupon has expired')
+            return False
         else:
             period = date - now
             print(f'Your coupon is valid {period.days} days left')
-    else:
-        print('There is no such coupon')
+            return True
 
 
-print(check_coupon(input('Enter the coupon: '), input('Enter the date(Month dd,YYYY): ')))
+print(check_coupon("123", "July 9, 2022"))
+print(check_coupon("123", "June 2, 2022"))
