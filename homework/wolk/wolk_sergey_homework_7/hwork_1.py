@@ -36,11 +36,11 @@ def decryption_caesar(msg, offset=None):
                 if index >= 0 else char
             decrypted.append(encrypted_char)
         return ''.join(decrypted)
-    return f'Не удалось расшифровать сообщение {msg:f}'
+    return f'Не удалось расшифровать сообщение {msg:}'
 if __name__ == '__main__':
     MESS = 'Привет! Мир'
     ST = 5
     ENCRYPTED_MESSAGE = encryption_caesar(MESS, ST)
-    print(f'Введите Сообщение: {MESS:f}')
-    print(f'Зашифрованное сообщение: {ENCRYPTED_MESSAGE:f}')
-    print(f'Расшифрованное сообщение: {decryption_caesar(ENCRYPTED_MESSAGE):f}')
+    print(f'Введите Сообщение: {MESS:}')
+    print(f'Зашифрованное сообщение: {ENCRYPTED_MESSAGE:}')
+    print(f'Расшифрованное сообщение: {decryption_caesar(ENCRYPTED_MESSAGE):}')
