@@ -1,0 +1,12 @@
+MY_STR = 'Hello world!'
+STR_A = MY_STR.startswith('Hello')
+print('The line begins with the word Hello: ', STR_A)
+print()
+STR_B = MY_STR.endswith('qwe')
+print('The line ends with qwe: ', STR_B)
+print()
+LETTER_A = MY_STR.index('w')
+print('W located on: ', LETTER_A)
+print()
+COUNT = MY_STR.count('l')
+print('The count of l is:', COUNT)
