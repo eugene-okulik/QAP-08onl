@@ -10,12 +10,11 @@ class Book:
     _books_reserved = []
     _who_reserve_book_dict = {}
 
-    def __init__(self, book_title, author, pages, isbn, flag, is_reserved=False):
+    def __init__(self, book_title, author, pages, isbn):
         self.book_title = book_title
         self.author = author
         self.pages = pages
         self.isbn = isbn
-        self.flag = flag
         Book._books_in_store.append(self)
 
     @staticmethod
@@ -99,7 +98,6 @@ class User:
     def reserve_book(self, book):
         if book not in Book.get_who_reserve_book_dict() and book in Book.get_books_in_store():
             Book.add_book_to_reserved_list(book, self)
-            book.is_reserved = True
         elif book in Book.get_who_reserve_book_dict():
             print(f"Книгу уже зарезервировал пользователь с именем "
                   f"{Book.get_who_reserve_book_dict()[book.book_title]}")
@@ -110,7 +108,6 @@ class User:
     @staticmethod
     def unreserve_book(book):
         Book.remove_book_from_reserved_list(book)
-        book.is_reserved = False
 
     @staticmethod
     def return_book(book):
@@ -119,8 +116,8 @@ class User:
 
 user1 = User("Николай")
 user2 = User("Павел")
-book1 = Book("Книга1", "Жюль Верн", 500, "10101010101", "any flag")
-book2 = Book("Книга2", "Жюль Верн", 500, "10101010101", "any flag")
+book1 = Book("Книга1", "Жюль Верн", 500, "10101010101")
+book2 = Book("Книга2", "Жюль Верн", 500, "10101010101")
 
 Book.print_who_reserve_book_dict()
 user1.take_book(book1)
