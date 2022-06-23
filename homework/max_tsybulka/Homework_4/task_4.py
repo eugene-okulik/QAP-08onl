@@ -11,5 +11,4 @@ B = int(input('Guess the number. Enter any number: '))
 
 while B != A:
     B = int(input("Try again bro. Enter any number: "))
-if B == A:
-    print("Congratulations! You guessed!")
+print("Congratulations! You guessed!")

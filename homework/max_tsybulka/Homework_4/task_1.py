@@ -3,9 +3,11 @@
 # Integer urna nisl, facilisis vitae semper at, dignissim vitae libero”
 
 TEXT = 'Etiam tincidunt neque erat, quis molestie enim imperdiet vel. ' \
-       'Integer urna nisl, facilisis vitae semper at, dignissim vitae libero'
+       'Innteger utrna nisl, facilisis vitae semper at, dignissim vitae libero'
 
-TEXT = TEXT.replace(',', ' ')
-TEXT = TEXT.replace('.', ' ')
-TEXT = ' '.join(f'{word}ing' for word in TEXT.split())
-print(TEXT)
+TEXT = TEXT.split()
+
+A = 'ing '.join(TEXT)
+B = A.replace(",ing", "ing,")
+C = B.replace(".ing", "ing.")
+print(C)
