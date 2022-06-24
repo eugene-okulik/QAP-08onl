@@ -1,40 +1,41 @@
 """Внизу решение задания"""
+a = int(input("Введите первое число "))
+b = int(input("Введите второе число "))
 
 
-def calc(first, second, operation):
-    """Функция которая делает одну из арифметических операций с переданными ей числами"""
-    if operation == '+':
-        print(first + second)
-    elif operation == '-':
-        print(first - second)
-    elif operation == '/':
-        print(first / second)
-    elif operation == "*":
-        print(first * second)
-
-
-def decorator(func, first, second):
+def decorator(func):
     """Функция которая декорирует функцию calc и управляет, тем какая операция будет произведена"""
 
-    def wrapper():
+    def wrapper(first, second, operation):
         if first < 0 or second < 0:
-            func(first, second, "*")
+            operation = "*"
 
-        if first == second and not first < 0 and not second < 0:
-            func(first, second, "+")
+        elif first == second and not first < 0 and not second < 0:
+            operation = "+"
 
-        if first > second and not first < 0 and not second < 0:
-            func(first, second, "-")
+        elif first > second and not first < 0 and not second < 0:
+            operation = "-"
 
-        if second > first and not first < 0 and not second < 0:
-            func(first, second, "/")
+        elif second > first and not first < 0 and not second < 0:
+            operation = "/"
+        return func(first, second, operation)
 
     return wrapper
 
 
-a = int(input("Введите первое число "))
-b = int(input("Введите второе число "))
+@decorator
+def calc(first, second, operation):
+    """Функция которая делает одну из арифметических операций с переданными ей числами"""
+    solution = []
+    if operation == '+':
+        solution = (first + second)
+    elif operation == '-':
+        solution = (first - second)
+    elif operation == '/':
+        solution = (first / second)
+    elif operation == "*":
+        solution = (first * second)
+    return solution
 
-new_func = decorator(calc, a, b)
 
-new_func()
+print(calc(a, b, '-'))
