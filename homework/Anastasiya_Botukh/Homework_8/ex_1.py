@@ -27,6 +27,7 @@ def operations(first_num, second_num, operation):
         return first_num * second_num
     if operation == '/':
         return first_num / second_num
+    return 'wrong action'
 
 
 print(operations(FIRST_NUM, SECOND_NUM, operations))
