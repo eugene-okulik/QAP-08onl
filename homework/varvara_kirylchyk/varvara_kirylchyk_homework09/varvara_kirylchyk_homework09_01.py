@@ -48,13 +48,13 @@ class User:
                 book.available = False
                 book.current_user = self
                 print(f"I got the book - {name}")
-                return True
+                # return True
             else:
                 print(f"The book - {name} - is not available")
-                return False
-        else:
+                # return False
+        # else:
             print("Error")
-            return False
+            # return False
 
     def return_book(self, name, library):
         book = library.get_book_by_name(name)
