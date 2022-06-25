@@ -22,7 +22,7 @@ class Bank:
         """This method counts user's deposit according to investment.
             Accepts investment as input """
         result = dep.amount + (dep.invest()*(dep.term*12))
-        return print(result)
+        return print(f"Your deposit will be {result} rubles")
 
 
 inv1 = Investment(300, 1)
