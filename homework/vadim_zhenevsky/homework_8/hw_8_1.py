@@ -6,11 +6,11 @@ def decorator(func):
     def wrapper(first, second, operation):
         if first < 0 or second < 0:
             operation = "*"
-        if first == second:
+        elif first == second:
             operation = "+"
-        if first > second:
+        elif first > second:
             operation = "-"
-        if first < second:
+        elif first < second:
             operation = "/"
         return func(first, second, operation)
 
@@ -21,11 +21,11 @@ def decorator(func):
 def calc(first, second, operation):
     if operation == "*":
         print(first * second)
-    if operation == "+":
+    elif operation == "+":
         print(first + second)
-    if operation == "-":
+    elif operation == "-":
         print(first - second)
-    if operation == "/":
+    elif operation == "/":
         print(first / second)
 
 
