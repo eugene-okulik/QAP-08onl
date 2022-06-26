@@ -1,11 +1,4 @@
 class Flower:
-    def __init__(self, flower_name, color, price, lifetime_hours, stem_length):
-        self.flower_name = flower_name
-        self.color = color
-        self.price = price
-        self.lifetime_hours = lifetime_hours
-        self.stem_length = stem_length
-
     def empty_public_method_1(self):
         pass
 
