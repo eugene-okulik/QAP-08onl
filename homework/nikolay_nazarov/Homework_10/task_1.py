@@ -1,12 +1,3 @@
-# Создать классы цветов: общий класс для всех цветов и классы для нескольких видов.
-# Создать экземпляры цветов. Собрать букет (букет - еще один класс)
-# (можно использовать аксессуары) с определением его стоимости.
-# Для букета создать метод, который определяет время его увядания по среднему времени жизни всех цветов в букете.
-# Позволить сортировку цветов в букете на основе различных параметров (свежесть/цвет/длина стебля/стоимость)
-# (это тоже методы)
-# Реализовать поиск цветов в букете по каким-нибудь параметрам (например, по среднему времени жизни) (и это тоже метод).
-# Узнать, есть ли цветок определенного типа в букете.
-
 class Flower:
     def __init__(self, flower_name, color, price, lifetime_hours, stem_length):
         self.flower_name = flower_name
@@ -14,6 +5,12 @@ class Flower:
         self.price = price
         self.lifetime_hours = lifetime_hours
         self.stem_length = stem_length
+
+    def empty_public_method_1(self):
+        pass
+
+    def empty_public_method_2(self):
+        pass
 
 
 class Rose(Flower):
@@ -45,7 +42,7 @@ class Peony(Flower):
 
 class Bouquet:
     def __init__(self, *flowers):
-        self.content = flowers
+        self.content = list(flowers)
 
     def lifetime_of_bouquet(self):
         result = 0
@@ -57,13 +54,39 @@ class Bouquet:
     def sort_by_lifetime_hours(self):
         i = 0
         while i < len(self.content):
-            print(self.content[i].lifetime_hours)
-            if self.content[i].lifetime_hours <
+            try:
+                if self.content[i].lifetime_hours < self.content[i + 1].lifetime_hours:
+                    i += 1
+                elif self.content[i].lifetime_hours == self.content[i + 1].lifetime_hours:
+                    i += 1
+                else:
+                    temp = self.content[i]
+                    self.content[i] = self.content[i + 1]
+                    self.content[i + 1] = temp
+                    i = 0
+            except IndexError:
+                break
+        return self.content
+
+    def find_flower_by_color(self, color):
+        for i in self.content:
+            if i.color == color:
+                return i.flower_name
+        return "Нет цветка в таким цветом"
+
+    def is_where_flower_with_price(self, price):
+        for i in self.content:
+            if i.price == price:
+                return i.flower_name
+        return "Нет цветка с такой стоимостью"
 
 
-rose1 = Rose()
+Rose1 = Rose()
 Verbena1 = Verbena()
 Peony1 = Peony()
-Bouquet1 = Bouquet(rose1, Verbena1, Peony1)
-# print(Bouquet1.lifetime_of_bouquet())
+Bouquet1 = Bouquet(Rose1, Verbena1, Peony1)
+print(Bouquet1.lifetime_of_bouquet())
 print(Bouquet1.sort_by_lifetime_hours())
+print(Bouquet1.content)
+print(Bouquet1.find_flower_by_color("Red"))
+print(Bouquet1.is_where_flower_with_price(100))
