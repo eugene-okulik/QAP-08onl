@@ -1,14 +1,16 @@
 from datetime import datetime
-
-CORRECT_CODE = "123"
-now = datetime.now()
-CORRECT_DATE = now.strftime("%B %d, %Y")
+CORRECT_CODE = '123'
 
 
 def check_coupon(entered_code, expiration_date):
-    if expiration_date == CORRECT_DATE and entered_code == "123":
-        return 'You have valid coupon'
-    return 'You have invalid coupon'
+    now = datetime.now()
+    expiration_date = now.strptime(expiration_date, "%B %d, %Y")
+    if entered_code is not CORRECT_CODE:
+        return "Your coupon is expired"
+    if expiration_date >= now:
+        return "Your coupon is valid"
+    return "Your coupon is not valid"
 
 
-print(check_coupon(input("Введите код купона "), input("Введите дату - Month  DD, YYYY: ")))
+print(check_coupon("123", "July 9, 2022"))
+print(check_coupon("123", "June 2, 2022"))
