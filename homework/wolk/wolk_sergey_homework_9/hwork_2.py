@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+
+@dataclass
 class Book:
 
     def __init__(self, author: str, publishing: int, title: str):
@@ -6,7 +9,7 @@ class Book:
     def __repr__(self) -> str:
         return f"{self.author}: \"{self.title}\" [{self.publishing} г.]"
 
-
+@dataclass
 class Library:
 
     def __init__(self, *book_1: Book):
