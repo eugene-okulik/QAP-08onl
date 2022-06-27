@@ -1,11 +1,11 @@
-initial = deposit = 1000
-percent = 10/100
-print(f'начальный депозит: {initial}, годовой процент: {percent*100}')
+INITIAL = DEPOSIT = 1000
+PERCENT = 10/100
+print(f'начальный депозит: {INITIAL}, годовой процент: {PERCENT*100}')
 
 for month in range(12):
-    income = deposit * percent / 12
-    deposit += income
-    print(f'месяц: {month+1}, доход: {income}, вклад: {deposit}')
+    INCOME = DEPOSIT * PERCENT / 12
+    DEPOSIT += INCOME
+    print(f'месяц: {month+1}, доход: {INCOME}, вклад: {DEPOSIT}')
 
-year_percent = (deposit - initial) / initial
-print(f'годовой процент с учётом капитализации составил: {year_percent*100}')
+YEAR_PERCENT = (DEPOSIT - INITIAL) / INITIAL
+print(f'годовой процент с учётом капитализации составил: {YEAR_PERCENT*100}')

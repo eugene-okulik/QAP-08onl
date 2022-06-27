@@ -33,7 +33,8 @@ class Library:
 
 
 home_library = Library(
-    Book("Эрик Мэтиз", 2019, "Изучаем Python. Программирование игр, визуализация данных, веб-приложения")
+    Book("Эрик Мэтиз", 2019, "Изучаем Python. "
+                             "Программирование игр, визуализация данных, веб-приложения")
 )
 
 home_library.append_book(
@@ -47,7 +48,8 @@ print(home_library.find_books(publishing=2019))
 home_library.sort_books("author", True)
 print(home_library.books)
 
-books = home_library.find_books(title="Изучаем Python. Программирование игр, визуализация данных, веб-приложения")
+books = home_library.find_books(title="Изучаем Python. "
+                                      "Программирование игр, визуализация данных, веб-приложения")
 for book in books:
     home_library.remove_book(book)
 
