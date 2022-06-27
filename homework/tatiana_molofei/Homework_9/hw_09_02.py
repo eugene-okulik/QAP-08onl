@@ -37,8 +37,11 @@ class Bank:
             deposit_amount += amount_percent
             # print(i, deposit_amount)
             i += 1
-
         return deposit_amount
+
+    @staticmethod
+    def public_method():
+        pass
 
 
 user_invest = Invest(10, 1000, 2)
