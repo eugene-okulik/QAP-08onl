@@ -76,4 +76,3 @@ user1.get_book('Eat_Pray_Love', 'Elizabeth_Gilbert', lib)
 user2.get_book('Eat_Pray_Love', 'Elizabeth_Gilbert', lib)
 user1.return_book('Eat_Pray_Love', 'Elizabeth_Gilbert', lib)
 user2.get_book('Eat_Pray_Love', 'Elizabeth_Gilbert', lib)
-
