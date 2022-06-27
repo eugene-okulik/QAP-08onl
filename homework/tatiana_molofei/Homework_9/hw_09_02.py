@@ -9,17 +9,13 @@
 
 class Invest:
     def __init__(self, percent, summ, term):
-        self.percent = percent
-        self._summ = summ
-        self._term = term
+        self._percent = percent
+        self.summ = summ
+        self.term = term
 
     @property
-    def summ(self):
-        return self._summ
-
-    @property
-    def term(self):
-        return self._term
+    def percent(self):
+        return self._percent
 
 
 class Bank:
