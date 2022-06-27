@@ -10,8 +10,16 @@
 class Invest:
     def __init__(self, percent, summ, term):
         self.percent = percent
-        self.summ = summ
-        self.term = term
+        self._summ = summ
+        self._term = term
+
+    @property
+    def summ(self):
+        return self._summ
+
+    @property
+    def term(self):
+        return self._term
 
 
 class Bank:
@@ -35,4 +43,4 @@ class Bank:
 
 user_invest = Invest(10, 1000, 2)
 
-print(f'The amount of your deposit in {user_invest.term} year/-s will be {Bank.deposit(user_invest)}')
+print(f'Your deposit will be {Bank.deposit(user_invest)}')
