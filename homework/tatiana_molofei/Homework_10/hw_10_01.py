@@ -11,7 +11,7 @@
 
 
 class Flowers:
-    def __init__(self, name, colour=None, lifetime=None, price=None):
+    def __init__(self, name=None, colour=None, lifetime=None, price=None):
         self.name = name
         self.colour = colour
         self.lifetime = lifetime
