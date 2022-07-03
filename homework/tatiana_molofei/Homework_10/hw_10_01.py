@@ -11,10 +11,9 @@
 
 
 class Flowers:
-    def __init__(self, name, colour=None, length=None, lifetime=None, price=None):
+    def __init__(self, name, colour=None, lifetime=None, price=None):
         self.name = name
         self.colour = colour
-        self.length = length
         self.lifetime = lifetime
         self.price = price
 
@@ -26,13 +25,13 @@ class Flowers:
 
 
 class ExoticFlowers(Flowers):
-    def __init__(self, name, colour=None, length=None, lifetime=None, price=None):
-        super().__init__(name, colour, length, lifetime, price)
+    def __init__(self, name, colour=None, lifetime=None, price=None):
+        super().__init__(name, colour, lifetime, price)
 
 
 class GardenFlowers(Flowers):
-    def __init__(self, name, colour=None, length=None, lifetime=None, price=None):
-        super().__init__(name, colour, length, lifetime, price)
+    def __init__(self, name, colour=None, lifetime=None, price=None):
+        super().__init__(name, colour, lifetime, price)
 
 
 class Bouquet:
@@ -72,17 +71,17 @@ class Bouquet:
         return ' is cheap' if price < 150 else ' is expensive'
 
 
-flower1 = ExoticFlowers('Anthurium', 'red', 15, 5, 50)
-flower2 = ExoticFlowers('Arabis', 'blue', 10, 10, 100)
-flower3 = ExoticFlowers('Calla lily', 'rose', 10, 20, 400)
-flower4 = ExoticFlowers('Amaranth', 'green', 15, 15, 250)
-flower5 = ExoticFlowers('Aster', 'green', 15, 5, 50)
+flower1 = ExoticFlowers('Anthurium', 'red', 5, 50)
+flower2 = ExoticFlowers('Arabis', 'blue', 10, 100)
+flower3 = ExoticFlowers('Calla lily', 'rose', 20, 400)
+flower4 = ExoticFlowers('Amaranth', 'green', 15, 250)
+flower5 = ExoticFlowers('Aster', 'green', 5, 50)
 
-flower6 = GardenFlowers('Rose', 'red', 15, 5, 120)
-flower7 = GardenFlowers('Zinnia', 'white', 15, 10, 150)
-flower8 = GardenFlowers('Peony', 'white', 20, 15, 220)
-flower9 = GardenFlowers('Tulip', 'red', 20, 2, 80)
-flower10 = GardenFlowers('Ranunculus', 'yellow', 15, 5, 150)
+flower6 = GardenFlowers('Rose', 'red', 5, 120)
+flower7 = GardenFlowers('Zinnia', 'white', 10, 150)
+flower8 = GardenFlowers('Peony', 'white', 15, 220)
+flower9 = GardenFlowers('Tulip', 'red', 2, 80)
+flower10 = GardenFlowers('Ranunculus', 'yellow', 5, 150)
 
 
 bouquet1 = Bouquet()
