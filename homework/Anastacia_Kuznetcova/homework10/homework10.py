@@ -51,51 +51,51 @@ class Bouquet:
     def __init__(self):
         self.components = []
 
-    def add_flower(self, _):
-        self.components.append(_)
+    def add_flower(self, flower_):
+        self.components.append(flower_)
 
     def full_amount(self):
         return len(self.components)
 
     def full_price(self):
         res = 0
-        for _ in self.components:
-            res = res + _.price
+        for flower_ in self.components:
+            res = res + flower_.price
         return res
 
     def lifetime_of_bouquet(self):
         res = 0
-        for _ in self.components:
-            res = res + _.lifetime
+        for flower_ in self.components:
+            res = res + flower_.lifetime
         return res // self.full_amount()
 
     def find_flower_by_color(self, color):
         res = []
-        for _ in self.components:
-            if _.color == color:
-                res.append(_.name)
+        for flower_ in self.components:
+            if flower_.color == color:
+                res.append(flower_.name)
                 return res
         return "Такого цвета нет"
 
     def find_price_of_flower(self, price):
         res = []
-        for _ in self.components:
-            if _.price == price:
-                res.append(_.name)
+        for flower_ in self.components:
+            if flower_.price == price:
+                res.append(flower_.name)
                 return res
         return "Нет цветка такой стоимости"
 
     def find_flower_in_bouquet(self, name):
-        for i in self.components:
-            if i.name == name:
+        for flower_ in self.components:
+            if flower_.name == name:
                 return "Этот цветок есть в букете"
             return "Нет такого цветка в букете"
 
     def find_flower_by_length(self, length):
         res = []
-        for _ in self.components:
-            if _.length == length:
-                res.append(_.name)
+        for flower_ in self.components:
+            if flower_.length == length:
+                res.append(flower_.name)
                 return res
         return "Нет цветка c такой длинной стебля в букете"
 
