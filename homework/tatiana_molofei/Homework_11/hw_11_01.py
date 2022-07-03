@@ -19,12 +19,9 @@ def book_info(self):
     return self.pages, self.author, self.price, self.year
 
 
-def book_price(self):
-    return 'expensive' if self.price > 30000 else 'cheap'
-
-
 print(f'Book price is {book1.price} rubles')
 print(f'Book author is {book2.author}')
 print(f'Book has {book3.pages} pages')
 print(f'The book was published in {book4.year} year')
-print(f'The book {book4.author} is {book_price(book4)}')
+print(f'The book {book4.author} is {book4.book_price()}')
+print(f'The book {book3.author} is {book3.reading_time()}')
