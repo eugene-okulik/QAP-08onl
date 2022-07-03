@@ -15,23 +15,16 @@ book3 = Book(1500, 2004, 'Gabriel Garcia Marquez', 2800)
 book4 = Book(300, 2015, 'Antoine de Saint-Exupéry', 35000)
 
 
-def info_pages(self):
-    return self.pages
+def book_info(self):
+    return self.pages, self.author, self.price, self.year
 
 
-def info_author(self):
-    return self.author
-
-
-def info_price(self):
-    return self.price
-
-
-def info_year(self):
-    return self.year
+def book_price(self):
+    return 'expensive' if self.price > 30000 else 'cheap'
 
 
 print(f'Book price is {book1.price} rubles')
 print(f'Book author is {book2.author}')
 print(f'Book has {book3.pages} pages')
 print(f'The book was published in {book4.year} year')
+print(f'The book {book4.author} is {book_price(book4)}')
