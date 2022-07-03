@@ -15,8 +15,20 @@ book3 = Book(1500, 2004, 'Gabriel Garcia Marquez', 2800)
 book4 = Book(300, 2015, 'Antoine de Saint-Exupéry', 35000)
 
 
-def book_info(self):
-    return self.pages, self.year, self.authour, self.price
+def info_pages(self):
+    return self.pages
+
+
+def info_author(self):
+    return self.author
+
+
+def info_price(self):
+    return self.price
+
+
+def info_year(self):
+    return self.year
 
 
 print(f'Book price is {book1.price} rubles')
