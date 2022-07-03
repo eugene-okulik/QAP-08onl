@@ -11,7 +11,7 @@
 
 
 class Flowers:
-    def __init__(self, name, colour, length, lifetime, price):
+    def __init__(self, name, colour=None, length=None, lifetime=None, price=None):
         self.name = name
         self.colour = colour
         self.length = length
@@ -21,14 +21,17 @@ class Flowers:
     def flower_freshness(self):
         return ' is not fresh' if self.lifetime < 3 else ' is fresh'
 
+    def flower_price(self):
+        return ' is cheap' if self.price < 150 else ' is expensive'
+
 
 class ExoticFlowers(Flowers):
-    def __init__(self, name, colour, length, lifetime, price):
+    def __init__(self, name, colour=None, length=None, lifetime=None, price=None):
         super().__init__(name, colour, length, lifetime, price)
 
 
 class GardenFlowers(Flowers):
-    def __init__(self, name, colour, length, lifetime, price):
+    def __init__(self, name, colour=None, length=None, lifetime=None, price=None):
         super().__init__(name, colour, length, lifetime, price)
 
 
@@ -63,6 +66,10 @@ class Bouquet:
         for flower in self.flowers:
             av_bouquet_age = (av_bouquet_age + flower.lifetime) / len(self.flowers)
         return 'Bouquet is not fresh' if av_bouquet_age < 5 else 'Bouquet is fresh'
+
+    @staticmethod
+    def flower_price(price):
+        return ' is cheap' if price < 150 else ' is expensive'
 
 
 flower1 = ExoticFlowers('Anthurium', 'red', 15, 5, 50)
