@@ -5,11 +5,11 @@ class Flower:
         self.length = length
         self.cost = cost
 
-    def method1(self):
-        pass
+    def change_color(self, col):
+        self.color = col
 
-    def method(self):
-        pass
+    def change_cost(self, cost):
+        self.cost = cost
 
 
 class Rose(Flower):
@@ -134,6 +134,7 @@ class Bouquet:
 
 
 flower1 = Rose()
+flower1.change_cost(10)
 flower2 = Lily()
 flower3 = Astra()
 flower4 = Peony()
@@ -142,4 +143,5 @@ bouquet1 = Bouquet()
 bouquet1.add(flower1)
 bouquet1.add(flower2)
 bouquet1.add(flower3)
+flower1.change_cost(10)
 print(bouquet1.get_bouquet())
