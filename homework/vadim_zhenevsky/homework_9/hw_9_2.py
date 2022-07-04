@@ -28,5 +28,5 @@ class Bank:
         pass
 
 
-Invest = Investments(5000, 15, 5)
+Invest = Investments(5000, 25, 5)
 print(Bank.deposit(Invest))
