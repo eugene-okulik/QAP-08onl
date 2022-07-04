@@ -1,12 +1,13 @@
 class Book:
 
-    def __init__(self, name, author, pages, isbn, reserved, taken):
+    def __init__(self, name, author, pages, isbn):
         self.name = name
         self.author = author
         self.pages = pages
         self.isbn = isbn
-        self.reserved = reserved
-        self.taken = taken
+
+    reserved = False
+    taken = False
 
     def set_reserved(self, reserved):
         self.reserved = reserved
@@ -36,9 +37,9 @@ class User:
         print('You reserved this book')
 
 
-book_1 = Book('Duma Key', '12345', 670, 'Stephen King', False, False)
-book_2 = Book('Kudjo', '67890', 400, 'Stephen King', False, False)
-book_3 = Book('Thinner', '102938', 309, 'Stephen King', False, False)
+book_1 = Book('Duma Key', '12345', 670, 'Stephen King')
+book_2 = Book('Kudjo', '67890', 400, 'Stephen King')
+book_3 = Book('Thinner', '102938', 309, 'Stephen King')
 
 user_1 = User()
 user_2 = User()
