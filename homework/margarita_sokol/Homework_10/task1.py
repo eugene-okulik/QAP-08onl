@@ -11,94 +11,118 @@
 # Узнать, есть ли цветок определенного типа в букете.
 
 class Flower:
-    def empty_public_method_1(self):
-        pass
+    def __init__(self, **kwargs):
+        self.name = kwargs.get('name')
+        self.hours = kwargs.get('hours')
+        self.color = kwargs.get('color')
+        self.length = kwargs.get('length')
+        self.price = kwargs.get('price')
 
-    def empty_public_method_2(self):
-        pass
+    def set_color(self, color):
+        self.color = color
+
+    def set_price(self, price):
+        self.price = price
 
 
 class Peonies(Flower):
-    def __init__(self):
-        self.name = 'Peony'
-        self.hours = 12
-        self.color = 'white'
-        self.length = 40
-        self.price = 710
+    def __init__(self, **kwargs):
+        super().__init__(
+            name=kwargs.get('name'),
+            hours=kwargs.get('hours'),
+            color=kwargs.get('color'),
+            length=kwargs.get('length'),
+            price=kwargs.get('price')
+        )
 
 
 class Tulips(Flower):
-    def __init__(self):
-        self.name = 'Tulip'
-        self.hours = 40
-        self.color = 'yellow'
-        self.length = 20
-        self.price = 450
+    def __init__(self, **kwargs):
+        super().__init__(
+            name=kwargs.get('name'),
+            hours=kwargs.get('hours'),
+            color=kwargs.get('color'),
+            length=kwargs.get('length'),
+            price=kwargs.get('price')
+        )
 
 
 class Freesia(Flower):
-    def __init__(self):
-        self.name = 'Freesia'
-        self.hours = 10
-        self.color = 'violet'
-        self.length = 12
-        self.price = 670
+    def __init__(self, **kwargs):
+        super().__init__(
+            name=kwargs.get('name'),
+            hours=kwargs.get('hours'),
+            color=kwargs.get('color'),
+            length=kwargs.get('length'),
+            price=kwargs.get('price')
+        )
 
 
 class Bouquet:
-    def __init__(self, *flowers):
-        self.includes = list(flowers)
+    def __init__(self):
+        self.includes = []
+
+    def add_flower(self, flower_):
+        self.includes.append(flower_)
 
     def price(self):
-        start = 0
-        for _ in self.includes:
-            start += 1
-        return start
+        return len(self.includes)
 
     def total_price(self):
         start = 0
-        for floret in self.includes:
-            start += floret.price
+        for flower_ in self.includes:
+            start += flower_.price
         return start
 
     def bouquet_lifespan(self):
         start = 0
-        for floret in self.includes:
-            start += floret.hours
+        for flower_ in self.includes:
+            start += flower_.hours
         return start // self.price()
 
     def search_by_color(self, color):
-        for floret in self.includes:
-            if floret.color == color:
-                return floret.name
+        start = []
+        for flower_ in self.includes:
+            if flower_.color == color:
+                start.append(flower_.name)
+                return start
         return f'{color} flower missing'
 
-    def search_by_length(self, stem_length):
-        for floret in self.includes:
-            if floret.length == stem_length:
-                return floret.name
-        return f'Missing flower with length {stem_length}'
+    def search_by_length(self, length):
+        start = []
+        for flower_ in self.includes:
+            if flower_.length == length:
+                start.append(flower_.name)
+                return start
+        return f'Missing flower with length {length}'
 
     def search_by_price(self, price):
-        for floret in self.includes:
-            if floret.price == price:
-                return floret.name
+        start = []
+        for flower_ in self.includes:
+            if flower_.price == price:
+                start.append(flower_.name)
+                return start
         return f'Missing flower with cost {price}'
 
     def search_by_flower(self, name):
-        for floret in self.includes:
-            if floret.name == name:
+        for flower_ in self.includes:
+            if flower_.name == name:
                 return f'{name} is present in this bouquet'
         return f'Missing {name} in the bouquet'
 
-
-Peonies1 = Peonies()
-Tulips1 = Tulips()
-Freesia1 = Freesia()
-Bouquet1 = Bouquet(Peonies1, Tulips1, Freesia1)
-print(Bouquet1.total_price())
-print(Bouquet1.bouquet_lifespan())
-print(Bouquet1.search_by_color('white'))
-print(Bouquet1.search_by_length(12))
-print(Bouquet1.search_by_price(670))
-print(Bouquet1.search_by_flower('Tulip'))
+flower = Flower()
+bouquet = Bouquet()
+peonies = Peonies(name='Peony', hours=12, length=40, color='white', price=710)
+tulips = Tulips(name='Tulip', hours=40, length=20, color='yellow', price=450)
+freesia = Freesia(name='Freesia', hours=10, length=12, color='violet', price=670)
+bouquet.add_flower(peonies)
+bouquet.add_flower(tulips)
+bouquet.add_flower(freesia)
+print(bouquet.includes)
+print(bouquet.bouquet_lifespan())
+print(bouquet.search_by_color('white'))
+print(bouquet.search_by_price(670))
+print(bouquet.search_by_flower('Tulip'))
+print(bouquet.price())
+print(bouquet.total_price())
+print(bouquet.search_by_length(12))
