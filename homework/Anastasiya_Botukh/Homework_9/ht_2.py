@@ -5,6 +5,9 @@ class Investment:
 
 
 class Bank:
+    def __init__(self):
+        pass
+
     @staticmethod
     def deposit(invest):
         monthly_percent = 10 / 12
