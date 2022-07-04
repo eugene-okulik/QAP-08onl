@@ -7,36 +7,36 @@
 # "abcde" == "abcde"
 # "aaabbdefffff" == "a3b2def5"
 
-USER_STR = input("Введи текст из примера ниже: \n-cccbba\n-abeehhhhhccced\n-aaabbceedd\n-abcde\n-aaabbdefffff\n"
-              "Ввод: ")
+USER_STR = input("Введи текст из примера ниже: \n-cccbba"
+                 "\n-abeehhhhhccced\n-aaabbceedd\n-abcde\n-aaabbdefffff\n"
+                "Ввод: ")
 
 
 def count_letters(user_string):
 
-    COUNT_INDEX = 1
-    NEW_LIST = []
-    NEW_STRING = ''
+    count = 1
+    list = []
+    string = ''
 
     for index in range(0, len(user_string) - 1):
         if user_string[index] == user_string[index + 1]:
-            COUNT_INDEX += 1
+            count += 1
         else:
-            NEW_LIST.append({user_string[index]: COUNT_INDEX})
-            COUNT_INDEX = 1
+            list.append({user_string[index]: count})
+            count = 1
 
-    for element in NEW_LIST:
+    for element in list:
         for key, value in element.items():
-            NEW_STRING += key
+            string += key
             if value > 1:
-                NEW_STRING += str(value)
+                string += str(value)
 
-    return NEW_STRING
+    return string
 
 
 RESULT = count_letters(USER_STR)
 
 print(RESULT)
-
 
 # Более элегантный способ решения заадчи
 
