@@ -10,27 +10,27 @@ class Flowers:
 
 
 class Tulips(Flowers):
-    def __init__(self, freshness, color, price, name):
+    def __init__(self, freshness=None, color=None, price=None, name=None):
         super().__init__(freshness, color, price, name)
 
 
 class Roses(Flowers):
-    def __init__(self, freshness, color, price, name):
+    def __init__(self, freshness=None, color=None, price=None, name=None):
         super().__init__(freshness, color, price, name)
 
 
 class Orchids(Flowers):
-    def __init__(self, freshness, color, price, name):
+    def __init__(self, freshness=None, color=None, price=None, name=None):
         super().__init__(freshness, color, price, name)
 
 
 class Chamomiles(Flowers):
-    def __init__(self, freshness, color, price, name):
+    def __init__(self, freshness=None, color=None, price=None, name=None):
         super().__init__(freshness, color, price, name)
 
 
 class Cornflowers(Flowers):
-    def __init__(self, freshness, color, price, name):
+    def __init__(self, freshness=None, color=None, price=None, name=None):
         super().__init__(freshness, color, price, name)
 
 
