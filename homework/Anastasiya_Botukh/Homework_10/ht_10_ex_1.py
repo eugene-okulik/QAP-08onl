@@ -1,38 +1,37 @@
 class Flowers:
-    def __init__(self, freshness, color, stem_length, price, name):
+    def __init__(self, freshness, color, price, name):
         self.freshness = freshness
         self.color = color
-        self.stem_length = stem_length
         self.price = price
         self.name = name
 
     def get_flowers(self):
-        return [self.freshness, self.color, self.stem_length, self.price, self.name]
+        return [self.freshness, self.color, self.price, self.name]
 
 
 class Tulips(Flowers):
-    def __init__(self, freshness, color, stem_length, price, name):
-        super().__init__(freshness, color, stem_length, price, name)
+    def __init__(self, freshness, color, price, name):
+        super().__init__(freshness, color, price, name)
 
 
 class Roses(Flowers):
-    def __init__(self, freshness, color, stem_length, price, name):
-        super().__init__(freshness, color, stem_length, price, name)
+    def __init__(self, freshness, color, price, name):
+        super().__init__(freshness, color, price, name)
 
 
 class Orchids(Flowers):
-    def __init__(self, freshness, color, stem_length, price, name):
-        super().__init__(freshness, color, stem_length, price, name)
+    def __init__(self, freshness, color, price, name):
+        super().__init__(freshness, color, price, name)
 
 
 class Chamomiles(Flowers):
-    def __init__(self, freshness, color, stem_length, price, name):
-        super().__init__(freshness, color, stem_length, price, name)
+    def __init__(self, freshness, color, price, name):
+        super().__init__(freshness, color, price, name)
 
 
 class Cornflowers(Flowers):
-    def __init__(self, freshness, color, stem_length, price, name):
-        super().__init__(freshness, color, stem_length, price, name)
+    def __init__(self, freshness, color, price, name):
+        super().__init__(freshness, color, price, name)
 
 
 class Bouquet:
@@ -72,13 +71,6 @@ class Bouquet:
                 result.append(flower.name)
         return result if len(result) > 0 else 'there is no such price'
 
-    def find_stem_length(self, stem_length):
-        result = []
-        for flower in self.flowers:
-            if flower.stem_length == stem_length:
-                result.append(flower.name)
-        return result if len(result) > 0 else 'there is no such stem length'
-
     def find_freshness(self, freshness):
         result = []
         for flower in self.flowers:
@@ -87,11 +79,11 @@ class Bouquet:
         return result if len(result) > 0 else 'there is no such freshness'
 
 
-tulip = Tulips(7, 'pink', 10, 5, 'Tulip')
-rose = Roses(5, 'red', 13, 10, 'Rose')
-orchid = Orchids(10, 'white', 22, 15, 'Orchid')
-chamomile = Chamomiles(4, 'blue', 8, 8, 'Chamomile')
-cornflower = Cornflowers(13, 'purple', 8, 7, 'Cornflower')
+tulip = Tulips(7, 'pink', 5, 'Tulip')
+rose = Roses(5, 'red', 10, 'Rose')
+orchid = Orchids(10, 'white', 15, 'Orchid')
+chamomile = Chamomiles(4, 'blue', 8, 'Chamomile')
+cornflower = Cornflowers(13, 'purple', 7, 'Cornflower')
 flowers1 = [tulip, rose, orchid, chamomile, cornflower]
 flowers2 = [rose, orchid, cornflower]
 flowers3 = [tulip, chamomile]
@@ -100,7 +92,6 @@ bouquet2 = Bouquet(flowers2)
 bouquet3 = Bouquet(flowers3)
 print(bouquet1.find_freshness(10))
 print(bouquet2.find_price(8))
-print(bouquet3.find_stem_length(10))
 print(bouquet1.find_color("blue"))
 print(bouquet2.find_color('white'))
 print(bouquet3.find_freshness(7))
