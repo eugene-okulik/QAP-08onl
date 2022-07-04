@@ -8,8 +8,8 @@
 # и число - сдвиг. Знаки препинания должны сохраниться.
 #
 
-alf_lower = 'abcdefghijklmnopqrstuvwxyz'
-alf_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+ALF_LOWER = 'abcdefghijklmnopqrstuvwxyz'
+ALF_UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 user_string = input()
 user_step = int(input())
@@ -18,11 +18,11 @@ user_step = int(input())
 def encode(text, step):
     string_encoded = ''
     for i in text:
-        if i in alf_lower:
+        if i in ALF_LOWER:
             i_index = ord(i) - ord('a')
             new_index = (i_index + step) % 26 + ord('a')
             string_encoded += chr(new_index)
-        elif i in alf_upper:
+        elif i in ALF_UPPER:
             i_index = ord(i) - ord('A')
             new_index = (i_index + step) % 26 + ord('A')
             string_encoded += chr(new_index)
@@ -36,11 +36,11 @@ def encode(text, step):
 def decode(text, step):
     string_decoded = ''
     for i in text:
-        if i in alf_lower:
+        if i in ALF_LOWER:
             i_index = ord(i) - ord('a')
             new_index = (i_index - step) % 26 + ord('a')
             string_decoded += chr(new_index)
-        elif i in alf_upper:
+        elif i in ALF_UPPER:
             i_index = ord(i) - ord('A')
             new_index = (i_index - step) % 26 + ord('A')
             string_decoded += chr(new_index)
