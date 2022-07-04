@@ -23,6 +23,10 @@ class Bank:
         profit = num.amount + simple_interest
         return profit
 
+    @staticmethod
+    def rate():
+        pass
+
 
 Invest = Investments(5000, 15, 5)
 print(Bank.deposit(Invest))
