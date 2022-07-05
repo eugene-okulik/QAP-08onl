@@ -4,6 +4,15 @@ class Investment:
         self.term = term
         self.profitability_calculation = profitability_calculation
 
+    def set_amount(self, amount):
+        self.amount = amount
+
+    def set_term(self, term):
+        self.term = term
+
+    def set_profitability_calculation(self, profitability_calculation):
+        self.profitability_calculation = profitability_calculation
+
 
 class Bank:
     def __init__(self):
@@ -19,9 +28,6 @@ class Bank:
             months = months - 1
             # print(total_amount)
         return total_amount
-
-    def public_method(self):
-        pass
 
 
 investment = Investment(2000, 5, 4)
