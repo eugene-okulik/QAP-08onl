@@ -5,8 +5,17 @@ class Flowers:
         self.price = price
         self.name = name
 
-    def get_flowers(self):
-        return [self.freshness, self.color, self.price, self.name]
+    def set_freshness(self, freshness):
+        self.freshness = freshness
+
+    def set_color(self, color):
+        self.color = color
+
+    def set_price(self, price):
+        self.price = price
+
+    def set_name(self, name):
+        self.name = name
 
 
 class Tulips(Flowers):
