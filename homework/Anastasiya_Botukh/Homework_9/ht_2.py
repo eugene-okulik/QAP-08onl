@@ -29,6 +29,9 @@ class Bank:
             # print(total_amount)
         return total_amount
 
+    def public_method(self):
+        pass
+
 
 investment = Investment(2000, 5, 4)
 bank = Bank()
