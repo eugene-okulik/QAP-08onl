@@ -29,18 +29,18 @@ def calculator():
         if start > 4 or start < 1:
             print("Не правильная операция, попробуйте еще раз")
         else:
-            a = int(input("Введите первое число: "))
-            b = int(input("Введите второе число: "))
+            A = int(input("Введите первое число: "))
+            B = int(input("Введите второе число: "))
             break
     if start == 1:
-        print("Результат: ", a + b)
+        print("Результат: ", A + B)
     elif start == 2:
-        print("Результат: ", a - b)
+        print("Результат: ", A - B)
     elif start == 3:
-        print("Результат: ", a * b)
+        print("Результат: ", A * B)
     elif start == 4:
-        if b != 0:
-            print(f"Результат: ", a / b)
+        if B != 0:
+            print(f"Результат: ", A / B)
         else:
             print("На ноль делить нельзя!")
 
