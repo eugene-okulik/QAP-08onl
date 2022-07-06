@@ -6,11 +6,11 @@ while True:
                'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'\
                'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
     res = []
-    ln = len(ALPHAVET)
-    n = '.\/[]{}()=-.,;:\'"1234567890~!`@#$%^&*<>?|=+_- '
+    LN = len(ALPHAVET)
+    N = '.\/[]{}()=-.,;:"1234567890~!`@#$%^&*<>?|=+_- '
     for l in STR:
-        if not l in n:
-            res.append(ALPHAVET[(ALPHAVET.find(l)+NUMBER)%ln])
+        if not l in N:
+            res.append(ALPHAVET[(ALPHAVET.find(l)+NUMBER)%LN])
         else:
             res.append(l)
     print('Вывод: ' + ''.join(res))
