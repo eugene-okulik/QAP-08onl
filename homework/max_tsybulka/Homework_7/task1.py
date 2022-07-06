@@ -7,7 +7,7 @@ while True:
                'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
     res = []
     LN = len(ALPHAVET)
-    N = '.\/[]{}()=-.,;:"1234567890~!`@#$%^&*<>?|=+_- '
+    N = '.[]{}()=-.,;:"1234567890~!`@#$%^&*<>?|=+_- '
     for l in STR:
         if not l in N:
             res.append(ALPHAVET[(ALPHAVET.find(l)+NUMBER)%LN])
