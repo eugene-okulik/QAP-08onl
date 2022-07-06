@@ -1,16 +1,16 @@
 while True:
-    number = int(input('Введите длину сдвига: '))
-    str = input('Введите текст: ')
-    alphabet = 'abcdefghijklmnopqrstuvwxyz' \
+    NUMBER = int(input('Введите длину сдвига: '))
+    STR = input('Введите текст: ')
+    ALPHAVET = 'abcdefghijklmnopqrstuvwxyz' \
                'ABCDEFGHIJKLMNOPQRSTUVWXYZ'\
                'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'\
                'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
     res = []
-    ln = len(alphabet)
+    ln = len(ALPHAVET)
     n = '.\/[]{}()=-.,;:\'"1234567890~!`@#$%^&*<>?|=+_- '
-    for l in str:
+    for l in STR:
         if not l in n:
-            res.append(alphabet[(alphabet.find(l)+number)%ln])
+            res.append(ALPHAVET[(ALPHAVET.find(l)+NUMBER)%ln])
         else:
             res.append(l)
     print('Вывод: ' + ''.join(res))
