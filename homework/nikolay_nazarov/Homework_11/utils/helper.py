@@ -7,3 +7,6 @@ class Book:
 
     def get_page_num(self):
         return self.page_num
+
+    def get_year_of_publication(self):
+        return self.year_of_publication

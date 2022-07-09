@@ -8,12 +8,13 @@
 # (импорт конкретно класса, импорт файла, содержащего класс, и т.д.)
 
 # Импорт класса
-#from utils.helper import Book
+# from utils.helper import Book
 
-#book = Book(page_num=100, year_of_publication=1997, author="Пушкин", price=299)
+# book = Book(page_num=100, year_of_publication=1997, author="Пушкин", price=299)
 
 # Импорт файла
 
 from utils import helper
+
 book = helper.Book(page_num=100, year_of_publication=1997, author="Пушкин", price=299)
 print(book.get_page_num())
