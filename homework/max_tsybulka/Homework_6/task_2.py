@@ -19,6 +19,7 @@
 # Можете сделать все в одной функции, можете разделить на разные.
 
 def calculator():
+    """Function calculator"""
     while True:
         start = int(input('''Введите номер пункта меню:\n start
         1. Сложение\n
@@ -29,18 +30,18 @@ def calculator():
         if start > 4 or start < 1:
             print("Не правильная операция, попробуйте еще раз")
         else:
-            A = int(input("Введите первое число: "))
-            B = int(input("Введите второе число: "))
+            a_1 = int(input("Введите первое число: "))
+            b_1 = int(input("Введите второе число: "))
             break
     if start == 1:
-        print("Результат: ", A + B)
+        print("Результат: ", a_1 + b_1)
     elif start == 2:
-        print("Результат: ", A - B)
+        print("Результат: ", a_1 - b_1)
     elif start == 3:
-        print("Результат: ", A * B)
+        print("Результат: ", a_1 * b_1)
     elif start == 4:
-        if B != 0:
-            print(f"Результат: ", A / B)
+        if b_1 != 0:
+            print("Результат: ", a_1 / b_1)
         else:
             print("На ноль делить нельзя!")
 

@@ -15,17 +15,17 @@ USER_STR = input("Введи текст из примера ниже: \n-cccbba"
 def count_letters(user_string):
 
     count = 1
-    list = []
+    list_1 = []
     string = ''
 
     for index in range(0, len(user_string) - 1):
         if user_string[index] == user_string[index + 1]:
             count += 1
         else:
-            list.append({user_string[index]: count})
+            list_1.append({user_string[index]: count})
             count = 1
 
-    for element in list:
+    for element in list_1:
         for key, value in element.items():
             string += key
             if value > 1:
@@ -40,6 +40,7 @@ print(RESULT)
 
 # Более элегантный способ решения заадчи
 
-# s, r = input("Введи текст из примера ниже: \n-cccbba\n-abeehhhhhccced\n-aaabbceedd\n-abcde\n-aaabbdefffff\n"), ''
+# s, r = input("Введи текст из примера ниже: \n-cccbba\n-abeehhhhhccced"
+#              "\n-aaabbceedd\n-abcde\n-aaabbdefffff\n"), ''
 # while len(s): r += s[0] + str(len(s) - len(s.lstrip(s[0]))); s = s.lstrip(s[0])
 # print(r)
