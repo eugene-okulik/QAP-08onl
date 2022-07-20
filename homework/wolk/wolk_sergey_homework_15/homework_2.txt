@@ -6,4 +6,4 @@ Backward one line:                                                y  ^Y  k  ^K  
 Search forward for matching line:                       /
 Search backward for matching line:                   ?
 Repeat previous search:                                      n
-Repeat previous search in reverse direction:  N
+Repeat previous search in reverse direction:   N
