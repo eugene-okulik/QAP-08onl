@@ -1,5 +1,5 @@
 Go to first line in file:                                             g  <  ESC-<
-Go to last line in file:                                             G  >  ESC->
+Go to last line in file:                                              G  >  ESC->
 Forward one window:                                            z
 Forward one line:                                                   e  ^E  j  ^N  CR
 Backward one line:                                                y  ^Y  k  ^K  ^P 

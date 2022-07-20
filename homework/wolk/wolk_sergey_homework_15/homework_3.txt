@@ -1,4 +1,4 @@
-/dev/null              - файл
+/dev/null               - файл
 /dev/zero             - файл
 /dev/stdin              - символьная ссылка
 /dev/tty               - файл
