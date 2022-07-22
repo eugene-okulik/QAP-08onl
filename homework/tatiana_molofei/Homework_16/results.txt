@@ -1,0 +1,13 @@
+Задание 1
+ls -l
+ls -h
+tar -xvf hw-16.tar
+scp -i .ssh/id_ed25519 tmolofei@164.92.136.89:file.txt /home/
+
+Задание 2
+new_user.sh snap
+
+Задание 3
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3037ms
+rtt min/avg/max/mdev = 0.631/0.964/1.866/0.520 ms
