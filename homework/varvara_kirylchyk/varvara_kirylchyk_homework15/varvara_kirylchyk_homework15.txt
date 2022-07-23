@@ -1,0 +1,21 @@
+Task 2
+Go to first line in file:  head -lines filename
+Go to last line in file: tail -lines filename
+Forward one window: CTRL+F
+Forward one line: j
+Backward one line: y
+Search forward for matching line: /
+Search backward for matching line: ?
+Repeat previous search: Ctrl + P
+Repeat previous search in reverse direction: Ctrl+R
+
+Task 3
+/dev/null -> file
+/dev/zero -> file
+/dev/sda -> file
+/dev/tty -> file
+/root -> directory
+/etc/passwd -> file
+/proc/mounts -> file
+/bin/ls -> file
+/bin/zcat -> file
