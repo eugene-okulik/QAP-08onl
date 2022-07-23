@@ -1,0 +1,9 @@
+/dev/null               - файл
+/dev/zero             - файл
+/dev/stdin              - символьная ссылка
+/dev/tty               - файл
+/root                    - каталог
+/etc/passwd        - обычный файл
+/proc/mounts     - символьная ссылка
+/bin/ls                 - обычный файл
+/bin/zcat              - обычный файл
