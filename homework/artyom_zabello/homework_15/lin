@@ -1,0 +1,25 @@
+Задание №2
+Go to first line in file: g or < or Esc+<
+Go to last line in file: G or > Esc+>
+Forward one window: z
+Forward one line: e or ^E or j or ^N or CR
+Backward one line: y or ^Y or k or ^K or ^P
+Search forward for matching line: /
+Search backward for matching line: ?
+Repeat previous search: n
+Repeat previous search in reverse direction: N
+
+
+
+
+
+Задание №3
+/dev/null  = символьные устройства
+/dev/zero = символьные устройства
+/dev/sda = такого нет
+/dev/tty = символьные устройства
+/root  = директория
+/etc/passwd  = обычный файл
+/proc/mounts = символьная ссылка
+/bin/ls = обычный файл
+/bin/zcat = обычный файл
