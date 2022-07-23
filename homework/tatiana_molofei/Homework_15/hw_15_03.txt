@@ -1,0 +1,9 @@
+/dev/null - тип файла - file
+/dev/zero - тип файла - file
+/dev/sda - тип файла - didn't find?????
+/dev/tty - тип файла - file
+/root - тип файла - directory
+/etc/passwd - тип файла - regular file
+/proc/mounts - тип файла - simbolic link
+/bin/ls - тип файла - regular file
+/bin/zcat - тип файла - regular file
