@@ -1,0 +1,130 @@
+Задание_1
+   25  ls -l /
+   26  ls -l /tmp
+   27  ls -l /usr/bin
+   28  ls -l /dev
+   29  ls --help
+   32  ls -a
+   34  cd -h
+   50  mkdir -p utils/tools/mytool
+   57  ls -l
+   64  ls -l
+   65  rm -r mydir/
+   68  tar --totals -cvfarchive.tar myfile.txtnii
+   72  ls -l dev/tty
+   74  ls -l /root
+   76  ls -l /etc/password
+   78  ls -l /etc/passwd
+   79  ls -l /proc/mouns
+   80  ls -l /proc/mounts
+   82  ls -l /bin/ls
+   84  ls -l /bin/zcat
+   86  ls -l /dev
+   87  ls -l /dev/null
+   90  ls -l
+   93  ls -l /dev/null
+   94  ls -l /root
+  121  ls -l /dev/null
+  122  ls -l /dev/zero
+  123  ls -l /dev/sda
+  124  ls -l /dev/sda
+  125  ls -l dev/tty
+  126  ls -l /root
+  129  ls -l /tty
+  131  ls -l
+  141  ls -l /root
+  144  ls -l
+  146  ls -l /zero
+  147  ls -l /dev/zero
+  148  ls -l /dev/null
+  149  ls -l /dev/tty
+  156  ls -l /root
+  158  ls -l /etc/passwd
+  162  ls-l
+  163  ls -l
+  170  ls -l
+  175  ls -l /bin/ls
+  176  ls -l /bin
+  181  ls -l
+  183  ls -l /bin/ls
+  187  ls -a
+  188  dir -a ~
+  189  dir -A
+  190  ls -l /dev/sda
+  239  sudo -i
+  241  df -h
+  247  ps -h
+  249  ps -h
+  251  ps -h
+  286  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16.tar homework_16/
+  287  ls -l homework_16
+  289  ls -l /home/siarhei/.ssh/known_hosts
+  291  ls -l home/siarhei/.ssh/known_hosts/
+  292  ls -l home/siarhei/.ssh/known_hosts
+  296  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16.tar
+  301  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16
+  302  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16 homework_16/
+  312  ls -l
+  314  pscp -i c:/Users/Admin/.ssh/id_9 siarhei@164.92.136.89:f:/hw-16.tar homework_16/
+  315  scp -i f:/hw-16.tar siarhei@164.92.136.89:f:homework_16/
+  316  scp f:/hw-16.tar siarhei@164.92.136.89:f:homework_16/
+  317  scp f:/hw-16.tar siarhei@164.92.136.89:/homework_16/
+  318  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16.tar home/suarhei/homework_16/
+  319  scp f:/hw-16.tar siarhei@164.92.136.89:/homework_16/
+  320  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:F:/hw-16.tar home/suarhei/homework_16/
+  321  scp c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:F:/hw-16.tar home/suarhei/homework_16/
+  322  scp c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16.tar home/suarhei/homework_16/
+  323  scp c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f/hw-16.tar home/suarhei/homework_16/
+  324  scp c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f/hw-16.tar /homework_16/
+  325  scp c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f/hw-16.tar homework_16/
+  326  scp c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16.tar homework_16/
+  327  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:f:/hw-16.tar
+  329  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/hw-16.tar siarhei@164.92.136.89:homework_16/
+  330  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/hw-16 siarhei@164.92.136.89:homework_16/
+  331  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/hw-16.tar siarhei@164.92.136.89:homework_16/
+  332  scp -i c:/Users/Admin/.ss siarhei@164.92.136.89:
+  334  scp -i c:/Users/Admin/.ssh/id_ed25519 siarhei@164.92.136.89:2.txt f:/
+  337  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/hw-16.tar siarhei@164.92.136.89:
+  338  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/myfile1.txt siarhei@164.92.136.89:
+  342  ls -a
+  344  ls -l
+  349  ls -l
+  351  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/myfile.txt siarhei@164.92.136.89:
+  352  scp -i c:/Users/Admin/.ssh/id_ed25519 F:/myfile.txt siarhei@164.92.136.89:
+  354  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/hw-16.tar siarhei@164.92.136.89:homework_16
+  355  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/hw-16.tar siarhei@164.92.136.89:homework_16/
+  356  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/hw-16.tar siarhei@164.92.136.89:
+  363  tar -xvf hw-16.tar
+  365  history | grep -
+  368  VAR=history | grep -
+  371  echo history | grep - >> result.txt
+  373  echo history | grep - > result.txt
+  376  VAR= history | grep -
+  378  history | grep - > result.txt
+Задание_2
+.
+..
+.bash_history
+.bashrc
+.cache
+.cloud-locale-test.skip
+.local
+.profile
+.ssh
+.viminfo
+.wget-hsts
+new_user.sh
+snap
+Задание_3
+PING google.com (142.250.184.238) 56(84) bytes of data.
+64 bytes from fra24s12-in-f14.1e100.net (142.250.184.238): icmp_seq=1 ttl=119 time=1.39 ms
+64 bytes from fra24s12-in-f14.1e100.net (142.250.184.238): icmp_seq=2 ttl=119 time=0.628 ms
+64 bytes from fra24s12-in-f14.1e100.net (142.250.184.238): icmp_seq=3 ttl=119 time=1.28 ms
+64 bytes from fra24s12-in-f14.1e100.net (142.250.184.238): icmp_seq=4 ttl=119 time=0.689 ms
+64 bytes from fra24s12-in-f14.1e100.net (142.250.184.238): icmp_seq=5 ttl=119 time=0.968 ms
+64 bytes from fra24s12-in-f14.1e100.net (142.250.184.238): icmp_seq=6 ttl=119 time=0.652 ms
+64 bytes from fra24s12-in-f14.1e100.net (142.250.184.238): icmp_seq=7 ttl=119 time=0.679 ms
+
+--- google.com ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6026ms
+rtt min/avg/max/mdev = 0.628/0.898/1.393/0.298 ms
