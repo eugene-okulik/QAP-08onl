@@ -1,0 +1,10 @@
+Задание 1
+2  ls -l
+5  ps -h
+6  history | grep "-"
+Задание 2
+new_user.sh  snap
+Задание 3
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 0.704/1.661/2.619/0.957 ms
