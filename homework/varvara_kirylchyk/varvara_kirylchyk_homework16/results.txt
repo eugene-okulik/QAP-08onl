@@ -1,0 +1,13 @@
+Задание 1
+   10  ls -a
+   11  cd -help
+   12  cd --help
+   29  unrar e hw-16.tar
+   31  unrar e hw-16.tar
+   32  tar -xf hw-16.tar
+   39  history | grep -
+Задание 2
+new_user.sh  snap
+Задание 3
+--- google.com ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9199ms
