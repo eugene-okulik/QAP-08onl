@@ -1,0 +1,71 @@
+Задание 1 
+   
+19  ls -l
+   20  ls -l/
+   21  ls -l /
+   22  ls -l /tmp
+   23  ls -l /usr/bin
+   24  ls -l /dev
+   27  ls -l /dev
+   29  cd --help
+   30  ls --help
+   31  ls -h
+   32  --full-time
+   35  ls -a
+   57  mkdir -p utils/tools/mytools
+   71  mkdir -p hw_15
+  100  ls -l
+  117   ssh wolk@164.92.136.89 -i .ssh C:\Users\Sergey\.ssh
+  118   ssh wolk@164.92.136.89 -i .ssh /qaq
+  119   ssh wolk@164.92.136.89 -i .ssh C:/Users/Sergey/.ssh
+  120   ssh wolk@164.92.136.89 -i .ssh C:/Users/Sergey/.ssh
+  121   ssh wolk@164.92.136.89 -i .ssh \Users\Sergey\.ssh
+  122   ssh wolk@164.92.136.89 -i .ssh /Users/Sergey/.ssh
+  123   ssh wolk@164.92.136.89 -i .ssh/C:/Users/Sergey/.ssh
+  125   ssh wolk@164.92.136.89 -i .ssh/Users/Sergey/.ssh
+  126   ssh wolk@164.92.136.89 -i .ssh/home/wolk/.ssh
+  132   ssh wolk@164.92.136.89 -i .ssh C:\Users\Sergey\.ssh\id_ed25519
+  133   ssh wolk@164.92.136.89 -i .ssh C:\Users\Sergey\.ssh
+  134   ssh wolk@164.92.136.89 -i C:\Users\Sergey\.ssh\id_ed25519
+  135  ssh wolk@164.92.136.89 -i C:\Users\Sergey\.ssh\id_ed25519
+  136   ssh -i C:\Users\Sergey\.ssh\id_ed25519 wolk@164.92.136.89
+  137  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/myfile.txt siarhei@164.92.136.89:
+  138  scp -i c:/Users/Admin/.ssh/id_ed25519 f:/myfile.txt siarhei@164.92.136.89:
+  139  scp -i C:\Users\Sergey\.ssh\id_ed25519
+  168  sudo -i
+  171  df -h
+  173  df -h
+  179  ps -h
+  181  ps -h
+  184  ps -h
+  187  ps -h
+  188  scp C:\Users\Sergey\QAP-08onl\hw-16.tar wolk@qap/164.92.136.89:/qap/wolk
+  190  scp C:\Users\Sergey\QAP-08onl\hw-16.tar wolk@qap/164.92.136.89:/home/wolk
+  191  scp C:\hw-16.tar wolk@qap/164.92.136.89:/home/wolk
+  194  unzip hw-16.tar
+  196  unzip hw-16.tar
+  197  tar -xvf hw-16.tar
+  207  grep "-"
+  209  history | grep -
+
+Задание 2
+
+total 8
+-rwxr-xr-x 1 root root  298 Jul 22 05:28 new_user.sh
+drwx------ 3 root root 4096 Jul 17 09:15 snap
+
+Задание 3
+
+ ping google.com
+PING google.com (172.217.18.110) 56(84) bytes of data.
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=1 ttl=60 time=1.44 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=2 ttl=60 time=1.08 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=3 ttl=60 time=0.889 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=4 ttl=60 time=0.434 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=5 ttl=60 time=0.459 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=6 ttl=60 time=0.514 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=7 ttl=60 time=0.502 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=8 ttl=60 time=0.448 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=9 ttl=60 time=0.524 ms
+^Z
+[2]+  Stopped                 ping google.com
