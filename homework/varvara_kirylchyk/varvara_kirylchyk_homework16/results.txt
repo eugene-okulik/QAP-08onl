@@ -7,7 +7,7 @@
    32  tar -xf hw-16.tar
    39  history | grep -
 Задание 2
-cat: /root: Permission denied
+new_user.sh  snap
 Задание 3
 --- google.com ping statistics ---
 10 packets transmitted, 10 received, 0% packet loss, time 9199ms
