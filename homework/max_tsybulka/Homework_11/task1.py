@@ -8,7 +8,6 @@
 # Во время работы с импортом попробуйте разные способы
 # (импорт конкретно класса, импорт файла, содержащего класс, и т.д.)
 
-
 from utils import helper
 
 book = helper.Book(page_num=999, year_of_publication=1994, author="Лектор", price=99)
