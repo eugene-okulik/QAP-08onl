@@ -61,7 +61,7 @@ class FlowerBouquet:
     def bouquet_term_life(self):
         result = 0
         for flower in self.flowers:
-            result + flower.expiration_date / 4
+            result += flower.expiration_date / 4
         return result
 
     def find_name(self, name):
