@@ -1,5 +1,4 @@
 task_1
-Please ask your administrator.
    19  ls -l
    20  ls -l /
    21  ls -l/tmp
