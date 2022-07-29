@@ -1,0 +1,83 @@
+Задание 1
+   11  ls -l/
+   12  ls -l
+   15  mkdir -p utils/tools/mytool
+   29  ls -l
+   31  rm -r utils/
+   45  ls -l
+   46  scp - i .ssh/ maxtsybulka@164.92.136.89
+   48  scp -i .ssh/Desktop/BOTtel/pepper.py @maxtsybulka164.92.136.89:/home/maxtsybulka
+   52  ls -l
+   59  scp -i .ssh maxtsybulka@164.92.136.89:gap/home/maxtsybulka/mydir/myfail.txt
+   60  scp -i .ssh maxtsybulka@164.92.136.89:/home/maxtsybulka/mydir/myfail.txt
+   64  ssh -i /back-up/home/user/.ssh/id_dsa user@yourserver.servername.domain
+   65  ssh -i /back-up/home/user/.ssh/id_dsa user@yourserver.servername.domain
+   66  ssh -i /back-up/home/user/.ssh/id_dsa user@yourserver.servername.domain
+   72  ssh -i /home/maxtsybulka.ssh/id_ed25519 maxtsybulka@164.92.136.89
+   74  scp -i .ssh/Desktop/BOTtel/pepper.py @maxtsybulka164.92.136.89:/home/maxtsybulka
+   75  scp -i /Desktop/BOTtel/pepper.py @maxtsybulka164.92.136.89:/home/maxtsybulka
+   76  scp -i /Desktop/BOTtel/pepper.py @maxtsybulka164.92.136.89:/home/maxtsybulka
+   78  scp -i /Desktop/BOTtel/pepper.py @maxtsybulka164.92.136.89:/home/maxtsybulka
+   79  scp -i Desktop/BOTtel/pepper.py maxtsybulka@164.92.136.89:/hame/maxtsybulka
+   80  scp -i /Users/maksimcybulko/Desktop/BOTtel/pepper.py maxtsybulka@164.92.136.89:/hame/maxtsybulka
+   81  scp -i
+   82  scp -i /Users/maksimcybulko/Desktop/BOTtel/pepper.py maxtsybulka@164.92.136.89:/home/maxtsybulka
+   83  scp -i Users/maksimcybulko/Desktop/BOTtel/pepper.py maxtsybulka@164.92.136.89:/home/maxtsybulka
+   84  scp -i /Users/maksimcybulko/Desktop/BOTtel maxtsybulka@164.92.136.89:/home/maxtsybulka
+   85  scp -i Users/maksimcybulko/Desktop/BOTtel maxtsybulka@164.92.136.89:/home/maxtsybulka
+   95  ls -l /home/e
+  103  ls -l
+  129  cp~/hw-16.tar~/maxtsybulka
+  133  cp~/hw-16.tar~/HW_16
+  135  ls -a
+  136  ls -l/root
+  137  ls -a/root
+  138  ls -a /root
+  139  sudo ls -a /root
+  142  ls -a /results.txt
+  143  ls -l /results.txt
+  149  ping -c10 google.com
+  150  ping -c10 google.com >> resualt.txt
+  152  sudo ls -a /root echo Задание 2 >> results.txt
+  153  sudo ls -a /root,echo Задание 2 >> results.txt
+  154  sudo ls -a /root.echo Задание 2 >> results.txt
+  155  sudo ls -a /root, echo Задание 2 >> results.txt
+  158  sudo ls -a /root >> results.txt
+  159  history | grep - >> results.txt
+  160  history | grep -
+  162  ls -a /results.txt
+  163  ls -l /results.txt
+  164  ls -l /resualt.txt
+  166  history | grep - >> result.txt
+
+Задание 2
+.
+..
+.bash_history
+.bashrc
+.cache
+.cloud-locale-test.skip
+.local
+.profile
+.ssh
+.viminfo
+.wget-hsts
+new_user.sh
+snap
+
+Задание 3
+PING google.com (172.217.18.110) 56(84) bytes of data.
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=1 ttl=119 time=1.31 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=2 ttl=119 time=0.469 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=3 ttl=119 time=0.448 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=4 ttl=119 time=0.446 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=5 ttl=119 time=0.408 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=6 ttl=119 time=0.459 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=7 ttl=119 time=0.454 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=8 ttl=119 time=0.477 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=9 ttl=119 time=0.550 ms
+64 bytes from fra16s42-in-f14.1e100.net (172.217.18.110): icmp_seq=10 ttl=119 time=0.443 ms
+
+--- google.com ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9143ms
+rtt min/avg/max/mdev = 0.408/0.546/1.309/0.256 ms
