@@ -1,0 +1,19 @@
+Задание 1
+   36  grep -c 'word' /path/to/file
+   39  tar -xvf hw-16.tar
+   42  history | grep -
+   44  echo history | grep "-" >> results.txt
+   46  history | grep "-" >> results.txt
+Задание 2
+new_user.sh
+snap
+Задание 3
+PING google.com (172.217.18.110) 56(84) bytes of data.
+64 bytes from zrh04s05-in-f110.1e100.net (172.217.18.110): icmp_seq=1 ttl=119 time=2.09 ms
+64 bytes from zrh04s05-in-f110.1e100.net (172.217.18.110): icmp_seq=2 ttl=119 time=0.897 ms
+64 bytes from zrh04s05-in-f110.1e100.net (172.217.18.110): icmp_seq=3 ttl=119 time=0.505 ms
+64 bytes from zrh04s05-in-f110.1e100.net (172.217.18.110): icmp_seq=4 ttl=119 time=0.353 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3020ms
+rtt min/avg/max/mdev = 0.353/0.962/2.093/0.682 ms
