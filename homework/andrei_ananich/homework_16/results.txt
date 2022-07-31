@@ -1,0 +1,50 @@
+Задание 1
+    2  ls -l
+    3  ls -l /
+    4  ls -l /tmp
+    5  ls -l/usr/bin
+    6  ls -l /usr/bin
+    7  ls -l /dev
+    9  ls -l
+   10  ls --help
+   13  ls -a
+   15  --help
+   16  ls -help
+   17  ls --help
+   27  ls -l
+   56  ls -l
+   62  df -h
+   80  ls -l
+   98  ls -l
+  100  ls -l
+  103  ls -l
+  105  ды -д
+  106  ls -l
+  108  ls -l
+  111  ls -l
+  113  tar xvzf hw-16.tar
+  114  tar -x hw-16.tar
+  115  tar -xf hw-16.tar
+  116  ls-l
+  117  ls -l
+  120  ls -l
+  123  history grep -
+  124  history grep "-"
+  125  history | grep "-"
+  126  history | grep -
+  127  history | grep - >> results.txt
+  128  ls -l
+  134  history | grep - >> results.txt
+Задание 2
+total 8
+-rwxr-xr-x 1 root root  298 Jul 22 05:28 new_user.sh
+drwx------ 3 root root 4096 Jul 17 09:15 snap
+Задание 3
+PING google.com (172.217.18.110) 56(84) bytes of data.
+64 bytes from zrh04s05-in-f110.1e100.net (172.217.18.110): icmp_seq=1 ttl=60 time=1.31 ms
+64 bytes from zrh04s05-in-f110.1e100.net (172.217.18.110): icmp_seq=2 ttl=60 time=0.560 ms
+64 bytes from zrh04s05-in-f110.1e100.net (172.217.18.110): icmp_seq=3 ttl=60 time=0.436 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2028ms
+rtt min/avg/max/mdev = 0.436/0.768/1.308/0.385 ms
