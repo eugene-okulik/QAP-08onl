@@ -26,6 +26,12 @@ element = driver.find_element(By.ID, "id_order")
 element.click()
 element.send_keys(12358)
 
+# element = driver.find_element(By.ID, "uniform-fileUpload")
+# element.click()
+# element = driver.find_element(By.XPATH, "//div[@class='uploader']//input[@type=‘file’]")
+# element.send_keys(r"C:\Users\Hello.txt")
+# element.click()
+
 element = driver.find_element(By.ID, "message")
 element.click()
 element.send_keys('Hello, Eugene')
