@@ -1,5 +1,5 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -33,5 +33,5 @@ element.send_keys('Hello, Eugene')
 element = driver.find_element(By.ID, "submitMessage")
 element.click()
 
-# message = driver.find_element(By.NAME, "alert alert-success")
+# message = driver.find_element(By.CLASS_NAME, "alert alert-success")
 # print(message)
