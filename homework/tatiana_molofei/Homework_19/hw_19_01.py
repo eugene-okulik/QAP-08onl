@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from time import sleep
 
 options = Options()
 options.add_argument('start-maximized')
@@ -26,11 +27,10 @@ element = driver.find_element(By.ID, "id_order")
 element.click()
 element.send_keys(12358)
 
-# element = driver.find_element(By.ID, "uniform-fileUpload")
-# element.click()
-# element = driver.find_element(By.XPATH, "//div[@class='uploader']//input[@type=‘file’]")
-# element.send_keys(r"C:\Users\Hello.txt")
-# element.click()
+file = driver.find_element(By.ID, 'fileUpload')
+file_uploading = driver.find_element(By.XPATH, "//input[@type='file']")
+file_uploading.send_keys("/home/tm/Downloads/hello.txt")
+sleep(2)
 
 element = driver.find_element(By.ID, "message")
 element.click()
