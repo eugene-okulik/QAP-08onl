@@ -31,7 +31,7 @@ element.send_keys(12358)
 file = driver.find_element(By.ID, 'fileUpload')
 file_uploading = driver.find_element(By.XPATH, "//input[@type='file']")
 file_uploading.send_keys("/home/tm/Downloads/hello.txt")
-sleep(2)
+sleep(1)
 
 element = driver.find_element(By.ID, "message")
 element.click()
