@@ -1,0 +1,19 @@
+#!/bin/bash
+
+word=""
+
+while [[ $word != "." ]]
+do
+echo "Enter the word: "
+read word
+if [[ ${#word} -le 5 && ${#word} -gt 0 ]]
+then
+echo "Ok"
+elif [[ ${#word} -eq 0 ]]
+then
+echo "You didn't enter the text!"
+exit 1
+else echo "The word is too long!"
+fi
+done
+echo "Bye"
