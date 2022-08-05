@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 options = Options()
 options.add_argument('start-maximized')
-driver = webdriver.Chrome(options=options)
+chrome_driver = webdriver.Chrome(options=options)
 
 
 def click_checkbox(driver):
@@ -22,4 +22,4 @@ def click_checkbox(driver):
         break
 
 
-click_checkbox(driver)
+click_checkbox(chrome_driver)
