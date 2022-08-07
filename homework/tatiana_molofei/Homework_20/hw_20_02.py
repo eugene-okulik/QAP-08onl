@@ -67,6 +67,7 @@ def filling_practice_form(driver):
 
     file_uploading = driver.find_element(By.ID, 'uploadPicture').find_element(By.XPATH, "//input[@type='file']")
     file_uploading.send_keys("/home/tm/Downloads/me.jpeg")
+
     file_uploading.submit()
 
 
