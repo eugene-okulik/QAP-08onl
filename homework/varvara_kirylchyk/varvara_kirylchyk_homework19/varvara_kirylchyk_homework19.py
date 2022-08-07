@@ -9,12 +9,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
+#driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
 driver = webdriver.Safari()
 driver.get("http://automationpractice.com/")
 sleep(5)
 
 element = driver.find_element(By.ID, "contact-link")
 element.click()
+
+sleep(5)
 
 element = driver.find_element(By.ID, "uniform-id_contact")
 element.click()
