@@ -1,0 +1,29 @@
+#!/bin/bash
+
+PS3="Хотите установить python?:"
+echo
+select  option in "ДА" "НЕТ"
+do
+if [[ $option == "ДА" ]]
+then
+echo "Вы выбрали установить python"
+else echo "Все-равно установим"
+fi
+break
+done
+
+#!/bin/bash
+
+word=""
+
+while [[ $word != "." ]]; do
+      echo "Enter a word: "
+      read word
+      len=${#word}
+if [[ $len -le 5 ]]; then
+      echo  "ОК"
+elif [[ $len -ge 6 ]]; then
+      echo "TOO LONG WORD"
+fi
+done
+echo "BYE"
