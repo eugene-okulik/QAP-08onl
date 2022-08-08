@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
-
 chrome_driver = webdriver.Chrome()
 chrome_driver.get("https://automationpractice.com/")
 chrome_driver.maximize_window()
@@ -26,7 +25,7 @@ form4 = chrome_driver.find_element(By.ID, 'message')
 form4.send_keys("Want to buy shorts")
 
 file_to_upload = chrome_driver.find_element(By.ID, 'fileUpload')
-file_to_upload.send_keys("D:\sometext.txt")
+file_to_upload.send_keys(r"D:\sometext.txt")
 
 button = chrome_driver.find_element(By.ID, 'submitMessage')
 button.click()
