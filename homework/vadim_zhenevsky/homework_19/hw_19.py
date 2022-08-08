@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
+
 service = Service(executable_path='chromedriver.exe')
 driver = webdriver.Chrome()
 driver.maximize_window()
