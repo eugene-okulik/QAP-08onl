@@ -1,0 +1,34 @@
+EX_1
+
+#!/bin/bush
+
+PS3="Do you want to install Python?"
+echo
+select answer in "Yes" "No"
+do
+if [[ $answer == "Yes" ]]
+then echo "You choose to install Python!"
+break
+else echo "We'll install it anyway!"
+break
+fi
+done
+
+
+EX_2
+
+#!/bin/bash
+
+word=""
+
+while [[ $word != "." ]]
+do
+echo "Enter the word: "
+read word
+len=${#word}
+if [[ $len -le 5 ]];
+then echo "ok"
+elif [[ $len -ge 6 ]]
+then echo "Sorry, too long word"
+fi
+done
