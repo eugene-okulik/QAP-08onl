@@ -1,3 +1,4 @@
+"""System module."""
 # Задание 1
 # Кликнуть все чекбоксы на странице.
 # Их там 17. Открываются по клику на >
@@ -15,6 +16,7 @@ chrome_driver = webdriver.Chrome(options=options)
 
 
 def click_checkbox(driver):
+    """A dummy docstring."""
     driver.get('https://demoqa.com/checkbox')
     driver.execute_script("""
         var l = document.getElementById("fixedban").remove();

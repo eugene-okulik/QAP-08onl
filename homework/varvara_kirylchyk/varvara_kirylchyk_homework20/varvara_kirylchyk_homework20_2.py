@@ -1,3 +1,4 @@
+"""System module."""
 # Задание 2
 # Заполнить эту форму
 # https://demoqa.com/automation-practice-form
@@ -30,6 +31,7 @@ CITY = 'Minsk'
 
 
 def filling_practice_form(driver):
+    """A dummy docstring."""
     driver.get('https://demoqa.com/automation-practice-form')
     driver.execute_script("""
         var l = document.getElementById("fixedban").remove();
@@ -80,33 +82,23 @@ def filling_practice_form(driver):
     hobbies_fill = driver.find_elements(By.XPATH, '//label[@class="custom-control-label"]')
     hobbies_fill[music].click()
 
-    # action = webdriver.common.action_chains.ActionChains(driver)
-    # action.move_to_element_with_offset(hobbies_fill, -3, -3)
-    # action.click()
-    # action.perform()
-    # time.sleep(5)
-    # hobbies_fill.click()
-    #
-    # driver.execute_script('arguments[0].scrollIntoView(true);', hobbies_fill)
-    # driver.execute_script("arguments[0].click();", hobbies_fill)
-
     current_address_fill = driver.find_element(By.CSS_SELECTOR,
                                                 'textarea[placeholder="Current Address"]')
     current_address_fill.send_keys(ADDRESS)
 
     time.sleep(3)
 
-    # file_uploading = driver.find_element(By.ID, 'uploadPicture')
-    # file_uploading = file_uploading.find_element(By.XPATH, "//input[@type='file']")
-    # file_uploading.send_keys("/home/tm/Downloads/me.jpeg")
-    # file_uploading.submit()
+    file_uploading = driver.find_element(By.ID, 'uploadPicture')
+    file_uploading = file_uploading.find_element(By.XPATH, "//input[@type='file']")
+    file_uploading.send_keys("/Downloads/cats.jpeg")
+    file_uploading.submit()
 
     state = driver.find_element(By.XPATH, '//input[@id="react-select-3-input"]')
     state.send_keys(STATE)
     state.send_keys(Keys.ENTER)
 
-    city = driver.find_element(By.XPATH, '//input[@id="react-select-4-input"]')
-    city.send_keys(CITY)
-    city.send_keys(Keys.ENTER)
+    # city = driver.find_element(By.XPATH, '//input[@id="react-select-4-input"]')
+    # city.send_keys(CITY)
+    # city.send_keys(Keys.ENTER)
 
 filling_practice_form(chrome_driver)
