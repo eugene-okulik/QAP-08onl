@@ -67,7 +67,7 @@ state_form.send_keys('NCR')
 state_form.send_keys(Keys.ENTER)
 
 city_form = Chrome_driver.find_element(By.XPATH,
-                                    '//input[@id="react-select-4-input"]')
+                                '//input[@id="react-select-4-input"]')
 city_form.send_keys('Delhi')
 city_form.send_keys(Keys.ENTER)
 
