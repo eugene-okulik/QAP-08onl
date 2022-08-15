@@ -85,11 +85,5 @@ def test_busket():
     driver.find_element(By.CLASS_NAME, "logo").click()
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, "a[data-id-product='1']").click()
-
-
-
-
-
-
-
+    assert driver.find_element(By.CLASS_NAME, "ajax_cart_no_product").text != "empty"
 
