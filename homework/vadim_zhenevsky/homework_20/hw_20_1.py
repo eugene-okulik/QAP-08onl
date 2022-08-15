@@ -8,6 +8,7 @@ Chrome_driver.maximize_window()
 Chrome_driver.execute_script("window.scrollTo(5, document.body.scrollHeight);")
 Chrome_driver.get("https://demoqa.com/checkbox")
 
+
 button_home = Chrome_driver.find_element(By.CLASS_NAME, "rct-collapse-btn")
 button_home.click()
 

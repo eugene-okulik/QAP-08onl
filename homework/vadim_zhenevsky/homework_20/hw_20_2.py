@@ -9,6 +9,7 @@ Chrome_driver = webdriver.Chrome()
 Chrome_driver.set_window_size(760, 1080)
 Chrome_driver.get("https://demoqa.com/automation-practice-form")
 
+
 first_name_field = Chrome_driver.find_element(By.ID, "firstName")
 first_name_field.send_keys('Vadim')
 
