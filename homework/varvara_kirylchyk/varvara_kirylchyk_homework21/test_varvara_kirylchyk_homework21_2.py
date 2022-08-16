@@ -1,3 +1,4 @@
+"""System module."""
 # Написать автотесты для сайта
 # http://automationpractice.com/
 # Тесты должны запускаться с помощью Pytest
@@ -5,23 +6,37 @@
 # должны быть такими, чтобы Pytest понял, что это тесты)
 
 import time
+import pytest as pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
 
 driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-driver.get("http://automationpractice.com/")
-time.sleep(3)
+# driver.get("http://automationpractice.com/")
+
+
+@pytest.fixture(scope='session')
+def setup():
+    """A dummy docstring."""
+    print("Opening Browser")
+    driver.get("http://automationpractice.com/")
+    time.sleep(3)
+    yield driver
+    print("Closing Browser")
+    driver.quit()
+
 
 # Задание 1:
 # Проверить, что в самом низу главной страницы есть текст
 # “© 2014 Ecommerce software by PrestaShop™”
 
-def test1():
-    assert driver.find_element(By.CSS_SELECTOR,
-                               "#footer > div > section.bottom-footer.col-xs-12 > div").text == \
-           "© 2014 Ecommerce software by PrestaShop™"
+
+def test1(setup):
+    """A dummy docstring."""
+    bottom_text = driver.find_element(By.CSS_SELECTOR,
+                                      "#footer > div > section.bottom-footer.col-xs-12 > div")
+    assert bottom_text.text == "© 2014 Ecommerce software by PrestaShop™"
+
 
 # Задание 2:
 # Проверить, что логотип отображается во всех трех
@@ -29,18 +44,23 @@ def test1():
 
 
 def test2():
-    driver.find_element(By.XPATH, "//a[@title='Women']").click()
+    """A dummy docstring."""
+    driver.find_element(By.XPATH, "//*[@id=\"block_top_menu\"]/ul/li[1]/a").click()
+    driver.implicitly_wait(5)
     assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
-    time.sleep(3)
-
-# def test3():
-#     driver.find_element(By.XPATH, "//a[@title='Dresses']").click()
-#     assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
 
 
-# def test4():
-#     driver.find_element(By.XPATH, "//a[@title='T-shirts']").click()
-#     assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
+def test3():
+    """A dummy docstring."""
+    driver.find_element(By.XPATH, '//*[@id="block_top_menu"]/ul/li[2]/a').click()
+    time.sleep(5)
+    assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
+
+
+def test4():
+    """A dummy docstring."""
+    driver.find_element(By.XPATH, "//*[@id=\"block_top_menu\"]/ul/li[3]/a").click()
+    assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
 
 
 # Задание 3:
@@ -49,6 +69,7 @@ def test2():
 # в поле емейл и попытаться создать аккаунт
 
 def test_check_alert():
+    """A dummy docstring."""
     driver.find_element(By.ID, 'contact-link').click()
     email = driver.find_element(By.CSS_SELECTOR, 'input[data-validate="isEmail"]')
     email.click()
@@ -60,6 +81,7 @@ def test_check_alert():
     li_header = alert_block_header.find_element(By.TAG_NAME, 'li')
     assert li_header.text == 'Invalid email address.'
 
+
 # Задание 4
 # На сайте http://automationpractice.com/index.php
 # на странице women
@@ -70,6 +92,7 @@ def test_check_alert():
 # что товаров на странице столько же сколько было до сортировки.
 
 def test_sorting():
+    """A dummy docstring."""
     driver.find_element(By.XPATH, "//a[@title='Women']").click()
     text_start = driver.find_element(By.CLASS_NAME, "product-count").text
     sorting = Select(driver.find_element(By.ID, "selectProductSort"))
@@ -77,13 +100,17 @@ def test_sorting():
     text_end = driver.find_element(By.CLASS_NAME, "product-count").text
     assert text_start == text_end, "Error"
 
+
 # Задание 5
 # На том же сайте добавить товар в корзину
 # и проверить, что товар появился в корзине
 
 def test_busket():
+    """A dummy docstring."""
     driver.find_element(By.CLASS_NAME, "logo").click()
     time.sleep(5)
     driver.find_element(By.CSS_SELECTOR, "a[data-id-product='1']").click()
-    assert driver.find_element(By.CLASS_NAME, "ajax_cart_no_product").text != "empty"
+    assert driver.find_element(By.CLASS_NAME,
+                               "ajax_cart_no_product").text != "empty"
 
+# driver.quit()

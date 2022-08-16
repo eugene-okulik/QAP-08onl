@@ -1,3 +1,4 @@
+"""System module."""
 # Pytest
 #
 # Создайте 10 тестов, которые проверяют сами себя
@@ -15,55 +16,67 @@ import pytest as pytest
 
 @pytest.fixture(scope='session')
 def print_session_text():
-    print('\nbefore session1\n')
+    """A dummy docstring."""
+    print('\nSession Starts\n')
     yield None
-    print('\nafter session2\n')
+    print('\nSession Ends\n')
 
 
 @pytest.fixture(scope='function')
-def print_text():
-    print('\nbefore test1\n')
+def print_text(request):
+    """A dummy docstring."""
+    print(f"BEFORE {request.function.__name__}")
     yield None
-    print('\nafter test2\n')
+    print(f"AFTER {request.function.__name__}")
 
 
 def test_sum1(print_session_text, print_text):
+    """A dummy docstring."""
     print("sum")
     assert 2 + 2 == 4, 'Результат не соответствует ожидаемому'
 
 
 def test_sum2(print_text):
+    """A dummy docstring."""
     assert 5 + 2 == 7, 'Результат не соответствует ожидаемому'
 
 
 def test_sum3(print_text):
+    """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
 
 def test_sum4(print_text):
+    """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
 
 def test_sum5(print_text):
+    """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
 
 def test_sum6(print_text):
+    """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
 @pytest.mark.parametrize('a, b', [[1,2],[3,4],[5,6]])
-def test_sum7(print_text, a, b):
-    result = a + b
-    assert a + b == result, 'Результат не соответствует ожидаемому'
+def test_sum7(print_text, num1, num2):
+    """A dummy docstring."""
+    result = num1 + num2
+    assert num1 + num2 == result, 'Результат не соответствует ожидаемому'
 
 @pytest.mark.hard
 def test_sum8(print_text):
+    """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
 @pytest.mark.simple
 def test_sum9(print_text):
+    """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
 @pytest.mark.skip('bug')
 def test_sum10(print_text):
+    """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
