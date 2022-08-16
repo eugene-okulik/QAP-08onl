@@ -9,24 +9,24 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class TestTask:
 
-    # pylint: disable=unused-argument
-
     @pytest.fixture(scope='function')
     def driver(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
-        yield self.driver
+        yield
         self.driver.quit()
 
-    def test_copyright_info(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_copyright_info(self):
         self.driver.get('http://automationpractice.com/')
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
         copyright1 = self.driver.find_element(By.XPATH,
                                               '//section[@class="bottom-footer col-xs-12"]')
         assert "© 2014 Ecommerce software by PrestaShop™" in copyright1.text
 
-    def test_check_logo_on_page_women(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_check_logo_on_page_women(self):
         self.driver.get('http://automationpractice.com')
         page_women = self.driver.find_element(By.XPATH, '//a[@title="Women"]')
         page_women.click()
@@ -34,7 +34,8 @@ class TestTask:
                                         '//img[@src="http://automationpractice.com/img/logo.jpg"]')
         assert logo
 
-    def test_check_logo_on_page_dresses(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_check_logo_on_page_dresses(self):
         self.driver.get('http://automationpractice.com')
         page_dresses = self.driver.find_element(By.XPATH, '//div[@id="block_top_menu"]/ul/li[2]/a')
         page_dresses.click()
@@ -42,7 +43,8 @@ class TestTask:
                                         '//img[@src="http://automationpractice.com/img/logo.jpg"]')
         assert logo
 
-    def test_check_logo_on_page_t_shirts(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_check_logo_on_page_t_shirts(self):
         self.driver.get('http://automationpractice.com')
         page_dresses = self.driver.find_element(By.XPATH, '//div[@id="block_top_menu"]/ul/li[3]/a')
         page_dresses.click()
@@ -50,19 +52,21 @@ class TestTask:
                                         '//img[@src="http://automationpractice.com/img/logo.jpg"]')
         assert logo
 
-    def test_invalid_email_address(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_invalid_email_address(self):
         self.driver.get('http://automationpractice.com/')
         sing_in = self.driver.find_element(By.XPATH, '//a[@class="login"]')
         sing_in.click()
-        email_addres = self.driver.find_element(By.ID, 'email_create')
-        email_addres.send_keys('мыло')
+        email_address = self.driver.find_element(By.ID, 'email_create')
+        email_address.send_keys('мыло')
         button = self.driver.find_element(By.ID, 'SubmitCreate')
         button.click()
         alert_danger = self.driver.find_element(By.CLASS_NAME, 'alert-danger')
         alert_danger_text = alert_danger.find_element(By.TAG_NAME, 'li')
         assert "Invalid email address." in alert_danger_text.text
 
-    def test_alphabetical_sorting_and_quality_control(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_alphabetical_sorting_and_quality_control(self):
         self.driver.get('http://automationpractice.com/index.php?id_category=3&controller=category')
         quantity = self.driver.find_element(By.CLASS_NAME, 'product-count')
         sort_alphabetically = Select(self.driver.find_element(By.ID, 'selectProductSort'))
@@ -70,7 +74,8 @@ class TestTask:
         quantity_after_sort = self.driver.find_element(By.CLASS_NAME, 'product-count')
         assert quantity_after_sort.text == quantity.text
 
-    def test_add_to_cart(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_add_to_cart(self):
         self.driver.get('http://automationpractice.com/index.php?id_category=3&controller=category')
         search_product = self.driver.find_element(By.LINK_TEXT, 'Printed Dress')
         actions = ActionChains(self.driver)
@@ -83,7 +88,8 @@ class TestTask:
         cart_after_add = self.driver.find_element(By.XPATH, '//a[@title="View my shopping cart"]')
         assert 'Cart 1 Product' in cart_after_add.text
 
-    def test_button_click(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_button_click(self):
         self.driver.get('https://testpages.herokuapp.com/styled/dynamic-buttons-simple.html')
         button_start = self.driver.find_element(By.ID, 'button00')
         button_start.click()
@@ -96,7 +102,8 @@ class TestTask:
         button_check = self.driver.find_element(By.ID, 'buttonmessage')
         assert 'All Buttons Clicked' in button_check.text
 
-    def test_button_click_task_2(self, driver):
+    @pytest.mark.usefixtures('driver')
+    def test_button_click_task_2(self):
         self.driver.get('https://testpages.herokuapp.com/styled/dynamic-buttons-simple.html')
         button_start = self.driver.find_element(By.ID, 'button00')
         WebDriverWait(self.driver, 10).until(ec.element_to_be_clickable(button_start))
