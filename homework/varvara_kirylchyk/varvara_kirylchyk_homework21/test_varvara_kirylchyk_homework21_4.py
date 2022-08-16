@@ -9,17 +9,27 @@
 # и нужно будет найти подходящее условие
 
 import time
+import pytest as pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-driver.get("https://testpages.herokuapp.com/styled/dynamic-buttons-disabled.html")
-time.sleep(5)
 
 
-def test9():
+@pytest.fixture(scope='session')
+def setup():
+    """A dummy docstring."""
+    print("Opening Browser")
+    driver.get("https://testpages.herokuapp.com/styled/dynamic-buttons-disabled.html")
+    time.sleep(3)
+    yield driver
+    print("Closing Browser")
+    driver.quit()
+
+
+def test9(setup):
     """A dummy docstring."""
     driver.find_element(By.ID, 'button00').click()
     time.sleep(5)
