@@ -1,8 +1,9 @@
+"""System module."""
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support.ui import Select
+# from selenium.webdriver.support.ui import WebDriverWait
 
 driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
 driver.get("https://testpages.herokuapp.com/styled/dynamic-buttons-simple.html")
@@ -18,26 +19,31 @@ time.sleep(3)
 # Подсказка: здесь достаточно implicitly_wait
 
 def test5():
+    """A dummy docstring."""
     driver.find_element(By.ID, "button00").click()
     driver.implicitly_wait(5)
     assert driver.find_element(By.ID, "button01").is_displayed()
     driver.implicitly_wait(5)
 
 def test6():
+    """A dummy docstring."""
     driver.find_element(By.ID, "button01").click()
     driver.implicitly_wait(5)
     assert driver.find_element(By.ID, "button02").is_displayed()
     driver.implicitly_wait(5)
 
 def test7():
+    """A dummy docstring."""
     driver.find_element(By.ID, "button02").click()
-    time.sleep(5)
+    driver.implicitly_wait(5)
     assert driver.find_element(By.ID, "button03").is_displayed()
-    time.sleep(3)
+    driver.implicitly_wait(5)
 
 def test8():
+    """A dummy docstring."""
     driver.find_element(By.ID, "button03").click()
     time.sleep(3)
     assert driver.find_element(By.ID, "buttonmessage").text == \
         'All Buttons Clicked'
     time.sleep(3)
+    driver.quit()
