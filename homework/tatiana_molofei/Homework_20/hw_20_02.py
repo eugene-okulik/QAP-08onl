@@ -48,8 +48,9 @@ def filling_practice_form(driver):
     month_fill.select_by_value(f'{MONTH_OF_BIRTH-1}')
     year_fill = Select(driver.find_element(By.CLASS_NAME, 'react-datepicker__year-select'))
     year_fill.select_by_value(f'{YEAR_OF_BIRTH}')
-    day_fill = driver.find_element(By.CLASS_NAME, f'react-datepicker__day--0{DAY_OF_BIRTH}')
-    day_fill.click()
+    driver.find_element(By.CLASS_NAME, f'react-datepicker__day--0{DAY_OF_BIRTH}').click()
+    # day_fill = driver.find_element(By.CLASS_NAME, f'react-datepicker__day--0{DAY_OF_BIRTH}')
+    # day_fill.click()
 
     subject_fill = driver.find_element(By.XPATH,
                                        '//div[@class="subjects-auto-complete__input"]/input')
