@@ -2,14 +2,14 @@ import math
 import pytest
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='session',  name='print_text')
 def print_text():
     print("\nBefore first test\n")
     yield None
     print("\nAfter last test\n")
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', name='print_all_tests')
 def print_all_tests():
     print("\nBefore every test\n")
     yield None
