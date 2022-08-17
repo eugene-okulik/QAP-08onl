@@ -1,5 +1,5 @@
-import pytest
 import math
+import pytest
 
 
 @pytest.fixture(scope='session')
@@ -68,7 +68,7 @@ def test_round(print_all_tests):
 
 
 @pytest.mark.hard
-@pytest.mark.parametrize('a', [5, 7])
-def test_factorial(print_all_tests, a):
-    result = math.factorial(a)
+@pytest.mark.parametrize('items', [5, 7])
+def test_factorial(print_all_tests, items):
+    result = math.factorial(items)
     assert result == 120
