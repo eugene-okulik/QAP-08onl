@@ -18,7 +18,6 @@ MOBILE = '8044583717'
 YEAR_OF_BIRTH = 1988
 MONTH_OF_BIRTH = 12
 DAY_OF_BIRTH = 18
-SUBJECT = "English"
 sports, reading, music = 3, 4, 5
 ADDRESS = 'Priluki, Mayskaya, 10'
 
@@ -54,7 +53,7 @@ def filling_practice_form(driver):
 
     subject_fill = driver.find_element(By.XPATH,
                                        '//div[@class="subjects-auto-complete__input"]/input')
-    subject_fill.send_keys(SUBJECT)
+    subject_fill.send_keys('English')
     subject_fill.send_keys(Keys.ENTER)
 
     hobbies_fill = driver.find_elements(By.XPATH, '//label[@class="custom-control-label"]')
