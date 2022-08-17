@@ -6,14 +6,15 @@ from selenium.webdriver.common.keys import Keys
 
 
 options = Options()
-options.add_argument('start-maximized')
+# options.add_argument('start-maximized')
+options.add_argument('window-size=760,1080')
 chrome_driver = webdriver.Chrome(options=options)
 
 FIRST_NAME = 'Tatiana'
 LAST_NAME = 'Molofei'
 EMAIL = 'tmolofei@yandex.by'
 male, female, other = 0, 1, 2
-MOBILE = '804458371700'
+MOBILE = '8044583717'
 YEAR_OF_BIRTH = 1988
 MONTH_OF_BIRTH = 12
 DAY_OF_BIRTH = 18
@@ -66,7 +67,15 @@ def filling_practice_form(driver):
     file_uploading = driver.find_element(By.ID, 'uploadPicture')
     file_uploading = file_uploading.find_element(By.XPATH, "//input[@type='file']")
     file_uploading.send_keys("/home/tm/Downloads/me.jpeg")
-    file_uploading.submit()
+
+    state_uploading = driver.find_element(By.XPATH, '//input[@id="react-select-3-input"]')
+    state_uploading.send_keys('Haryana')
+    state_uploading.send_keys(Keys.ENTER)
+
+    city_uploading = driver.find_element(By.XPATH, '//input[@id="react-select-4-input"]')
+    city_uploading.send_keys('Karnal')
+    city_uploading.send_keys(Keys.ENTER)
+    city_uploading.submit()
 
 
 filling_practice_form(chrome_driver)
