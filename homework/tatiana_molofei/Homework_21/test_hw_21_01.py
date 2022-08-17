@@ -2,7 +2,7 @@ import math
 import pytest
 
 
-@pytest.fixture(scope='session',  name='print_text')
+@pytest.fixture(scope='session',  name='print_begin_end')
 def print_text():
     print("\nBefore first test\n")
     yield None
@@ -17,7 +17,7 @@ def print_all_tests():
 
 
 @pytest.mark.simple
-def test_sum(print_text, print_all_tests):
+def test_sum(print_begin_end, print_all_tests):
     assert 2+2 == 4
 
 
