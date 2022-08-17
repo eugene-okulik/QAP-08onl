@@ -49,7 +49,7 @@ def test_isdigit(print_all_tests):
 @pytest.mark.hard
 @pytest.mark.skip("Useless test")
 def test_entry(print_all_tests):
-    assert ('a' in "Tryam")
+    assert 'a' in "Tryam"
 
 
 @pytest.mark.hard
