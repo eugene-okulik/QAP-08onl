@@ -14,13 +14,14 @@ lastname_form = chrome_driver.find_element(By.ID, "lastName")
 lastname_form.send_keys('Kuznetcova')
 email_form = chrome_driver.find_element(By.ID, "userEmail")
 email_form.send_keys('stassia92@mail.ru')
-gender_form = chrome_driver.find_elements(By.XPATH,
-                                          '//label[@class="custom-control-label"]')
+gender_form = chrome_driver.find_elements(By.CLASS_NAME,
+                                          "custom-control-label")
 gender_form[1].click()
 phone_form = chrome_driver.find_element(By.ID, "userNumber")
 phone_form.send_keys('5554455000')
 date_of_birth = chrome_driver.find_element(By.ID, "dateOfBirthInput")
 date_of_birth.click()
+
 choose_month = Select(chrome_driver.find_element(By.CLASS_NAME,
                                                  'react-datepicker__month-select'))
 choose_month.select_by_value("1")
