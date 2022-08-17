@@ -16,11 +16,13 @@ def print_all_tests():
     print("\nAfter every test\n")
 
 
+@pytest.mark.usefixtures()
 @pytest.mark.simple
 def test_sum(print_begin_end, print_all):
     assert 2+2 == 4
 
 
+@pytest.mark.usefixtures()
 @pytest.mark.simple
 def test_dif(print_all):
     assert 5-2 == 3
