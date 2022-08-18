@@ -16,70 +16,59 @@ def print_all_tests():
     print("\nAfter every test\n")
 
 
-@pytest.mark.usefixtures
 @pytest.mark.simple
-def test_sum(print_begin_end, print_all):
+def test_sum():
     assert 2+2 == 4
 
 
-@pytest.mark.usefixtures
 @pytest.mark.simple
-def test_dif(print_all):
+def test_dif():
     assert 5-2 == 3
 
 
-@pytest.mark.usefixtures
 @pytest.mark.simple
-def test_mult(print_all):
+def test_mult():
     assert 4*3 == 12
 
 
-@pytest.mark.usefixtures
 @pytest.mark.hard
-def test_div(print_all):
+def test_div():
     assert 4 / 2 == 2
 
 
-@pytest.mark.usefixtures
 @pytest.mark.simple
-def test_isalpha(print_all):
+def test_isalpha():
     assert "helloMyFriend".isalpha()
 
 
-@pytest.mark.usefixtures
 @pytest.mark.hard
-def test_isdigit(print_all):
+def test_isdigit():
     assert "34566".isdigit()
 
 
-@pytest.mark.usefixtures
 @pytest.mark.hard
 @pytest.mark.skip("Useless test")
-def test_entry(print_all):
+def test_entry():
     assert 'a' in "Tryam"
 
 
-@pytest.mark.usefixtures
 @pytest.mark.hard
-def test_comp(print_all):
+def test_comp():
     assert 6 < 8
 
 
-@pytest.mark.usefixtures
 @pytest.mark.hard
-def test_pow(print_all):
+def test_pow():
     assert 2 ** 4 == 16
 
 
-@pytest.mark.usefixtures
 @pytest.mark.hard
-def test_round(print_all):
+def test_round():
     assert math.ceil(8.999) == 9
 
 
-@pytest.mark.usefixtures
 @pytest.mark.hard
 @pytest.mark.parametrize('items', [5, 7])
-def test_factorial(print_all, items):
+def test_factorial(items):
     result = math.factorial(items)
     assert result == 120
