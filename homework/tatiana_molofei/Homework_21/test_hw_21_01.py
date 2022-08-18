@@ -70,7 +70,7 @@ def test_round():
 
 
 @pytest.mark.hard
-@pytest.mark.parametrize('items', [5, 7])
+@pytest.mark.parametrize('items', [5, 7, 8])
 def test_factorial(items):
     result = math.factorial(items)
     assert result == 120
