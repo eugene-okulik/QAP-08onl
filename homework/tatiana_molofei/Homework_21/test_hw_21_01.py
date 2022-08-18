@@ -49,12 +49,14 @@ def test_isdigit():
 @pytest.mark.hard
 @pytest.mark.skip("Useless test")
 def test_entry():
-    assert 'a' in "Tryam"
+    text = "Tryam"
+    assert 'a' in text
 
 
 @pytest.mark.hard
 def test_comp():
-    assert 5 < 8
+    item_1 = item_2 = 5
+    assert item_1 == item_2
 
 
 @pytest.mark.hard
