@@ -54,7 +54,7 @@ def test_entry():
 
 @pytest.mark.hard
 def test_comp():
-    assert 6 < 8
+    assert 5 < 8
 
 
 @pytest.mark.hard
