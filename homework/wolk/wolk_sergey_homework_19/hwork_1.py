@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 service = Service(executable_path='chromedriver.exe')
 options = Options()
 options.add_argument('start-maximized')
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(options=options, service=service)
 driver.maximize_window()
 driver.get('http://automationpractice.com')
 
