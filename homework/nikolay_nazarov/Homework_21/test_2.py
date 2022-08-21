@@ -1,5 +1,3 @@
-from time import sleep
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -8,16 +6,6 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
-@pytest.fixture(scope='function')
-def driver():
-    print('\nbefore test\n')
-    driver = webdriver.Chrome()
-    driver.implicitly_wait(10)
-    yield driver
-    print('\nafter test\n')
-    driver.quit()
 
 
 class TestTask:
@@ -35,8 +23,9 @@ class TestTask:
         self.driver.get("http://automationpractice.com/")
         self.driver.maximize_window()
         blank_text = self.driver.find_element(By.CLASS_NAME, "_blank").text
-        assert blank_text == "Ecommerce software by PrestaShop™", "В самом низу главной страницы нет текста " \
-                                                                  "Ecommerce software by PrestaShop™"
+        assert blank_text == "Ecommerce software by PrestaShop™", \
+            "В самом низу главной страницы нет текста " \
+            "Ecommerce software by PrestaShop™"
 
     @pytest.mark.usefixtures('driver')
     def test_logo_is_visible(self):
@@ -58,7 +47,8 @@ class TestTask:
     def test_invalid_email_error_is_visible(self):
         self.driver.get("http://automationpractice.com/")
         self.driver.maximize_window()
-        self.driver.find_element(By.CSS_SELECTOR, "[title = 'Log in to your customer account']").click()
+        self.driver.find_element\
+            (By.CSS_SELECTOR, "[title = 'Log in to your customer account']").click()
         email_input = self.driver.find_element(By.CSS_SELECTOR, "#email_create")
         email_input.send_keys("Мыло")
         email_input.send_keys(Keys.ENTER)
