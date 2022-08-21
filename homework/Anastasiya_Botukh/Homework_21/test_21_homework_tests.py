@@ -34,17 +34,17 @@ def test_dif_2(every_session):
 
 
 @pytest.mark.parametrize('a, b', [[10, 2], [4, 1], [8, 8]])
-def test_sum_3(every_session, some_sessions, a, b):
+def test_sum_3(every_session, some_sessions, a_num, b_num):
     print('sum')
-    result = a + b
-    assert a+b == result, 'not right result'
+    result = a_num + b_num
+    assert a_num+b_num == result, 'not right result'
 
 
 @pytest.mark.skip(reason='bug - #1')
-@pytest.mark.parametrize('a', [17, 9, 8])
-def test_diff_3(every_session, a):
+@pytest.mark.parametrize('a_num', [17, 9, 8])
+def test_diff_3(every_session, a_num):
     print('diff')
-    assert 17-9 == a, 'not right result'
+    assert 17-9 == a_num, 'not right result'
 
 
 def test_9(every_session, some_sessions):
