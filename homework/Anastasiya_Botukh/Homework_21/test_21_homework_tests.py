@@ -26,7 +26,8 @@ def test_dif():
     assert 3 - 1 == 2, 'Wrong result'
 
 
-def test_dif_1(every_session):
+@pytest.mark.usefixtures('every_session')
+def test_dif_1():
     print('dif_1')
     assert 5 - 4 == 1, 'Wrong result'
 
@@ -61,5 +62,5 @@ def test_9():
 
 @pytest.mark.usefixtures('every_session')
 @pytest.mark.skip(reason='bug - #2')
-def test_10(every_session):
+def test_10():
     assert 10 / 5 == 5, 'Wrong result'
