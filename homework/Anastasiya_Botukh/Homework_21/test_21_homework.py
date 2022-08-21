@@ -1,5 +1,4 @@
 import pytest
-from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support import expected_conditions as EC
@@ -53,7 +52,6 @@ def test_sorted(driver):
     start_count_products = driver.find_element(By.CLASS_NAME, 'compare_product_count').text
     sort = Select(driver.find_element(By.CSS_SELECTOR, 'select[id="selectProductSort"]'))
     sort.select_by_value("name:asc")
-    sleep(3)
     end_count_products = driver.find_element(By.CLASS_NAME, 'compare_product_count').text
     assert start_count_products == end_count_products
 
@@ -63,7 +61,6 @@ def test_add_to_cart(driver):
     driver.get('http://automationpractice.com/index.php')
     driver.execute_script("window.scrollTo(600, 700)")
     container = driver.find_element(By.CLASS_NAME, 'product-container')
-    sleep(2)
     ActionChains(driver).move_to_element(container).perform()
     driver.find_element(By.CSS_SELECTOR, 'a[data-id-product="1"]').click()
     assert driver.find_element(By.CLASS_NAME, 'ajax_cart_no_product').text != 'empty'
@@ -81,6 +78,7 @@ def test_buttons_click(driver):
 
 
 # test_7
+@pytest.mark.skip
 def test_dynamic_buttons_click(driver):
     driver.get('https://testpages.herokuapp.com/styled/dynamic-buttons-disabled.html')
     driver.find_element(By.ID, 'button00').click()
