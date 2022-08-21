@@ -2,21 +2,21 @@ import pytest
 
 
 @pytest.fixture(scope='function')
-def every_func_fixture():
+def every_func():
     print('\nevery_func_fixture - before')
     yield None
     print('\nevery_func_fixture - after')
 
 
 @pytest.fixture(scope='session')
-def every_session_fixture():
+def every_session():
     print('\nevery_session_fixture - before session')
     yield None
     print('every_session_fixture - after session')
 
 
 @pytest.mark.hard("Тяжелый тест")
-def test_1(every_session_fixture, every_func_fixture):
+def test_1(every_session, every_func):
     print('test_1 - inside')
     assert 2 + 2 == 4, "2+2 не равно 4"
 
