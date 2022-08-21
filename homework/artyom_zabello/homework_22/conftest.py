@@ -9,7 +9,7 @@ def driver():
     opt = Options()
     opt.add_argument('--start-maximized')
     serv = Service(executable_path='D:\\driver\\chromedriver.exe')
-    driver = webdriver.Chrome(options=opt, service=serv)
-    driver.implicitly_wait(10)
-    yield driver
-    driver.quit()
+    driver_chrome = webdriver.Chrome(options=opt, service=serv)
+    driver_chrome.implicitly_wait(10)
+    yield driver_chrome
+    driver_chrome.quit()
