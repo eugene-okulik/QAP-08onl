@@ -23,7 +23,8 @@ def test_check():
     driver_1.get('http://automationpractice.com')
     page_women = driver_1.find_element(By.XPATH, '//a[@title="Women"]')
     page_women.click()
-    logo = driver_1.find_element(By.XPATH, '//img[@src="http://automationpractice.com/img/logo.jpg"]')
+    logo = driver_1.find_element(By.XPATH,
+                                 '//img[@src="http://automationpractice.com/img/logo.jpg"]')
     assert logo
 
 
@@ -31,15 +32,18 @@ def test_page_dresses():
     driver_1.get('http://automationpractice.com')
     page_dresses = driver_1.find_element(By.XPATH, '//div[@id="block_top_menu"]/ul/li[2]/a')
     page_dresses.click()
-    logo = driver_1.find_element(By.XPATH, '//img[@src="http://automationpractice.com/img/logo.jpg"]')
+    logo = driver_1.find_element(By.XPATH,
+                                 '//img[@src="http://automationpractice.com/img/logo.jpg"]')
     assert logo
 
 
 def test_shirts():
     driver_1.get('http://automationpractice.com')
-    page_dresses = driver_1.find_element(By.XPATH, '//div[@id="block_top_menu"]/ul/li[3]/a')
+    page_dresses = driver_1.find_element(By.XPATH,
+                                         '//div[@id="block_top_menu"]/ul/li[3]/a')
     page_dresses.click()
-    logo = driver_1.find_element(By.XPATH, '//img[@src="http://automationpractice.com/img/logo.jpg"]')
+    logo = driver_1.find_element(By.XPATH,
+                                 '//img[@src="http://automationpractice.com/img/logo.jpg"]')
     assert logo
 
 def test_email():
