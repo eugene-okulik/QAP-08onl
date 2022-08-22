@@ -56,21 +56,25 @@ def test_6():
     assert 2 + 2 == 4, "2+2 не равно 4"
 
 
+@pytest.mark.usefixtures
 def test_7():
     print('test_7 - inside')
     assert 2 + 2 == 4, "2+2 не равно 4"
 
 
+@pytest.mark.usefixtures
 def test_8():
     print('test_8 - inside')
     assert 2 + 2 == 4, "2+2 не равно 4"
 
 
+@pytest.mark.usefixtures
 def test_9():
     print('test_9 - inside')
     assert 2 + 2 == 4, "2+2 не равно 4"
 
 
+@pytest.mark.usefixtures
 def test_10():
     print('test_10 - inside')
     assert 2 + 2 == 4, "2+2 не равно 4"
