@@ -35,7 +35,7 @@ def test_division():
 
 
 def test_abcc():
-    assert 'abc' > 'abc', 'Wrong result'
+    assert 'abc' == 'abx', 'Wrong result'
 
 
 def test_differen():
