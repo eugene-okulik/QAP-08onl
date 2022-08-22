@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 
 
-service = Service(executable_path='chromedriver.exe')
+service = Service(executable_path='../Homework_21/chromedriver.exe')
 chrome_driver = webdriver.Chrome(service=service)
 
 
