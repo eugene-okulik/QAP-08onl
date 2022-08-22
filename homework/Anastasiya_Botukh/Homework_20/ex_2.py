@@ -23,8 +23,8 @@ email_field = driver.find_element(By.ID, "userEmail")
 email_field.click()
 email_field.send_keys("aaisatsana18@gmail.com")
 
-# gender_field = driver.find_elements(By.XPATH, '//label[@class="custom-control-label"]')
-# gender_field[1].click()
+gender = driver.find_elements(By.XPATH, '//label[@class="custom-control-label"]')
+gender[1].click()
 
 number_field = driver.find_element(By.CSS_SELECTOR, 'input[placeholder="Mobile Number"]')
 number_field.click()
@@ -42,9 +42,7 @@ driver.find_element(By.CLASS_NAME, "react-datepicker__day--006").click()
 
 subjects_field = driver.find_element(By.XPATH,
                                      '//div[@class="subjects-auto-complete__input"]/input')
-subjects_field.send_keys("English, ")
-subjects_field.send_keys("Automation testing, ")
-subjects_field.send_keys("Stretching")
+subjects_field.send_keys("English")
 subjects_field.send_keys(Keys.ENTER)
 
 hobbies_field = driver.find_elements(By.XPATH, '//label[@class="custom-control-label"]')
@@ -54,19 +52,20 @@ picture_field = driver.find_element(By.ID, "uploadPicture")
 picture_input = driver.find_element(By.XPATH, "//input[@type='file']")
 picture_input.send_keys("/Users/aisatsana/Downloads/TMS.jpg")
 
-current_address_field = driver.find_element(By.CSS_SELECTOR,
-                                            'textarea[placeholder="Current Address"]')
+current_address_field = driver.find_element(By.CSS_SELECTOR, 'textarea[placeholder="Current Address"]')
 current_address_field.send_keys("Belarus, Minsk")
 current_address_field.submit()
 
 state_field = driver.find_element(By.XPATH, '//input[@id="react-select-3-input"]')
-state_field.send_keys('NCR')
+state_field.send_keys('Uttar Pradesh')
 state_field.send_keys(Keys.ENTER)
 
 city_field = driver.find_element(By.XPATH, '//input[@id="react-select-4-input"]')
 city_field.send_keys('Agra')
 city_field.send_keys(Keys.ENTER)
 
-sleep(3)
+submit_button = driver.find_element(By.CLASS_NAME, 'btn-primary')
+submit_button.click()
 
+sleep(5)
 driver.quit()
