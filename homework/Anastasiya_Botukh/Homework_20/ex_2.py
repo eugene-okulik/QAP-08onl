@@ -52,7 +52,8 @@ picture_field = driver.find_element(By.ID, "uploadPicture")
 picture_input = driver.find_element(By.XPATH, "//input[@type='file']")
 picture_input.send_keys("/Users/aisatsana/Downloads/TMS.jpg")
 
-current_address_field = driver.find_element(By.CSS_SELECTOR, 'textarea[placeholder="Current Address"]')
+current_address_field = driver.find_element(By.CSS_SELECTOR,
+                                            'textarea[placeholder="Current Address"]')
 current_address_field.send_keys("Belarus, Minsk")
 current_address_field.submit()
 
