@@ -1,7 +1,6 @@
-import pytest
 import math
 from datetime import datetime
-
+import pytest
 
 @pytest.fixture(scope='session')
 def print_text():
@@ -36,7 +35,7 @@ def test_division():
 
 
 def test_abcc():
-    assert 'abc' == 'abc', 'Wrong result'
+    assert 'abc' > 'abc', 'Wrong result'
 
 
 def test_differen():

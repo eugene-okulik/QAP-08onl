@@ -11,7 +11,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 @pytest.fixture(scope='function')
 def driver():
-    service = Service(executable_path='chromedriver.exe')
+    #service = Service(executable_path='chromedriver.exe')
     options = Options()
     options.add_argument('start-maximized')
     driver = webdriver.Chrome(options=options)
