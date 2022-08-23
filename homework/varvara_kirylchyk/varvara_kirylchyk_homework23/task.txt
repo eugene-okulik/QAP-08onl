@@ -1,0 +1,10 @@
+Задание 23
+Написать минимум 3 теста,
+которые проверяют что-то на трех разных страницах.
+Тесты должны быть оформлены согласно POM.
+Например, проверить что-то на каждой из этих страниц:
+
+http://automationpractice.com/index.php?controller=best-sales
+http://automationpractice.com/index.php?controller=stores
+http://automationpractice.com/index.php?id_cms=4&controller=cms
+
