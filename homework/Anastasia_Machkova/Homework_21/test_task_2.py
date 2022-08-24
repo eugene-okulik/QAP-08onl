@@ -37,21 +37,24 @@ def test_check_inscription(driver, all_tests):
 def test_logo_women(driver):
     driver.get('http://automationpractice.com/index.php')
     driver.find_element(By.XPATH, '//div[@id="block_top_menu"]/ul/li[1]/a').click()
-    logo_women = driver.find_element(By.XPATH, '//img[@src="http://automationpractice.com/img/logo.jpg"]')
+    logo_women = driver.find_element(By.XPATH,
+                                     '//img[@src="http://automationpractice.com/img/logo.jpg"]')
     assert logo_women
 
 
 def test_logo_dress(driver):
     driver.get('http://automationpractice.com/index.php')
     driver.find_element(By.XPATH, '//div[@id="block_top_menu"]/ul/li[2]/a').click()
-    logo_dress = driver.find_element(By.XPATH, '//img[@src="http://automationpractice.com/img/logo.jpg"]')
+    logo_dress = driver.find_element(By.XPATH,
+                                     '//img[@src="http://automationpractice.com/img/logo.jpg"]')
     assert logo_dress
 
 
 def test_logo_tshirt(driver):
     driver.get('http://automationpractice.com/index.php')
     driver.find_element(By.XPATH, '//div[@id="block_top_menu"]/ul/li[3]/a').click()
-    logo_tshirt = driver.find_element(By.XPATH, '//img[@src="http://automationpractice.com/img/logo.jpg"]')
+    logo_tshirt = driver.find_element(By.XPATH,
+                                      '//img[@src="http://automationpractice.com/img/logo.jpg"]')
     assert logo_tshirt
 
 

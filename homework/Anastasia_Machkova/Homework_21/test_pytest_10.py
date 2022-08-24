@@ -16,60 +16,70 @@ def all_tests():
 
 
 @pytest.mark.simple
-def test_1(this_test):
+@pytest.mark.usefixtures(this_test, all_tests)
+def test_1():
     print('test_1')
     assert 2+2 == 4, 'The result is not as expected'
 
 
 @pytest.mark.simple
-def test_2(this_test):
+@pytest.mark.usefixtures(this_test)
+def test_2():
     print('test_2')
     assert 3-1 == 2, 'The result is not as expected'
 
 
-def test_3(this_test):
+@pytest.mark.usefixtures(this_test)
+def test_3():
     print('test_3')
     assert 11*11 == 121, 'The result is not as expected'
 
 
 @pytest.mark.skip(reason='Bug #3')
-def test_4(this_test):
+@pytest.mark.usefixtures(this_test)
+def test_4():
     print('test_4')
     assert 10/5 == 2, 'The result is not as expected'
 
 
 @pytest.mark.hard
-@pytest.mark.parametrize('x', [3, 4, 5])
-def test_5(x, this_test):
+@pytest.mark.parametrize('x_num', [3, 4, 5])
+@pytest.mark.usefixtures(this_test)
+def test_5(x_num):
     print('test_5')
-    assert 15/3 == x, 'The result is not as expected'
+    assert 15/3 == x_num, 'The result is not as expected'
 
 
 @pytest.mark.hard
-@pytest.mark.parametrize('a, b', [[1, 2], [3, 4], [5, 6]])
-def test_6(a, b, this_test):
+@pytest.mark.parametrize('a_num, b_num', [[1, 2], [3, 4], [5, 6]])
+@pytest.mark.usefixtures(this_test)
+def test_6(a_num, b_num):
     print('test_6')
-    result = a + b
-    assert a+b == result, 'The result is not as expected'
+    result = a_num + b_num
+    assert a_num+b_num == result, 'The result is not as expected'
 
 
 @pytest.mark.simple
-def test_7(this_test):
+@pytest.mark.usefixtures(this_test)
+def test_7():
     print('test_7')
     assert 4*4 == 15, 'The result is not as expected'
 
 
-@pytest.mark.parametrize('x', [56])
-def test_8(x, this_test):
+@pytest.mark.parametrize('y_num', [56])
+@pytest.mark.usefixtures(this_test)
+def test_8(y_num):
     print('test_8')
-    assert 7*8 == x, 'The result is not as expected'
+    assert 7*8 == y_num, 'The result is not as expected'
 
 
-def test_9(this_test):
+@pytest.mark.usefixtures(this_test)
+def test_9():
     print('test_9')
     assert 100/2 == 50, 'The result is not as expected'
 
 
-def test_10(this_test):
+@pytest.mark.usefixtures(this_test)
+def test_10():
     print('test_10')
     assert 5+5 == 11, 'The result is not as expected'
