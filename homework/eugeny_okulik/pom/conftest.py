@@ -7,7 +7,7 @@ import pytest
 def driver():
     options = Options()
     options.add_argument('window-size=1920,1080')
-    driver = webdriver.Chrome(options=options)
-    driver.implicitly_wait(10)
-    yield driver
-    driver.quit()
+    chrome_driver = webdriver.Chrome(options=options)
+    chrome_driver.implicitly_wait(10)
+    yield chrome_driver
+    chrome_driver.quit()

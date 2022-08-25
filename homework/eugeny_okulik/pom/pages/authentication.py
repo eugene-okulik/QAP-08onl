@@ -1,6 +1,5 @@
-# from pages.base_page import BasePage
-from pom.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from pom.pages.base_page import BasePage
 
 email_field = (By.ID, 'email')
 passwd_field = (By.ID, 'passwd')
@@ -21,4 +20,3 @@ class AuthPage(BasePage):
 
     def is_displayed_email_field(self):
         return self.email_field.is_displayed()
-
