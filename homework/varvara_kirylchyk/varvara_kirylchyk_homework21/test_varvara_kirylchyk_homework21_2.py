@@ -5,25 +5,24 @@
 # (т.е. их названия (тестов, файла(ов))
 # должны быть такими, чтобы Pytest понял, что это тесты)
 
-import time
-import pytest as pytest
-from selenium import webdriver
+import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-# driver.get("http://automationpractice.com/")
 
-
-@pytest.fixture(scope='session')
-def setup():
+@pytest.fixture(scope='function')
+def driver():
     """A dummy docstring."""
     print("Opening Browser")
-    driver.get("http://automationpractice.com/")
-    time.sleep(3)
-    yield driver
+    options = Options()
+    options.add_argument('window-size=1920,1080')
+    chrome_driver = webdriver.Chrome(options=options)
+    chrome_driver.implicitly_wait(5)
+    yield chrome_driver
     print("Closing Browser")
-    driver.quit()
+    chrome_driver.quit()
 
 
 # Задание 1:
@@ -31,8 +30,9 @@ def setup():
 # “© 2014 Ecommerce software by PrestaShop™”
 
 
-def test1(setup):
+def test1(driver):
     """A dummy docstring."""
+    driver.get("http://automationpractice.com/")
     bottom_text = driver.find_element(By.CSS_SELECTOR,
                                       "#footer > div > section.bottom-footer.col-xs-12 > div")
     assert bottom_text.text == "© 2014 Ecommerce software by PrestaShop™"
@@ -43,23 +43,17 @@ def test1(setup):
 # категориях сайта (woman, dresses, t-shirts)
 
 
-def test2():
+def test2(driver):
     """A dummy docstring."""
-    driver.find_element(By.XPATH, "//*[@id=\"block_top_menu\"]/ul/li[1]/a").click()
+    driver.get("http://automationpractice.com/")
+    driver.find_element(By.XPATH, '//a[@title="Women"]').click()
     driver.implicitly_wait(5)
     assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
-
-
-def test3():
-    """A dummy docstring."""
     driver.find_element(By.XPATH, '//*[@id="block_top_menu"]/ul/li[2]/a').click()
-    time.sleep(5)
+    driver.implicitly_wait(5)
     assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
-
-
-def test4():
-    """A dummy docstring."""
-    driver.find_element(By.XPATH, "//*[@id=\"block_top_menu\"]/ul/li[3]/a").click()
+    driver.find_element(By.XPATH, '//*[@id="block_top_menu"]/ul/li[3]/a').click()
+    driver.implicitly_wait(5)
     assert driver.find_element(By.CLASS_NAME, "logo").is_displayed()
 
 
@@ -68,15 +62,15 @@ def test4():
 # появляется если ввести слово “мыло”
 # в поле емейл и попытаться создать аккаунт
 
-def test_check_alert():
+def test_check_alert(driver):
     """A dummy docstring."""
+    driver.get("http://automationpractice.com/")
     driver.find_element(By.ID, 'contact-link').click()
     email = driver.find_element(By.CSS_SELECTOR, 'input[data-validate="isEmail"]')
     email.click()
     email.send_keys('мыло')
     submit_button = driver.find_element(By.NAME, "submitMessage")
     submit_button.click()
-    time.sleep(5)
     alert_block_header = driver.find_element(By.XPATH, '//div[@class="alert alert-danger"]')
     li_header = alert_block_header.find_element(By.TAG_NAME, 'li')
     assert li_header.text == 'Invalid email address.'
@@ -91,26 +85,27 @@ def test_check_alert():
 # После сортировки проверить,
 # что товаров на странице столько же сколько было до сортировки.
 
-def test_sorting():
+def test_sorting(driver):
     """A dummy docstring."""
+    driver.get("http://automationpractice.com/")
     driver.find_element(By.XPATH, "//a[@title='Women']").click()
-    text_start = driver.find_element(By.CLASS_NAME, "product-count").text
+    quantity_text_start = driver.find_element(By.CLASS_NAME, "product-count").text
     sorting = Select(driver.find_element(By.ID, "selectProductSort"))
     sorting.select_by_index(3)
-    text_end = driver.find_element(By.CLASS_NAME, "product-count").text
-    assert text_start == text_end, "Error"
+    quantity_text_end = driver.find_element(By.CLASS_NAME, "product-count").text
+    assert quantity_text_start == quantity_text_end, "Error"
 
 
 # Задание 5
 # На том же сайте добавить товар в корзину
 # и проверить, что товар появился в корзине
 
-def test_busket():
+
+def test_busket(driver):
     """A dummy docstring."""
+    driver.get("http://automationpractice.com/")
     driver.find_element(By.CLASS_NAME, "logo").click()
-    time.sleep(5)
+    driver.implicitly_wait(5)
     driver.find_element(By.CSS_SELECTOR, "a[data-id-product='1']").click()
     assert driver.find_element(By.CLASS_NAME,
                                "ajax_cart_no_product").text != "empty"
-
-# driver.quit()
