@@ -1,4 +1,3 @@
-import pytest
 from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.alert import Alert
