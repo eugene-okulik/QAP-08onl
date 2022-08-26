@@ -13,6 +13,8 @@ driver = webdriver.Chrome(options=options)
 driver.get('https://demoqa.com/checkbox')
 open_all_checkbox = driver.find_element(By.CLASS_NAME, 'rct-option')
 open_all_checkbox.click()
+click_checkboxes = driver.find_element(By.CLASS_NAME, 'rct-checkbox')
+click_checkboxes.click()
 
 sleep(3)
 
