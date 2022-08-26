@@ -1,6 +1,8 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
+import allure
 
 
+allure.feature("UI Testing")
 class BasePage:
     def __init__(self, driver: WebDriver):
         self.driver = driver
