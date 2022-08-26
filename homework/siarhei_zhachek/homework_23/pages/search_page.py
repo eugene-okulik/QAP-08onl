@@ -28,10 +28,3 @@ class SearchPage(BasePage):
     @property
     def laptops_in_page(self):
         return self.find_element(loc.laptops_in_page)
-
-
-
-
-
-
-

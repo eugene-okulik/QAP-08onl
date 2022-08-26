@@ -15,8 +15,3 @@ def test_dropdown(driver):
     home_page.move_laptops_und_computer()
     home_page.move_to_notebooks()
     assert home_page.notebooks.is_displayed()
-
-
-
-
-

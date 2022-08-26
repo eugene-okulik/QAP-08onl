@@ -29,4 +29,3 @@ class CatPage(BasePage):
     @property
     def element_is_not_to_cat(self):
         return self.find_element(loc.element_is_not_to_cat)
-

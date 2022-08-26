@@ -52,7 +52,3 @@ class HomePage(BasePage):
     def move_to_notebooks(self):
         notebooks_to = self.find_element(loc.notebooks)
         return self.move_to_element(notebooks_to).perform()
-
-
-
-
