@@ -5,12 +5,10 @@ from selenium.webdriver.support.ui import Select
 import pytest
 
 
-serv = Service(executable_path=r'D:\dz1\prog\chromedriver.exe')
-driver = webdriver.Chrome(service=serv)
-
-
 @pytest.fixture(scope='session')
 def start_now():
+    serv = Service(executable_path=r'D:\dz1\prog\chromedriver.exe')
+    driver = webdriver.Chrome(service=serv)
     print("Начинаем")
     driver.get("http://automationpractice.com/")
     yield driver
