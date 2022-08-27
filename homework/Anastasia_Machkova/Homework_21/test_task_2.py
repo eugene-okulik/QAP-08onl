@@ -11,12 +11,12 @@ from selenium.webdriver.support.ui import Select
 def driver():
     print('\nTest start\n')
     service = Service(executable_path='chromedriver.exe')
-    driver = webdriver.Chrome(service=service)
-    driver.maximize_window()
-    driver.implicitly_wait(10)
-    yield driver
+    chrome_driver = webdriver.Chrome(service=service)
+    chrome_driver.maximize_window()
+    chrome_driver.implicitly_wait(10)
+    yield chrome_driver
     print('\nTest end\n')
-    driver.quit()
+    chrome_driver.quit()
 
 
 @pytest.fixture(scope='session')
