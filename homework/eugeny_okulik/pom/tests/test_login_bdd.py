@@ -1,4 +1,4 @@
-from pytest_bdd import feature, scenario, given, when, then
+from pytest_bdd import scenario, given, when, then
 from pom.pages.home_page import HomePage
 from pom.pages.authentication import AuthPage
 
