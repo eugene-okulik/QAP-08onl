@@ -1,20 +1,6 @@
 import pytest
 
 
-@pytest.fixture(scope='function')
-def print_text_multiple_times():
-    print('\nevery_func_fixture - before')
-    yield None
-    print('\nevery_func_fixture - after')
-
-
-@pytest.fixture(scope='session')
-def print_text_once():
-    print('\nevery_session_fixture - before session')
-    yield None
-    print('every_session_fixture - after session')
-
-
 @pytest.mark.usefixtures
 @pytest.mark.hard("Тяжелый тест")
 def test_1():

@@ -5,18 +5,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-import pytest
-from selenium import webdriver
-
-
-@pytest.fixture(scope='function')
-def driver():
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    driver.implicitly_wait(10)
-    yield driver
-    driver.quit()
-
 
 def test_blank_text(driver):
     driver.get("http://automationpractice.com/")
