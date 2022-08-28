@@ -1,8 +1,9 @@
+import allure
 from ..pages.home_page import HomePage
 from ..pages.jobs_page import JobsPage
-import allure
 
 
+@allure.suite('From home page')
 @allure.feature('Find QA AUTO middle level jobs')
 def test_find_qa_auto_middle(driver):
     with allure.step('Open home page'):

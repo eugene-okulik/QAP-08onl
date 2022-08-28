@@ -1,9 +1,9 @@
+import allure
 from ..pages.home_page import HomePage
 from ..pages.enter_email_page import EnterEmailPage
-import pytest
-import allure
 
 
+@allure.suite('From home page')
 @allure.feature('Log in')
 def test_press_to_enter(driver):
     with allure.step('Open home page'):
@@ -22,6 +22,7 @@ def test_press_to_enter(driver):
     assert error.is_displayed
 
 
+@allure.suite('From home page')
 @allure.feature('Log in')
 def test_empty_fields(driver):
     with allure.step('Open home page'):

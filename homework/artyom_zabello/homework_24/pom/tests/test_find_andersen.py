@@ -1,10 +1,10 @@
+import allure
 from ..pages.home_page import HomePage
 from ..pages.companies_page import CompaniesPage
 from ..pages.andersen_page import AndersenPage
-import allure
-import pytest
 
 
+@allure.suite('From home page')
 @allure.feature('Find Andersen company')
 def test_find_andersen(driver):
     with allure.step('open home page'):

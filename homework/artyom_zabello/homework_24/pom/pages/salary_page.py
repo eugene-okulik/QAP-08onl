@@ -1,5 +1,6 @@
-from ..pages.base_page_dev_by import BasePage
 from selenium.webdriver.common.by import By
+from ..pages.base_page_dev_by import BasePage
+
 
 POSITION = (By.CSS_SELECTOR, 'a[data-type="salary_position_id"]')
 QA_TEAM_LEADER = (By.CSS_SELECTOR, 'a[data-id="127"]')

@@ -1,11 +1,12 @@
-from ..pages.home_page import HomePage
-from pytest_bdd import scenario, given, when, then
-from ..pages.jobs_page import JobsPage
 import allure
+from pytest_bdd import scenario, given, when, then
+from ..pages.home_page import HomePage
+from ..pages.jobs_page import JobsPage
+
 
 
 @allure.feature('Test BDD')
-@scenario('jobs.feature', 'Jobs for QA Auto middle exist')
+@scenario('bdd_tests.feature', 'Jobs for QA Auto middle exist')
 def test_jobs_bdd():
     pass
 

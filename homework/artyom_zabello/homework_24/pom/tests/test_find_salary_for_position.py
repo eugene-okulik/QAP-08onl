@@ -1,10 +1,10 @@
 from time import sleep
+import allure
 from ..pages.home_page import HomePage
 from ..pages.salary_page import SalaryPage
-import allure
-import pytest
 
 
+@allure.suite('From home page')
 @allure.feature('Search QA team leader salary')
 def test_find_qa_teamleader_salary(driver):
     with allure.step('open home page'):
@@ -17,6 +17,6 @@ def test_find_qa_teamleader_salary(driver):
         sleep(1)
         driver.execute_script("window.scrollTo(500, 600)")
         salary_page.find_position()
-    qa = salary_page.select_qa_team_leader()
+    q_a = salary_page.select_qa_team_leader()
     avg = salary_page.get_salary_qa_team_leader()
-    assert 'QA Team Leader' in qa.text and '3165' in avg.text
+    assert 'QA Team Leader' in q_a.text and '3165' in avg.text
