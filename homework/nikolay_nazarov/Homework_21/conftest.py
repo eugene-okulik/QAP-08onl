@@ -3,7 +3,7 @@ from selenium import webdriver
 
 
 @pytest.fixture(scope='function')
-def driver():
+def driver_chrome():
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.implicitly_wait(10)
