@@ -40,7 +40,7 @@ def test_dif_2():
 
 
 @pytest.mark.usefixtures('every_session', 'some_sessions')
-@pytest.mark.parametrize('a, b', [[10, 2], [4, 1], [8, 8]])
+@pytest.mark.parametrize('a_num, b_num', [[10, 2], [4, 1], [8, 8]])
 def test_sum_3(a_num, b_num):
     print('sum')
     result = a_num + b_num
