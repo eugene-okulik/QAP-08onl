@@ -1,3 +1,5 @@
+from time import sleep
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -45,7 +47,7 @@ music_checkbox = chrome_driver.find_element(By.CSS_SELECTOR, "label[for='hobbies
 music_checkbox.click()
 
 upload_picture = chrome_driver.find_element(By.ID, "uploadPicture")
-upload_picture.send_keys(r"D:\1.jpg")
+upload_picture.send_keys(r"D:\1.png")
 
 current_address_placeholder = chrome_driver.find_element(By.ID, 'currentAddress')
 current_address_placeholder.send_keys("Mytisci, st. Razvedchika Abelia, h. 1")

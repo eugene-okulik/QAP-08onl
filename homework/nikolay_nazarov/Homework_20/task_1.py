@@ -48,9 +48,9 @@ word_file_checkbox = chrome_driver.find_element(By.CSS_SELECTOR,
                                                 'li:nth-child(1) .rct-checkbox')
 word_file_checkbox.click()
 
-excel_file_checkbox = chrome_driver.find_element(By.CSS_SELECTOR,
-                                                 '.rct-node > ol > li:nth-child(3) > ol > '
-                                                 'li:nth-child(2) .rct-checkbox')
-excel_file_checkbox.click()
 
+excel_file_checkbox = chrome_driver.find_element(By.CSS_SELECTOR,
+                                                 '.rct-node > ol > li:nth-child(3) > ol >'
+                                                 ' li:nth-child(2) .rct-checkbox > svg')
+excel_file_checkbox.click()
 chrome_driver.quit()
