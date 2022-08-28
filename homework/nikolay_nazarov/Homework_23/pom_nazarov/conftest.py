@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pytest
-import allure
 
 
 @pytest.fixture(scope='function')
