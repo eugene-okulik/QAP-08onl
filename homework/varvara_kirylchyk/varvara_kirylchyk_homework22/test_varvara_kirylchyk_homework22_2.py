@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
 
-def test11(driver):
+def test11_sublists(driver):
     """A dummy docstring."""
     driver.get("https://demoqa.com/menu")
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
