@@ -22,13 +22,13 @@ class HomePage(BasePage):
     def t_shirt_btn_is_clickable(self):
         return self.find_element(home_page_locators.t_shirts_page).is_enabled()
 
-    def test_contact_us_is_clickable(self):
+    def contact_us_is_clickable(self):
         return self.find_element(home_page_locators.contact_us).is_enabled()
 
     def cart_is_clickable(self):
         return self.find_element(home_page_locators.cart).is_enabled()
 
-    def test_contact_us_is_displayed(self):
+    def contact_us_is_displayed(self):
         return self.find_element(home_page_locators.contact_us).is_displayed()
 
     def cart_is_displayed(self):
