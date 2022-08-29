@@ -1,6 +1,5 @@
 from pom.pages.cart_window import CartPage
 from pom.pages.cart_page import HomePage
-import allure
 
 def test_open_cart(driver):
     home_page = HomePage(driver)
