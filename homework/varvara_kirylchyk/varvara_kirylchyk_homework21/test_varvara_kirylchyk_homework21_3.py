@@ -32,16 +32,11 @@ def test10(setup):
     """A dummy docstring."""
     setup.get("https://testpages.herokuapp.com/styled/dynamic-buttons-simple.html")
     setup.find_element(By.ID, "button00").click()
-    setup.implicitly_wait(5)
     assert setup.find_element(By.ID, "button01").is_displayed()
-    setup.implicitly_wait(5)
     setup.find_element(By.ID, "button01").click()
-    setup.implicitly_wait(5)
     assert setup.find_element(By.ID, "button02").is_displayed()
     setup.find_element(By.ID, "button02").click()
-    setup.implicitly_wait(5)
     assert setup.find_element(By.ID, "button03").is_displayed()
-    setup.implicitly_wait(5)
     setup.find_element(By.ID, "button03").click()
     assert setup.find_element(By.ID, "buttonmessage").text == \
         'All Buttons Clicked'

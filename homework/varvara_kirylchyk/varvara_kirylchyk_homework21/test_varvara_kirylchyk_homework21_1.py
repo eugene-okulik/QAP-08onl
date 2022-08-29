@@ -11,7 +11,7 @@
 # Пропустите выполнение одного теста и пометьте причину пропуска
 # Хотя бы один тест должен работать с набором тестовых данных
 
-import pytest as pytest
+import pytest
 
 
 @pytest.fixture(scope='session')
@@ -60,21 +60,25 @@ def test_sum6(print_text):
     """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
-@pytest.mark.parametrize('a, b', [[1,2],[3,4],[5,6]])
-def test_sum7(print_text, num1, num2):
+
+@pytest.mark.parametrize('a, b', [[1, 2], [3, 4], [5, 6]])
+def test_sum7(print_text, a, b):
     """A dummy docstring."""
-    result = num1 + num2
-    assert num1 + num2 == result, 'Результат не соответствует ожидаемому'
+    result = a + b
+    assert a + b == result, 'Результат не соответствует ожидаемому'
+
 
 @pytest.mark.hard
 def test_sum8(print_text):
     """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
+
 @pytest.mark.simple
 def test_sum9(print_text):
     """A dummy docstring."""
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
+
 
 @pytest.mark.skip('bug')
 def test_sum10(print_text):
