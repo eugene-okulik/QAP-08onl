@@ -17,7 +17,7 @@ def all_tests():
 
 @pytest.mark.usefixtures(name='this_test')
 @pytest.mark.simple
-def test_1():
+def test_1(all_tests):
     print('test_1')
     assert 2+2 == 4, 'The result is not as expected'
 
