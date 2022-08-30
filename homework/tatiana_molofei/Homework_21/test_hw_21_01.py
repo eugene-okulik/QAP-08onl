@@ -3,7 +3,7 @@ import pytest
 
 
 @pytest.fixture(scope='session',  name='print_begin_end')
-def print_text():
+def print_text_some_tests():
     print("\nBefore first test\n")
     yield None
     print("\nAfter last test\n")
@@ -13,14 +13,17 @@ def print_text():
 def print_all_tests():
     print("\nBefore every test\n")
     yield None
-    print("\nAfter every test\n")
+    print("\nAfter every test\n")\
 
 
+
+@pytest.mark.usefixtures('print_begin_end', 'print_all')
 @pytest.mark.simple
 def test_sum():
     assert 2+2 == 4
 
 
+@pytest.mark.usefixtures('print_all')
 @pytest.mark.simple
 def test_dif():
     assert 5-2 == 3
