@@ -2,16 +2,18 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pytest
 import allure
+import settings
 
 
 @pytest.fixture(scope='function')
 def driver(browser_option):
     options = Options()
     options.add_argument('window-size=1920,1080')
-    if browser_option == 'ff':
+    # if browser_option == 'ff':
+    if settings.browser_name == 'ff':
         with allure.step('Run Firefox'):
             my_driver = webdriver.Firefox()
-    else:
+    elif settings.browser_name == 'chrome':
         with allure.step('Run Chrome'):
             my_driver = webdriver.Chrome(options=options)
     my_driver.implicitly_wait(10)

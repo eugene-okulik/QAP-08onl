@@ -1,6 +1,6 @@
 from pytest_bdd import scenario, given, when, then
-from pom.pages.home_page import HomePage
-from pom.pages.authentication import AuthPage
+from pages.home_page import HomePage
+from pages.authentication import AuthPage
 
 
 @scenario('login.feature', 'login field exists')

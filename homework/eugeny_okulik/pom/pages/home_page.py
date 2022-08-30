@@ -1,5 +1,5 @@
-from pom.pages.base_page import BasePage
-from pom.pages.locators import home_page_locators as loc
+from pages.base_page import BasePage
+from pages.locators import home_page_locators as loc
 
 
 class HomePage(BasePage):
@@ -12,7 +12,7 @@ class HomePage(BasePage):
         return self.find_element(loc.sign_in_button)
 
     def open(self):
-        self.driver.get('http://automationpractice.com/index.php')
+        self.driver.get(f'{self.domain}/index.php')
 
     def open_sign_in(self):
         self.find_element(loc.sign_in_button).click()

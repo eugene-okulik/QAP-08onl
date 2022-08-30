@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from pom.pages.base_page import BasePage
+from pages.base_page import BasePage
 
 email_field = (By.ID, 'email')
 passwd_field = (By.ID, 'passwd')
