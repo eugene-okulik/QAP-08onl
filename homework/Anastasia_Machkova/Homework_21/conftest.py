@@ -15,6 +15,13 @@ def driver():
     chrome_driver.quit()
 
 
+@pytest.fixture(scope='function')
+def this_test():
+    print('\nReady to test\n')
+    yield
+    print('\nI am done with test\n')
+
+
 @pytest.fixture(scope='session')
 def all_tests():
     print('\nNow all tests will run\n')
