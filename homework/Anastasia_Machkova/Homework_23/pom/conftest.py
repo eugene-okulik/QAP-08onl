@@ -5,7 +5,8 @@ from selenium.webdriver.chrome.service import Service
 
 @pytest.fixture(scope='function')
 def driver():
-    service = Service(executable_path='C:\\Users\\a.machkova.MACHKOVA-T490\\Downloads\\chromedriver.exe')
+    service = Service(executable_path='C:\\Users\\a.machkova.MACHKOVA-T490\\'
+                                      'Downloads\\chromedriver.exe')
     chrome_driver = webdriver.Chrome(service=service)
     chrome_driver.maximize_window()
     chrome_driver.implicitly_wait(10)

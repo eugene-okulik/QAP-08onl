@@ -1,5 +1,5 @@
-from .home_page import HomePage
 from selenium.webdriver.common.by import By
+from .home_page import HomePage
 
 email_field = (By.CSS_SELECTOR, 'input[data-validate="isEmail"]')
 order_reference = (By.ID, 'id_order')
