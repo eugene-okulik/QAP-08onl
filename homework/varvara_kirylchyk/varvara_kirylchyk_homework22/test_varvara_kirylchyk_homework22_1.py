@@ -19,7 +19,8 @@ def test10_tabs(driver):
     driver.get("https://www.demoblaze.com/index.html")
     element = driver.find_element(By.CLASS_NAME, "h-100")
     element_text = driver.find_element(By.XPATH, "//*[@id='tbodyid']/div[1]/div/div/h4/a").text
-    ActionChains(driver).move_to_element(element).key_down(Keys.COMMAND).click(element).key_up(Keys.COMMAND).perform()
+    ActionChains(driver).move_to_element(element).key_down(Keys.COMMAND)\
+        .click(element).key_up(Keys.COMMAND).perform()
     time.sleep(5)
     driver.switch_to.window(driver.window_handles[1])
     time.sleep(5)
@@ -32,4 +33,3 @@ def test10_tabs(driver):
     cart.click()
     time.sleep(5)
     assert cart_text in element_text
-
