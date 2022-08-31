@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import Select
 
 
 #task_1
-def test_check_inscription(driver, all_tests):
+def test_check_inscription(driver):
     driver.get('http://automationpractice.com/index.php')
     inscription = driver.find_element(By.CSS_SELECTOR, 'section.bottom-footer.col-xs-12')
     assert inscription.text == '© 2014 Ecommerce software by PrestaShop™'
