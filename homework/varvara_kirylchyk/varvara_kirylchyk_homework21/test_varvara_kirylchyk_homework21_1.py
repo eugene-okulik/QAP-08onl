@@ -61,11 +61,11 @@ def test_sum6(print_text):
     assert 3 + 3 == 6, 'Результат не соответствует ожидаемому'
 
 
-@pytest.mark.parametrize('a, b', [[1, 2], [3, 4], [5, 6]])
-def test_sum7(print_text, a, b):
+@pytest.mark.parametrize('one, two', [[1, 2], [3, 4], [5, 6]])
+def test_sum7(print_text, one, two):
     """A dummy docstring."""
-    result = a + b
-    assert a + b == result, 'Результат не соответствует ожидаемому'
+    result = one + two
+    assert one + two == result, 'Результат не соответствует ожидаемому'
 
 
 @pytest.mark.hard
