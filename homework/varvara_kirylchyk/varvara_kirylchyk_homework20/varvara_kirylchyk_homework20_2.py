@@ -1,104 +1,104 @@
+"""System module."""
 # Задание 2
 # Заполнить эту форму
 # https://demoqa.com/automation-practice-form
 
 import time
 from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.keys import Keys
 
-# options = Options()
-# options.add_argument("start-maximized")
-# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),
-# // options=options)
 
-driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-# driver = webdriver.Safari()
-driver.get("https://demoqa.com/automation-practice-form")
-driver.maximize_window()
+options = Options()
+options.add_argument('window-size=960,640')
+chrome_driver = webdriver.Chrome(options=options)
 
-time.sleep(3)
+FIRST_NAME = 'Varvara'
+LAST_NAME = 'Kirylchyk'
+EMAIL = 'varvara.kirylchyk@yandex.ru'
+male, female, other = 0, 1, 2
+MOBILE = '1123456789'
+YEAR_OF_BIRTH = 1988
+MONTH_OF_BIRTH = 11
+DAY_OF_BIRTH = 10
+SUBJECT = "Question"
+sports, reading, music = 3, 4, 5
+ADDRESS = 'City'
+STATE = "ABC"
+CITY = 'Minsk'
 
-driver.execute_script("""
-    var l = document.getElementById("fixedban").remove();
- """)
 
-fe = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "firstName")))
-fe.send_keys("Varvara")
+def filling_practice_form(driver):
+    """A dummy docstring."""
+    driver.get('https://demoqa.com/automation-practice-form')
+    driver.execute_script("""
+        var l = document.getElementById("fixedban").remove();
+     """)
 
-ln = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "lastName")))
-ln.send_keys("Kirylchyk")
+    first_name_fill = driver.find_element(By.XPATH, '//input[@id="firstName"]')
+    first_name_fill.send_keys(FIRST_NAME)
 
-userEmail_element = WebDriverWait(driver, 10).until(EC.presence_of_element_located //
-                                                    ((By.ID, "userEmail")))
-userEmail_element.send_keys("kirylchyk@gmail.com")
+    last_name_fill = driver.find_element(By.CSS_SELECTOR, 'input[placeholder="Last Name"]')
+    last_name_fill.send_keys(LAST_NAME)
 
-driver.switch_to.default_content()
-gender_element = driver.find_element(By.ID, "gender-radio-2")
-# gender_element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable
-# //((By.ID, "gender-radio-2")))
+    email_fill = driver.find_element(By.ID, 'userEmail')
+    email_fill.send_keys(EMAIL)
 
-driver.execute_script('arguments[0].scrollIntoView(true);', gender_element)
-driver.execute_script("arguments[0].click();", gender_element)
+    time.sleep(3)
+    driver.execute_script("window.scrollTo(0, 1080)")
 
-# action = webdriver.common.action_chains.ActionChains(driver)
-# action.move_to_element_with_offset(gender_element, -3, -3)
-# action.click()
-# action.perform()
-# time.sleep(5)
-# gender_element.click()
+    gender_fill = driver.find_elements(By.XPATH, '//label[@class="custom-control-label"]')
+    gender_fill[female].click()
 
-time.sleep(3)
-userNumber_element = driver.find_element(By.ID, "userNumber")
-userNumber_element.click()
-userNumber_element.send_keys("123")
+    mobile_fill = driver.find_elements(By.XPATH, '//input[@class=" mr-sm-2 form-control"]')
+    mobile_fill[2].send_keys(MOBILE)
+    if len(MOBILE) != 10 or MOBILE.isdigit() is False:
+        print("Error. The phone number must be 10 digits.")
 
-driver.execute_script('arguments[0].scrollIntoView(true);', userNumber_element)
-driver.execute_script("arguments[0].click();", userNumber_element)
+    driver.execute_script("window.scrollTo(0, 1080)")
 
-time.sleep(3)
-date_of_birth_fill = driver.find_element(By.ID, 'dateOfBirthInput')
-date_of_birth_fill.click()
+    date_of_birth_fill = driver.find_element(By.ID, 'dateOfBirthInput')
+    date_of_birth_fill.click()
+    month_fill = Select(driver.find_element(By.CLASS_NAME, 'react-datepicker__month-select'))
+    month_fill.select_by_value(f'{MONTH_OF_BIRTH-1}')
+    year_fill = Select(driver.find_element(By.CLASS_NAME, 'react-datepicker__year-select'))
+    year_fill.select_by_value(f'{YEAR_OF_BIRTH}')
+    day_fill = driver.find_element(By.CLASS_NAME, f'react-datepicker__day--0{DAY_OF_BIRTH}')
+    day_fill.click()
 
-select_month = Select(driver.find_element(By.CLASS_NAME, 'react-datepicker__month-select'))
-select_month.select_by_value("10")
-select_year = Select(driver.find_element(By.CLASS_NAME, 'react-datepicker__year-select'))
-select_year.select_by_value("1988")
-driver.find_element(By.CLASS_NAME, 'react-datepicker__day--006').click()
+    time.sleep(3)
 
-time.sleep(3)
-
-subject_element = driver.find_element(By.XPATH,
+    subject_fill = driver.find_element(By.XPATH,
                                         '//div[@class="subjects-auto-complete__input"]/input')
-subject_element.click()
-subject_element.send_keys("Question")
+    subject_fill.send_keys(SUBJECT)
+    subject_fill.send_keys(Keys.ENTER)
 
-time.sleep(3)
+    driver.execute_script('arguments[0].scrollIntoView(true);', subject_fill)
+    driver.execute_script("arguments[0].click();", subject_fill)
+    time.sleep(3)
 
-# hobby_element = driver.find_element(By.CLASS_NAME, "hobbies-checkbox-3")
-# hobby_element.click()
+    hobbies_fill = driver.find_elements(By.XPATH, '//label[@class="custom-control-label"]')
+    hobbies_fill[music].click()
 
-# time.sleep(3)
+    current_address_fill = driver.find_element(By.CSS_SELECTOR,
+                                                'textarea[placeholder="Current Address"]')
+    current_address_fill.send_keys(ADDRESS)
 
-address_element = driver.find_element(By.ID, "currentAddress")
-address_element.click()
-address_element.send_keys("City")
+    time.sleep(3)
 
-time.sleep(3)
+    file_uploading = driver.find_element(By.ID, 'uploadPicture')
+    file_uploading = file_uploading.find_element(By.XPATH, "//input[@type='file']")
+    file_uploading.send_keys("/Downloads/cats.jpeg")
+    file_uploading.submit()
 
-driver.execute_script('arguments[0].scrollIntoView(true);', address_element)
-driver.execute_script("arguments[0].click();", address_element)
+    state = driver.find_element(By.XPATH, '//input[@id="react-select-3-input"]')
+    state.send_keys(STATE)
+    state.send_keys(Keys.ENTER)
 
-# state_element = Select(driver.find_element(By.ID, "state"))
-# state_element.select_by_index(2)
+    # city = driver.find_element(By.XPATH, '//input[@id="react-select-4-input"]')
+    # city.send_keys(CITY)
+    # city.send_keys(Keys.ENTER)
 
-# time.sleep(3)
-
-submit_element = driver.find_element(By.ID, "submit")
-submit_element.click()
+filling_practice_form(chrome_driver)
