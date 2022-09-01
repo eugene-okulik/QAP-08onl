@@ -10,10 +10,10 @@ def driver(browser_option):
     options = Options()
     options.add_argument('window-size=1920,1080')
     # if browser_option == 'ff':
-    if settings.browser_name == 'ff':
+    if settings.BROWSER_NAME == 'ff':
         with allure.step('Run Firefox'):
             my_driver = webdriver.Firefox()
-    elif settings.browser_name == 'chrome':
+    elif settings.BROWSER_NAME == 'chrome':
         with allure.step('Run Chrome'):
             my_driver = webdriver.Chrome(options=options)
     my_driver.implicitly_wait(10)

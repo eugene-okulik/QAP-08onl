@@ -1,3 +1,3 @@
-browser_name = 'chrome'
-domain = 'http://automationpractice.com'
-environment = ''
+BROWSER_NAME = 'chrome'
+DOMAIN = 'http://automationpractice.com'
+ENVIRONMENT = ''

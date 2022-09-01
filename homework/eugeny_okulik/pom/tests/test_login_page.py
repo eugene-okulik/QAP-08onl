@@ -14,10 +14,18 @@ def test_login(driver, user):
     with allure.step('Open Home page'):
         home_page = HomePage(driver)
         home_page.open()
-        allure.attach(driver.get_screenshot_as_png(), name='screenshot', attachment_type=AttachmentType.PNG)
+        allure.attach(
+            driver.get_screenshot_as_png(),
+            name='screenshot',
+            attachment_type=AttachmentType.PNG
+        )
     with allure.step('Click Sign In button'):
         home_page.open_sign_in()
-        allure.attach(driver.get_screenshot_as_png(), name='screenshot', attachment_type=AttachmentType.PNG)
+        allure.attach(
+            driver.get_screenshot_as_png(),
+            name='screenshot',
+            attachment_type=AttachmentType.PNG
+        )
     auth_page = AuthPage(driver)
     email, passw = user
     auth_page.email_field.send_keys(email)
