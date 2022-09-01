@@ -23,7 +23,10 @@ def driver(browser_option):
 
 def pytest_addoption(parser):
     parser.addoption(
-        "--browser", action='store', default='chrome', help='Укажите название браузера, по умолчанию значение - chrome'
+        "--browser",
+        action='store',
+        default='chrome',
+        help='Укажите название браузера, по умолчанию значение - chrome'
     )
 
 
