@@ -1,0 +1,45 @@
+Задание 1
+   14  ls -l /
+   15  ls -l /tmp
+   16  ls -l /usr/bin
+   17  ls -l /dev
+   18  ls --help
+   21  ls -a
+   58  scp -i .ssh/qap insanity20@164.92.136.89:myfile.txt ~/Desktop
+   92  df -h
+   95  ps -f
+   97  ps -h
+  101  tar -xvf hw-16.tar
+  107  history | grep -
+  108  history | grep - >> results.txt
+
+Задание 2
+.
+..
+.bash_history
+.bashrc
+.cache
+.cloud-locale-test.skip
+.config
+.local
+.profile
+.selected_editor
+.ssh
+.viminfo
+.wget-hsts
+new_user.sh
+snap
+
+Задание 3
+PING google.com (142.250.74.206) 56(84) bytes of data.
+64 bytes from fra24s02-in-f14.1e100.net (142.250.74.206): icmp_seq=1 ttl=119 time=1.26 ms
+64 bytes from fra24s02-in-f14.1e100.net (142.250.74.206): icmp_seq=2 ttl=119 time=0.558 ms
+64 bytes from fra24s02-in-f14.1e100.net (142.250.74.206): icmp_seq=3 ttl=119 time=0.604 ms
+64 bytes from fra24s02-in-f14.1e100.net (142.250.74.206): icmp_seq=4 ttl=119 time=0.658 ms
+64 bytes from fra24s02-in-f14.1e100.net (142.250.74.206): icmp_seq=5 ttl=119 time=0.652 ms
+64 bytes from fra24s02-in-f14.1e100.net (142.250.74.206): icmp_seq=6 ttl=119 time=0.592 ms
+64 bytes from fra24s02-in-f14.1e100.net (142.250.74.206): icmp_seq=7 ttl=119 time=0.590 ms
+
+--- google.com ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6072ms
+rtt min/avg/max/mdev = 0.558/0.701/1.257/0.229 ms
