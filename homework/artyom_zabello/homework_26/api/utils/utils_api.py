@@ -1,5 +1,6 @@
-import requests
 import json
+import requests
+
 
 
 class Utils:
@@ -13,7 +14,7 @@ class Utils:
 
     @staticmethod
     def read_file(file_name):
-        with open(f"{file_name}", 'r') as file:
+        with open(f"{file_name}", 'r', encoding='utf-8') as file:
             res = json.loads(file.read())
         return res
 
@@ -31,7 +32,7 @@ class ApiMethods:
 
     @staticmethod
     def create_new_meme(domain, token, file_name):
-        with open(f"{file_name}", 'r') as file:
+        with open(f"{file_name}", 'r', encoding='utf-8') as file:
             res_json = json.loads(file.read())
         req = requests.post(f'{domain}/meme', json=res_json, headers=token)
         print(req.json())
@@ -39,7 +40,7 @@ class ApiMethods:
 
     @staticmethod
     def update_meme(domain, id_meme, file_name, token):
-        with open(f"{file_name}", 'r') as file:
+        with open(f"{file_name}", 'r', encoding='utf-8') as file:
             res_json = json.loads(file.read())
         req = requests.put(f'{domain}/meme/{id_meme}', json=res_json, headers=token)
         print(req.json())
