@@ -1,4 +1,3 @@
-from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -7,13 +6,10 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def test_1(driver):
+def test_cart_check(driver):
     driver.get('https://www.demoblaze.com/index.html')
-    sleep(2)
     driver.execute_script("window.scrollTo(800, 1000)")
-    sleep(2)
-    new_window = driver.find_element(By.XPATH,
-                                     "//*[@id=\"tbodyid\"]/div[8]/div/div/h4/a")
+    new_window = driver.find_element(By.LINK_TEXT, 'Sony vaio i5')
     ActionChains(driver).move_to_element(new_window).\
         key_down(Keys.COMMAND).click(new_window).key_up(Keys.COMMAND).perform()
     driver.switch_to.window(driver.window_handles[1])
@@ -29,7 +25,7 @@ def test_1(driver):
     assert 'Sony vaio i5' in cart_check.text
 
 
-def test_2(driver):
+def test_move_to_element(driver):
     driver.get('https://demoqa.com/menu#')
     main_item = driver.find_element(By.XPATH, '//*[@id=\"nav\"]/li[2]/a')
     ActionChains(driver).move_to_element(main_item).perform()
@@ -39,7 +35,7 @@ def test_2(driver):
     ActionChains(driver).move_to_element(sub_sub_item_2).perform()
 
 
-def test_3(driver):
+def test_check_word(driver):
     driver.get('https://testpages.herokuapp.com/styled/alerts/alert-test.html')
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     driver.find_element(By.ID, 'promptexample').click()
