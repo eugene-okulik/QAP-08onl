@@ -7,11 +7,13 @@ def user_info(files):
         # print(info)
     analysed_info = json.loads(info)
     # print(analysed_info)
-    user_own = str(analysed_info['has']).replace(':', '').replace('{', '') \
-        .replace('}', '').replace("'", "")
-    # print(user_own)
+    kids = analysed_info['children']
+    kids = " and ".join(kids)
+    # print(kids)
+    user_own = str(analysed_info['has']).replace(':', '').replace('{', '').replace('}', ''). \
+        replace("'", "")
     print(f"User name is {analysed_info['name']}, he lives in {analysed_info['city']}. He has "
-          f"{len(analysed_info['children'])} children. He owns {user_own}.")
+          f"{len(analysed_info['children'])} children - {kids}. He owns {user_own}.")
 
 
 user_info('file_1.json')
