@@ -114,7 +114,7 @@ def test_existence_of_a_meme_with_the_fun_tag(domain):
     for value in dict(response).values():
         count_tags_fun = 0
         for tags in value:
-            for tag in tags['tags']:
+            for tag in tags["tags"]:
                 if tag == 'fun':
                     count_tags_fun += 1
         assert count_tags_fun >= 1
