@@ -99,7 +99,7 @@ def test_delete_mem(domain):
         headers=headers,
         data=data
     ).json()
-    meme_id = response['id']
+    meme_id = response["id"]
     requests.request('DELETE', f'{domain}/meme/{meme_id}', headers=headers, data=data)
     response = requests.request('GET', f'{domain}/meme/{meme_id}', headers=headers, data=data)
     assert response.status_code == 404

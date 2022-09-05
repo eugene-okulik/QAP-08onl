@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from ..pages.base_page_dev_by import BasePage
 
 
+# pylint: too-few-public-methods
 ANDERSEN_LABEL = (By.XPATH, '//div[@class="left"]/h1')
 
 
