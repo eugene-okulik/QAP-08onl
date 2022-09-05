@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
 
-service = Service(executable_path='chromedriver.exe')
+service = Service(executable_path='../Homework_21/chromedriver.exe')
 chrome_driver = webdriver.Chrome(service=service)
 
 
