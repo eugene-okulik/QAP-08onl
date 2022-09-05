@@ -12,3 +12,6 @@ class AndersenPage(BasePage):
 
     def get_label(self):
         return self.find_element(ANDERSEN_LABEL)
+
+    def get_label_text(self):
+        return self.find_element(ANDERSEN_LABEL).text
