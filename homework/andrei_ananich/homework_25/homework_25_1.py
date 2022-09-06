@@ -14,11 +14,12 @@ def user_data(file):
     with open(f'json_files/{file}', encoding="utf8") as json_file:
         data = json_file.read()
         result_data = json.loads(data)
+        children = ', '.join(result_data['children'])
         own_things = str(result_data['has']).replace(':', '').replace('{', '')\
             .replace('}', '').replace("'", "")
-    print(f"User name is {result_data['name']}. He lives in {result_data['city']}. "
-          f"He has {len(result_data['children'])} kid(s). "
-          f"He owns {own_things}.")
+    print(f"User name is {result_data['name']}. He lives in {result_data['city']}."
+          f" He has {len(result_data['children'])} kids {children}."
+          f" He owns {own_things}.")
 
 
 user_data('user1.json')
