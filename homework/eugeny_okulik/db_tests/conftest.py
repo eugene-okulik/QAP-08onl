@@ -13,3 +13,4 @@ def cursor():
     )
     my_cursor = db_connection.cursor(dictionary=True)
     yield my_cursor
+    db_connection.close()
