@@ -1,8 +1,8 @@
 import pytest
 
+import allure
 from ..pages.home_page import HomePage
 from ..pages.authentification import AuthPage
-import allure
 from ..tests.test_data import data
 
 
