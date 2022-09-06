@@ -1,6 +1,5 @@
-import json
+import dataclasses
 import requests
-
 
 
 class Utils:
@@ -13,36 +12,25 @@ class Utils:
         return result
 
     @staticmethod
-    def read_file(file_name):
-        with open(f"{file_name}", 'r', encoding='utf-8') as file:
-            res = json.loads(file.read())
-        return res
+    def check_token(domain, token):
+        req = requests.get(f'{domain}/authorize/{token}')
+        if 'Token is alive. Username is' in req.text:
+            return True
+        return False
 
 
-    #
-    # @staticmethod
-    # def check_token(domain, token):
-    #     req = requests.get(f'{domain}/authorize/{token}')
-    #     if 'Token is alive. Username is' in req.text:
-    #         return True
-    #     return False
-
-
+@dataclasses.dataclass
 class ApiMethods:
 
     @staticmethod
-    def create_new_meme(domain, token, file_name):
-        with open(f"{file_name}", 'r', encoding='utf-8') as file:
-            res_json = json.loads(file.read())
-        req = requests.post(f'{domain}/meme', json=res_json, headers=token)
+    def create_new_meme(domain, file, token):
+        req = requests.post(f'{domain}/meme', json=file, headers=token)
         print(req.json())
         return req
 
     @staticmethod
     def update_meme(domain, id_meme, file_name, token):
-        with open(f"{file_name}", 'r', encoding='utf-8') as file:
-            res_json = json.loads(file.read())
-        req = requests.put(f'{domain}/meme/{id_meme}', json=res_json, headers=token)
+        req = requests.put(f'{domain}/meme/{id_meme}', json=file_name, headers=token)
         print(req.json())
         return req
 
