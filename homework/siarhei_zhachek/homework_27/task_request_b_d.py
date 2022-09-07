@@ -68,3 +68,6 @@ def task_request_b_d():
     )
 
     d_b.close()
+
+
+task_request_b_d()
