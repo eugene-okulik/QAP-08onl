@@ -21,7 +21,6 @@ def test_get_all_memes(domain):
     assert len(response) == 1
 
 
-# не работает :-(
 def test_get_tags_memes(domain):
     """A dummy docstring."""
     req = request.Request(f'{domain}/meme')
@@ -29,8 +28,14 @@ def test_get_tags_memes(domain):
     req.add_header('tags', 'fun')
     response = request.urlopen(req).read().decode('utf-8')
     response = json.loads(response)
-    print(response)
-    assert len(response) == 1
+    # print(response)
+    for value in dict(response).values():
+        count_tags_fun = 0
+        for tags in value:
+            for tag in tags["tags"]:
+                if tag == 'fun':
+                    count_tags_fun += 1
+        assert count_tags_fun >= 1
 
 
 def test_create_meme(domain):
