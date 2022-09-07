@@ -32,8 +32,8 @@ def test_add_group():
 # такими как вы придумаете и group_id той группы, что вы создали
 def test_add_student():
     """A dummy docstring."""
-    query = 'INSERT INTO `students` (id, name, second_name, group_id) VALUES (%s, %s, %s, %s)'
-    values = ('98', 'Grapes', 'Purple', '40')
+    query = 'INSERT INTO `students` (name, second_name, group_id) VALUES (%s, %s, %s)'
+    values = ('Mandarin', 'Orange', '40')
     cursor.execute(query, values)
     db.commit()
 
@@ -42,7 +42,9 @@ def test_add_student():
 # и записывает дату когда книгу нужно вернуть (в колонку return_date)
 def test_add_book():
     """A dummy docstring."""
-    cursor.execute('select id from students where id = 98')
+    cursor.execute('''
+    select id from students where second_name = 'Purple'
+    ''')
     result = cursor.fetchone()
     result2 = result['id']
     query = 'INSERT INTO books (title, taken_by_student_id, return_date) VALUES (%s, %s, %s)'
@@ -66,7 +68,7 @@ def test_get_data():
     from students s
     inner join books b on b.taken_by_student_id = s.id 
     inner join `groups` g on g.id = s.group_id
-    where s.id = 98
+    where s.second_name = 'Purple'
     ''')
     result = cursor.fetchall()
     # print(result)
