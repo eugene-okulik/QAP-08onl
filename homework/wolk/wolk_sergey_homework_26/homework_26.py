@@ -1,12 +1,13 @@
 from urllib import request, error
 import json
+from urllib.request import urlopen
 
 
 def test_get_all(domain):
     req = request.Request(f'{domain}/meme')
     req.add_header('Authorization', '255a5I8vj9gKF5Z')
-    response = request.urlopen(req).read().decode('utf-8')
-    response = json.loads(response)
+    with urlopen(req) as file:
+        response = file.read()
     assert len(response) == 1
 
 
@@ -14,8 +15,8 @@ def test_get_tags(domain):
     req = request.Request(f'{domain}/meme')
     req.add_header('Authorization', '255a5I8vj9gKF5Z')
     req.add_header('tags', 'fun')
-    response = request.urlopen(req).read().decode('utf-8')
-    response = json.loads(response)
+    with urlopen(req) as file:
+        response = file.read()
     print(response)
     assert len(response) == 1
 
@@ -36,8 +37,8 @@ def test_create(domain):
         "text": "meme",
         "url": "url.com"
     }).encode('ascii')
-    response = request.urlopen(req).read().decode('utf-8')
-    response = json.loads(response)
+    with urlopen(req) as file:
+        response = file.read()
     print(response)
     assert response['text'] == 'meme'
 
@@ -59,8 +60,8 @@ def test_update(domain):
         "url": "url.com",
         "id": 9
     }).encode('ascii')
-    response = request.urlopen(req).read().decode('utf-8')
-    response = json.loads(response)
+    with urlopen(req) as file:
+        response = file.read()
     print(response)
     assert response['text'] == 'meme updated'
 
