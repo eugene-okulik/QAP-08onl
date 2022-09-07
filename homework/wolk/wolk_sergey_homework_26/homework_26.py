@@ -1,4 +1,4 @@
-from urllib import request, error
+from urllib import request, urlopen, error
 import json
 from urllib.request import urlopen
 
@@ -81,13 +81,14 @@ def test_delete_meme(domain):
         "text": "meme to delete",
         "url": "url.com"
     }).encode('ascii')
-    response = request.urlopen(req).read().decode('utf-8')
-    response = json.loads(response)
+    with urlopen(req) as file:
+        response = file.read()
     meme_id = response["id"]
     req = request.Request(f'{domain}/meme/{meme_id}', method='DELETE')
     req.add_header('Content-Type', 'application/json')
     req.add_header('Authorization', '255a5I8vj9gKF5Z')
-    response = request.urlopen(req)
+    with urlopen(req) as file:
+        response = file.read()
     print(response)
     req = request.Request(f'{domain}/meme/{meme_id}')
     req.add_header('Content-Type', 'application/json')
