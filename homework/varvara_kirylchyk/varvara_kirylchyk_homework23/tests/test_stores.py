@@ -1,5 +1,5 @@
-from ..pages.stores import StoresPage
 import allure
+from pages.stores import StoresPage
 
 @allure.feature("Testing Stores Page")
 @allure.story("UI")

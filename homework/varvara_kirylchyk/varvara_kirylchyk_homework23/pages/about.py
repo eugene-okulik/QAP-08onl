@@ -1,5 +1,5 @@
-from ...varvara_kirylchyk_homework23.pages.base_page import BasePage
-from ...varvara_kirylchyk_homework23.locators import locators_about as loc
+from pages.base_page import BasePage
+from locators import locators_about as loc
 
 
 class AboutPage(BasePage):

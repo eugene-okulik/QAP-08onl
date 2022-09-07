@@ -1,5 +1,5 @@
-from ..pages.about import AboutPage
 import allure
+from pages.about import AboutPage
 
 @allure.feature("Testing About Page")
 @allure.story("UI")

@@ -1,5 +1,5 @@
-from ..pages.best_sales import BestSalesPage
 import allure
+from pages.best_sales import BestSalesPage
 
 @allure.feature("Testing Best Sales Page")
 @allure.story("UI")

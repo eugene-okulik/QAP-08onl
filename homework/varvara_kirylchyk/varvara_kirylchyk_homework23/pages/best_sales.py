@@ -1,5 +1,5 @@
-from .base_page import BasePage
-from ..locators import locators_best_sales as loc
+from pages.base_page import BasePage
+from locators import locators_best_sales as loc
 
 
 class BestSalesPage(BasePage):
