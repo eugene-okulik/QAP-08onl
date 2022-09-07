@@ -1,7 +1,6 @@
-from urllib import request, urlopen, error
-import json
+from urllib import request, error
 from urllib.request import urlopen
-
+import json
 
 def test_get_all(domain):
     req = request.Request(f'{domain}/meme')
@@ -65,6 +64,7 @@ def test_update(domain):
     print(response)
     assert response['text'] == 'meme updated'
 
+
 def test_delete_meme(domain):
     req = request.Request(f'{domain}/meme', method='POST')
     req.add_header('Content-Type', 'application/json')
@@ -94,7 +94,7 @@ def test_delete_meme(domain):
     req.add_header('Content-Type', 'application/json')
     req.add_header('Authorization', '255a5I8vj9gKF5Z')
     try:
-        request.urlopen(req)
+        file.read()
     except error.HTTPError as err:
         print(err)
         assert err.code == 404
