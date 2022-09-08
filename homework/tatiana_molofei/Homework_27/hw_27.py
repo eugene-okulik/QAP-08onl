@@ -10,57 +10,53 @@ db = mysql.connect(
 )
 
 cursor = db.cursor(dictionary=True)
-# cursor.execute('select * from `groups`')
-# print(cursor.fetchall())
 
+# Создает группу (даты в запросе можно указывать как строки, т.е. '2022-04-03')
 
 CREATE_NEW_GROUP = 'INSERT INTO `groups` (title, start_date, end_date) VALUES (%s, %s, %s)'
 values_new_group = ('TOM-22', '2022-01-01', '2024-08-10')
 cursor.execute(CREATE_NEW_GROUP, values_new_group)
+id_tom_22 = cursor.lastrowid
 db.commit()
 
-cursor.execute('select * from `groups`')
-result = cursor.fetchall()
-ID_TOM_22 = None
-for groups in result:
-    if groups['title'] == 'TOM-22':
-        id_tom_22 = groups['id']
-
+# Создает студента с именем и фамилией, такими как вы придумаете
+# и group_id той группы, что вы создали
 
 CREATE_NEW_STUDENT = 'INSERT INTO students (name, second_name, group_id) VALUES (%s, %s, %s)'
-values_new_student = ('Lionel', 'Messi', ID_TOM_22)
+values_new_student = ('Lionel', 'Messi', id_tom_22)
 cursor.execute(CREATE_NEW_STUDENT, values_new_student)
+id_student = cursor.lastrowid
 db.commit()
 
-cursor.execute('select * from students')
-result = cursor.fetchall()
-ID_STUDENT = None
-for student in result:
-    if student['group_id'] == ID_TOM_22:
-        ID_STUDENT = student['id']
 
+# Создает 2 книги. В колонку taken_by_student_id записывает id вашего студента и
+# записывает дату когда книгу нужно вернуть (в колонку return_date)
 
 CREATE_NEW_BOOKS = 'INSERT INTO books (title, taken_by_student_id, return_date) VALUES (%s, %s, %s)'
 values_new_books = [
-    ('Cat in the bag', ID_STUDENT, '2022-09-15'),
-    ('The Witches', ID_STUDENT, '2022-10-12')
+    ('"Cat in the bag"', id_student, '2022-09-15'),
+    ('"The Witches"', id_student, '2022-10-12')
 ]
 cursor.executemany(CREATE_NEW_BOOKS, values_new_books)
 db.commit()
 
-cursor.execute('select * from books')
-result = cursor.fetchall()
-student_books = []
-book_return_date = []
-for books in result:
-    if books['taken_by_student_id'] == ID_STUDENT:
-        student_books.append(books['title'])
-        book_return_date.append(books['return_date'])
+#
+cursor.execute(f'''
+SELECT s.name, s.second_name, g.title, g.id, b.title as book, b.return_date
+FROM students as s
+INNER JOIN `groups` as g
+ON g.id = s.group_id
+INNER JOIN books as b 
+ON b.taken_by_student_id = s.id
+WHERE s.id = {id_student}
+''')
 
-print(f'Student {student["name"]} {student["second_name"]} studies '
-      f'in the {groups["title"]} group and '
+result = cursor.fetchall()
+
+print(f'Student {result[0]["name"]} {result[0]["second_name"]} studies '
+      f'in the {result[0]["title"]} group and '
       f'took the following books from the library: '
-      f'{student_books[0]} until {book_return_date[0].strftime("%B %d, %Y")}, '
-      f'{student_books[1]} until {book_return_date[1].strftime("%B %d, %Y")}')
+      f'{result[0]["book"]} until {result[0]["return_date"].strftime("%B %d, %Y")}, '
+      f'{result[1]["book"]} until {result[1]["return_date"].strftime("%B %d, %Y")}')
 
 db.close()
