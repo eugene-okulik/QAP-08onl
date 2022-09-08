@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 from .base_page import BasePage
 
 
-
 subscription_button = (By.XPATH, '//button[@class="btn btn-default"]')
 journal_button = (By.XPATH, '//a[@href="zhurnal"]')
 

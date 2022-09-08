@@ -13,11 +13,8 @@ class HomePage(BasePage):
     def open_sign_in(self):
         self.find_element(loc.customer_login_button).click()
 
-
-
-    def switch_to_handle(self):
-        tabs = self.driver.window_handles
-        self.driver.switch_to.window(tabs[1])
+    def switch_to_the_handle(self):
+        return self.switch_to_handle(1)
 
     @property
     def call_me_button(self):
