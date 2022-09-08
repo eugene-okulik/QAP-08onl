@@ -13,15 +13,25 @@ class HomePage(BasePage):
     def open_sign_in(self):
         self.find_element(loc.customer_login_button).click()
 
-    def open_journal(self):
-        self.find_element(loc.journal_button).click()
+
 
     def switch_to_handle(self):
         tabs = self.driver.window_handles
         self.driver.switch_to.window(tabs[1])
 
-    def callme_button(self):
-        self.find_element(loc.callme_button)
+    @property
+    def call_me_button(self):
+        return self.find_element(loc.callme_button)
 
-    def test_pass_button(self):
+    def callme_is_clickable(self):
+        return self.call_me_button.is_enabled()
+
+    def pass_button(self):
         self.find_element(loc.pass_test_button)
+
+    @property
+    def pass_the_button(self):
+        return self.find_element(loc.pass_test_button)
+
+    def test_pass_field_is_clickable(self):
+        return self.pass_the_button.is_enabled()

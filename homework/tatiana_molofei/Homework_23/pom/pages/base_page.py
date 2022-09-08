@@ -9,6 +9,6 @@ class BasePage:
         by_element, val = args[0]
         return self.driver.find_element(by_element, val)
 
-    def find_element_1(self, *args):
+    def find_elements(self, *args):
         by_element, val = args[0]
         return self.driver.find_element(by_element, val)

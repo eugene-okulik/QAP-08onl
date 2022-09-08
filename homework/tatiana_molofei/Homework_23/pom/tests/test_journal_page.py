@@ -1,10 +1,8 @@
-from ..pages.home_page import HomePage
-from ..pages.authentification import AuthPage
+from ..pages.journal_page import JournalPage
 
 
 def test_journal(driver):
-    home_page = HomePage(driver)
-    home_page.open()
-    home_page.open_journal()
-    auth_page = AuthPage(driver)
-    assert auth_page.test_subscription_button_is_displayed()
+    journal_page = JournalPage(driver)
+    journal_page.open()
+    journal_page.open_journal()
+    assert journal_page.test_subscription_button_is_displayed()
