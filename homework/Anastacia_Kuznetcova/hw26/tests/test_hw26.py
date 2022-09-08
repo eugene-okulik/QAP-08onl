@@ -36,5 +36,17 @@ def test_del_meme(domain):
 
 def test_get_all_memes(domain):
     res: requests.Response = ApiMethods.get_all_memes(domain, Token)
-    print(res.text)
-    assert len(res.json()['data']) > 0 and res.status_code == 200
+    res_all_meme = res.json()
+    assert len(res_all_meme) == 1
+
+
+def test_get_tags_memes(domain):
+    res: requests.Response = ApiMethods.get_all_memes(domain, Token)
+    res_tags_fun = res.json()
+    for value in dict(res_tags_fun).values():
+        count_tags_fun = 0
+        for tags in value:
+            for tag in tags["tags"]:
+                if tag == 'fun':
+                    count_tags_fun += 1
+        assert count_tags_fun >= 1
