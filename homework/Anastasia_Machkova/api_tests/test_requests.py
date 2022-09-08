@@ -1,5 +1,5 @@
-import requests
 import json
+import requests
 
 
 def test_get_all_posts(domain):
