@@ -58,6 +58,7 @@ def join_text(db_1, id_student):
     return_book2 = result[1]['return_date']
     print(f"Student {name} studies in {group} group and took the following books "
           f"from the library: {book1} until {return_book1} and {book2} until {return_book2}")
+    db_1.close()
 
 
 # create_books(data_base(), create_students(data_base(), create_group(data_base())))
