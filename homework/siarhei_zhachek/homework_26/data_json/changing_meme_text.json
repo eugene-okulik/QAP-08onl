@@ -1,0 +1,22 @@
+{
+  "id": 12,
+  "text": "What you will see is called a meme, cool memes!!!.",
+  "url": "https://jrnlst.ru/sites/default/files/covers/cover_6.jpg",
+  "tags": [
+      "fun",
+      "meme",
+      "Sergey Druzhko",
+      "bald man"
+  ],
+  "info":
+      {
+        "objects":
+          ["picture - jpg",
+            "text_rus"],
+        "size":
+            {
+              "width": "737",
+              "height": "1288"
+            }
+      }
+}

@@ -1,0 +1,20 @@
+{
+  "text": "What you will see is called a meme.",
+  "url": "https://jrnlst.ru/sites/default/files/covers/cover_6.jpg",
+  "tags": [
+            "fun",
+            "meme",
+            "Sergey Druzhko"
+         ],
+  "info":
+  {
+    "objects":
+              ["picture",
+                "text"],
+    "size":
+      {
+        "width": "737",
+        "height": "1288"
+      }
+  }
+}
