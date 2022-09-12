@@ -25,6 +25,7 @@ def test_changing_the_meme(domain, token, changing_meme, return_meme):
     assert response["text"] == 'What you will see is called a meme, cool memes!!!.'
     data = json.dumps(return_meme)
     requests.request('PUT', f'{domain}/meme/299', headers=headers, data=data).json()
+    save_file.close()
 
 
 def test_delete_mem(domain, deleted_meme, token):
