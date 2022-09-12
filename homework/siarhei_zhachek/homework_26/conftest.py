@@ -64,3 +64,12 @@ def deleted_meme():
     meme = json.loads(delete_meme)
     yield meme
     meme_delete.close()
+
+
+@pytest.fixture(scope='session')
+def return_meme():
+    with open('data_json/my_file.json', 'r', encoding='UTF-8') as saved_file:
+        my_file = saved_file.read()
+    meme_return = json.loads(my_file)
+    yield meme_return
+    saved_file.close()

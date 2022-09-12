@@ -12,14 +12,19 @@ def test_a_meme_has_been_created(domain, meme_text, token):
     assert response['text'] == 'What you will see is called a meme.'
 
 
-def test_changing_the_meme(domain, changing_meme, token):
+def test_changing_the_meme(domain, token, changing_meme, return_meme):
     headers = {
         'Content-Type': 'application/json',
         'Authorization': token
     }
+    my_response = requests.request('GET', f'{domain}/meme/299', headers=headers).text
+    with open('data_json/my_file.json', 'w', encoding='UTF-8') as save_file:
+        save_file.write(my_response)
     data = json.dumps(changing_meme)
-    response = requests.request('PUT', f'{domain}/meme/12', headers=headers, data=data).json()
+    response = requests.request('PUT', f'{domain}/meme/299', headers=headers, data=data).json()
     assert response["text"] == 'What you will see is called a meme, cool memes!!!.'
+    data = json.dumps(return_meme)
+    requests.request('PUT', f'{domain}/meme/299', headers=headers, data=data).json()
 
 
 def test_delete_mem(domain, deleted_meme, token):
