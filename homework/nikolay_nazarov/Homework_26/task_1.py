@@ -1,5 +1,6 @@
 import random
 import json
+
 import requests
 from conftest import meme_id_to_conf
 
@@ -63,8 +64,7 @@ def test_meme_change(domain, token, clean_up, pre_condition_meme):
         'Authorization': f'{token}',
         'Content-Type': 'application/json'
     }
-    response_change_text = \
-        requests.request("PUT", url, headers=headers, data=payload).json()["text"]
+    requests.request("PUT", url, headers=headers, data=payload)
     # Получить мем
     url = f"{domain}/meme/{pre_condition_meme['meme_id']}"
 
@@ -75,7 +75,7 @@ def test_meme_change(domain, token, clean_up, pre_condition_meme):
 
     response_get_text = requests.request("GET", url, headers=headers, data=payload).json()["text"]
     meme_id_to_conf(pre_condition_meme['meme_id'])
-    assert response_change_text == response_get_text
+    assert pre_condition_meme["meme_text"] != response_get_text
 
 
 def test_meme_deletion(domain, token, pre_condition_meme):

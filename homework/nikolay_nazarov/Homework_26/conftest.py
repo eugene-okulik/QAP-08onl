@@ -28,10 +28,9 @@ def token(domain):
     yield token
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='function')
 def clean_up(domain, token):
     yield
-    global MEME_ID_CONF
     url = f'{domain}/meme/{MEME_ID_CONF}'
     payload = {}
     headers = {
@@ -41,7 +40,7 @@ def clean_up(domain, token):
     requests.request("DELETE", url, headers=headers, data=payload)
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='function')
 def pre_condition_meme(domain, token):
     url = f'{domain}/meme'
     payload = json.dumps({
