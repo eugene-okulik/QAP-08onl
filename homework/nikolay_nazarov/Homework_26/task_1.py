@@ -1,6 +1,7 @@
 import random
 import json
 
+import pytest
 import requests
 from conftest import meme_id_to_conf
 
@@ -45,26 +46,27 @@ def test_meme_creation(domain, token, clean_up):
 def test_meme_change(domain, token, clean_up, pre_condition_meme):
     # Изменить мем
     url = f"{domain}/meme/{pre_condition_meme['meme_id']}"
-    payload = json.dumps({
+    change_payload = json.dumps({
         "id": pre_condition_meme['meme_id'],
-        "text": f"cat_text1{random.randint(1, 500)}",
-        "url": "cat_url",
+        "info": {
+            "cat_info_1": "cat_info_1_value",
+            "cat_info_2": "cat_info_2_value",
+            "cat_info_3": "cat_info_3_value"
+        },
         "tags": [
             "cat_tag_1",
             "cat_tag_2",
             "cat_tag_3"
         ],
-        "info": {
-            "cat_info_1": "cat_info_1_value",
-            "cat_info_2": "cat_info_2_value",
-            "cat_info_3": "cat_info_3_value"
-        }
+        "text": f"cat_text1{random.randint(1, 500)}",
+        "url": "cat_url",
+
     })
     headers = {
         'Authorization': f'{token}',
         'Content-Type': 'application/json'
     }
-    requests.request("PUT", url, headers=headers, data=payload)
+    requests.request("PUT", url, headers=headers, data=change_payload)
     # Получить мем
     url = f"{domain}/meme/{pre_condition_meme['meme_id']}"
 
@@ -73,9 +75,12 @@ def test_meme_change(domain, token, clean_up, pre_condition_meme):
         'Authorization': f'{token}'
     }
 
-    response_get_text = requests.request("GET", url, headers=headers, data=payload).json()["text"]
+    response_get_text = requests.request("GET", url, headers=headers, data=payload).json()
+    response_get_text.pop("updated_by")
     meme_id_to_conf(pre_condition_meme['meme_id'])
-    assert pre_condition_meme["meme_text"] != response_get_text
+    response_get_text = json.dumps(response_get_text)
+
+    assert change_payload == response_get_text
 
 
 def test_meme_deletion(domain, token, pre_condition_meme):
