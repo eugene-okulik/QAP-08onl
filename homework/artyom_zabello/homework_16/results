@@ -1,0 +1,58 @@
+Задание №1
+   23  ls - l /home
+   24  ls -l /
+   25  ls -l /tmp
+   26  ls -l /bin
+   27  ls -l /usr/bin
+   28  ls -l /dev
+   29  ls -a
+   32  ls -help
+   33  ls --help
+   44  mkdir -p memes/228/mymeme
+   51  man -h
+   53  man ls -n
+   54  man ls -n4
+   55  man --help
+   58  man -h
+   62  ls -l /home/
+   63  ls -l
+   66  ls -l memes
+   67  ls -l dir2
+   70  ls- l
+   71  ls -l lanselap
+   88  ls -l /dev
+   90  ls -l /root
+   91  ls -l /dev/null
+   92  ls -l /dev/zero
+   93  ls -l /dev/s
+   94  ls -l /dev/tty
+   95  ls -l /etc/passwd
+   96  ls -l /proc/mounts 
+   97  ls -l /bin/ls
+   98  ls -l /bin/zcat
+  111  sudo -1
+  112  sudo -i
+  113  scp -i C:\Users\User\.ssh\id_ed25519 lanselap@164.92.136.89 hw-16.tar /lanselap/homework_16
+  114  scp -i C:\Users\User\.ssh\id_ed25519 lanselap@164.92.136.89 hw-16.tar /homework_16
+  115  scp -i C:\Users\User\.ssh\id_ed25519 lanselap@164.92.136.89 hw-16.tar homework_16
+  118  tar -xfv hw-16.tar
+  120  tar -xfv hw-16.tar
+  121  tar -xvf hw-16.tar
+  124  history | grep - > results.txt
+  126  sudo -i
+  133  history | grep - >> results.txt
+Задание №2
+. .. .bash_history .bashrc .cache .cloud-locale-test.skip .local .profile .ssh .viminfo .wget-hsts new_user.sh snap
+Задание №3
+ping -i 02 -c 99999999999999 www.google.ru
+ PING www.google.ru (216.58.212.163) 56(84) bytes of data.
+  164  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=1 ttl=60 time=1.49 ms
+  165  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=2 ttl=60 time=0.617 ms
+  166  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=3 ttl=60 time=0.621 ms
+  167  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=4 ttl=60 time=0.648 ms
+  168  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=5 ttl=60 time=0.551 ms
+  169  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=6 ttl=60 time=0.613 ms
+  170  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=7 ttl=60 time=0.544 ms
+  171  64 bytes from fra24s01-in-f3.1e100.net (216.58.212.163): icmp_seq=8 ttl=60 time=0.622 ms
+  172  --- www.google.ru ping statistics ---
+  173  8 packets transmitted, 8 received, 0% packet loss, time 14087ms

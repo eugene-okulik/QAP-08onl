@@ -1,0 +1,82 @@
+Задание 1
+   15  mkdir -p utils/tools/mytool
+   20  ls -l
+   28  rm -r mydir/
+   30  rm -r utils/
+   84  sudo tail -30 /var/log/syslog
+   85  sudo head -30 /var/log/syslog
+   97  sudo -i
+   98  find -name "*.txt"
+   99  sudo find /root -name "*.sh"
+  102  loginctl list-users
+  110  sudo groupmode -h
+  111  sudo groupmod -h
+  112  ls -l
+  114  ls -l
+  116  ls -l
+  120  ls-l
+  121  ls -l
+  123  ls -l
+  125  ls -l
+  127  ls -l
+  155  ls -l
+  156  ls -l /
+  157  ls -l /tmp
+  158  ls -l /usr/bin
+  159  ls -l /dev
+  161  ls -l
+  164  ls -a
+  186  mkdir -p utils/tools/mytool
+  193  ls -l
+  201  ls -l
+  202  rm -r catalog/
+  204  tar --totals -cvf archive.tar my.txt my.xls
+  205  tar -tf archive.tar
+  217  ls -l
+  219  ls -l
+  231  ls -l
+  244  history grep -
+  245  history grep-
+  251  grep "-" history
+  252  grep "-"  
+Задание 2
+new_user.sh
+snap
+Задание 3
+PING google.com (216.58.212.142) 56(84) bytes of data.
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=1 ttl=119 time=1.14 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=2 ttl=119 time=0.416 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=3 ttl=119 time=0.389 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=4 ttl=119 time=0.455 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=5 ttl=119 time=0.380 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=6 ttl=119 time=0.531 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=7 ttl=119 time=0.428 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=8 ttl=119 time=0.524 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=9 ttl=119 time=0.381 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=10 ttl=119 time=0.428 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=11 ttl=119 time=0.352 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=12 ttl=119 time=0.437 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=13 ttl=119 time=0.424 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=14 ttl=119 time=0.554 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=15 ttl=119 time=0.564 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=16 ttl=119 time=0.454 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=17 ttl=119 time=0.547 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=18 ttl=119 time=0.492 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=19 ttl=119 time=0.366 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=20 ttl=119 time=0.494 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=21 ttl=119 time=0.417 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=22 ttl=119 time=0.440 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=23 ttl=119 time=0.608 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=24 ttl=119 time=0.443 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=25 ttl=119 time=0.401 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=26 ttl=119 time=5.25 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=27 ttl=119 time=0.388 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=28 ttl=119 time=0.468 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=29 ttl=119 time=0.413 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=30 ttl=119 time=0.458 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=31 ttl=119 time=0.415 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=32 ttl=119 time=0.497 ms
+64 bytes from ams15s21-in-f142.1e100.net (216.58.212.142): icmp_seq=33 ttl=119 time=0.423 ms
+--- google.com ping statistics ---
+33 packets transmitted, 33 received, 0% packet loss, time 32653ms
+rtt min/avg/max/mdev = 0.352/0.617/5.249/0.829 ms

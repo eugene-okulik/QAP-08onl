@@ -1,0 +1,19 @@
+Go to first line in file: g  <  ESC-<
+Go to last line in file: G  >  ESC->
+Forward one window: z
+Forward one line: e , ^E , j , ^N , CR
+Backward one line: y , ^Y , k , ^K , ^P
+Search forward for matching line: /
+Search backward for matching line: ?
+Repeat previous search: n
+Repeat previous search in reverse direction: N
+
+/dev/null - file
+/dev/zero - file
+/dev/sda - no file
+/dev/tty - file
+/root - directory file
+/etc/passwd - regular file
+/proc/mounts - symbolic link
+/bin/ls - regular file
+/bin/zcat - regular file

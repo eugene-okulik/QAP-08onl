@@ -1,0 +1,16 @@
+
+
+#!/bin/bash
+
+txt=""
+
+while [[  $txt != "."  ]]; do
+           echo "Введите слово : "
+read txt
+           len=${#txt}
+if [[  $len -le 5  ]] && [[  $txt != "."  ]]; then
+          echo "ok"
+elif [[  $len -ge 6  ]]; then
+          echo "Слово слишком длинное"
+fi
+done

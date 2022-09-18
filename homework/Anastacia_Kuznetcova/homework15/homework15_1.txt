@@ -1,0 +1,11 @@
+Задание 2
+
+Go to first line in file: g  <  ESC-<
+Go to last line in file: G  >  ESC->
+Forward one window: z
+Forward one line: e or ^E or j or ^N or CR
+Backward one line: y or ^Y or k or ^K or ^P
+Search forward for matching line: /
+Search backward for matching line: ?
+Repeat previous search: n
+Repeat previous search in reverse direction: N

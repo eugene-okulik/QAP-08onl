@@ -1,0 +1,61 @@
+task_1
+   19  ls -l
+   20  ls -l /
+   21  ls -l/tmp
+   22  ls -l /tmp
+   23  ls -l /usr/bin
+   24  ls -l /dev
+   25  ls --help
+   28  ls -a
+   42  mkdir -p  utils/tools/mytool
+   53  rm -r mydir/
+   61  wget aisatsana@MacBook-Air-AISATSANA ~ % scp -i .ssh/id_ed25519 aisatsanaaa@164.92.136.89:myfile Downloads
+   62  wget aisatsanaaa@qap:~$ wget aisatsana@MacBook-Air-AISATSANA ~ % scp -i .ssh/id_ed25519 aisatsanaaa@164.92.136.89:myfile Downloads
+   63  wget aisatsanaaa@qap:~$ wget aisatsana@MacBook-Air-AISATSANA ~ % scp -i .ssh/id_ed25519 aisatsanaaa@164.92.136.89:myfile Downloads
+   64  wget aisatsanaaa@qap:~$ wget aisatsana@MacBook-Air-AISATSANA ~ % scp -i .ssh/id_ed25519 aisatsanaaa@164.92.136.89:myfile Downloads
+   92  sudo tail -30 /var/log/syslog
+   94  sudo head -30 /var/log/syslog
+   95  ls *[0-9]*
+   97  sudo -i
+   99  find -name "*txt"
+  102  loginctl list-users
+  108  ls -l
+  109  ls -l /home/
+  110  ls -l
+  111  ls -la
+  113  cp hw-16.tar
+  115  scp -i .ssh/ /home/aisatsana/Downloads/hw-16.tar aisatsanaaa@164.92.136.89:
+  116  scp -i .ssh/id_ed25519 /home/iisatsana/Downloads/hw-16.tar aisatsanaaa@164.92.136.89:
+  117  scp -i .ssh/id_ed25519 /home/aisatsana/Downloads/hw-16.tar aisatsanaaa@164.92.136.89:
+  119  tar -kvf hw-16.tar
+  120  tar -xvf hw-16.tar
+  127  history|grep -
+  130  echo history|gap - >> results.txt
+  131  echo history|grep - >> results.txt
+  133  ls -l
+  135  history|grep - >> results.txt
+task_2
+new_user.sh
+snap
+task_3
+PING google.com (216.58.212.142) 56(84) bytes of data.
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=1 ttl=119 time=1.58 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=2 ttl=119 time=0.477 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=3 ttl=119 time=0.491 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=4 ttl=119 time=1.10 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=5 ttl=119 time=0.471 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=6 ttl=119 time=0.447 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=7 ttl=119 time=0.445 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=8 ttl=119 time=0.457 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=9 ttl=119 time=0.428 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=10 ttl=119 time=0.362 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=11 ttl=119 time=0.419 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=12 ttl=119 time=0.374 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=13 ttl=119 time=0.472 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=14 ttl=119 time=0.435 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=15 ttl=119 time=0.454 ms
+64 bytes from fra16s46-in-f14.1e100.net (216.58.212.142): icmp_seq=16 ttl=119 time=0.561 ms
+
+--- google.com ping statistics ---
+16 packets transmitted, 16 received, 0% packet loss, time 15270ms
+rtt min/avg/max/mdev = 0.362/0.561/1.583/0.310 ms

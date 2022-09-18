@@ -1,0 +1,22 @@
+{
+  "text": "my_text",
+  "url": "my_url.com",
+  "tags": [
+       "meme",
+        "bald man"
+  ],
+  "info":
+      {
+        "objects":
+          [
+          "picture",
+                        "text"
+          ],
+        "colors":
+          [
+            "green",
+            "black",
+            "purple"
+          ]
+      }
+}
